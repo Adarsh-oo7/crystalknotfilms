@@ -1,4 +1,6 @@
 // @ts-nocheck
+/* eslint-disable */
+
 const useFluidCursor = () => {
   const canvas = document.getElementById('fluid');
   resizeCanvas();
