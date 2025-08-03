@@ -1,4 +1,3 @@
-// Fixed Hero.tsx with proper TypeScript types
 "use client"
 
 import { motion, Variants, easeInOut } from "framer-motion"
@@ -20,101 +19,73 @@ export function Hero() {
     }
   }, [])
 
-  // Fixed logoVariants with proper typing
   const logoVariants: Variants = {
-    hidden: { 
-      scale: 2, 
-      opacity: 0, 
-      y: 50 
-    },
+    hidden: { scale: 2, opacity: 0, y: 50 },
     visible: {
       scale: 1,
       opacity: 1,
       y: 0,
       transition: {
         duration: 1,
-        ease: easeInOut, // imported easing function
+        ease: easeInOut,
         delay: 0.5,
       },
     },
   }
 
-// Alternative solutions:
+  return (
+    <section className="relative min-h-screen w-full flex flex-col overflow-hidden">
+      <div className="absolute top-0 left-0 right-0 z-30">
+        <Header/>
+      </div>
+      <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover">
+        <source src="/videos/intro.mp4" type="video/mp4" />
+      </video>
+      <div className="absolute inset-0 bg-black/80 " />
+      <div className="relative z-20 flex flex-1 items-center justify-center px-6 lg:px-8 min-h-screen">
+        <div className="text-center text-white max-w-4xl">
+          <motion.div
+            initial={hasAnimated ? "visible" : "hidden"}
+            animate="visible"
+            variants={logoVariants}
+            className="mb-8"
+          >
+            <Image
+              src="/images/Ck logo.png"
+              alt="Company Logo"
+              width={150}
+              height={150}
+              priority
+              className="mx-auto invert"
+            />
+          </motion.div>
 
-// Option 1: Use predefined easing names
-const logoVariants1 = {
-  hidden: {
-    scale: 0.8,
-    opacity: 0,
-    y: 30,
-  },
-  visible: {
-    scale: 1,
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.8,
-      ease: "easeInOut", // or "easeIn", "easeOut", "linear", "anticipate", "backIn", "backOut", "backInOut", "bounceIn", "bounceOut", "bounceInOut", "circIn", "circOut", "circInOut"
-      delay: 0.2,
-    },
-  },
-};
-
-// Option 2: Use cubic-bezier array format
-const logoVariants2 = {
-  hidden: {
-    scale: 0.8,
-    opacity: 0,
-    y: 30,
-  },
-  visible: {
-    scale: 1,
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.8,
-      ease: [0.4, 0, 0.2, 1], // cubic-bezier values as array
-      delay: 0.2,
-    },
-  },
-};
-
-// Option 3: Remove ease property to use default
-const logoVariants3 = {
-  hidden: {
-    scale: 0.8,
-    opacity: 0,
-    y: 30,
-  },
-  visible: {
-    scale: 1,
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.8,
-      delay: 0.2,
-    },
-  },
-};
-
-// Option 4: Import and use easing functions
-// At the top of your file, add:
-// import { easeInOut } from "framer-motion";
-
-const logoVariants4 = {
-  hidden: {
-    scale: 0.8,
-    opacity: 0,
-    y: 30,
-  },
-  visible: {
-    scale: 1,
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.8,
-      ease: easeInOut, // imported easing function
-      delay: 0.2,
-    },
-  },
-};
+          <div className="flex items-center justify-center mb-6">
+            <div className="w-16 h-px bg-white/60" />
+          </div>
+          <div className="mb-4">
+            <span className="text-3xl lg:text-5xl font-light italic" style={{ fontFamily: "serif" }}>
+              Feel Good
+            </span>
+          </div>
+          <h2
+            className="text-4xl lg:text-7xl xl:text-8xl font-light tracking-wider mb-8"
+            style={{ fontFamily: "serif" }}
+          >
+            WEDDING FILMS
+          </h2>
+          <div className="flex items-center justify-center">
+            <div className="w-16 h-px bg-white/60" />
+          </div>
+        </div>
+      </div>
+      <div className="absolute bottom-8 right-8 text-right text-white/80 text-sm lg:text-base tracking-wide max-w-xs z-20">
+        <p className="leading-relaxed">
+          INSPIRED BY FAMILY,
+          <br />
+          FASHIONED BY HEART.
+        </p>
+      </div>
+    </section>
+  )
+}
