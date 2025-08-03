@@ -141,9 +141,8 @@ export function Hero() {
 
   // Get the base path for GitHub Pages - matches your next.config.js
   const getVideoPath = () => {
-    const basePath = process.env.NODE_ENV === 'production' 
-      ? '/crystalknotfilms'
-      : ''
+    const isProd = process.env.NODE_ENV === 'production'
+    const basePath = isProd ? '/crystalknotfilms' : ''
     return `${basePath}/videos/intro.mp4`
   }
 
@@ -263,7 +262,7 @@ export function Hero() {
           <div>Video Duration: {videoRef?.duration ? `${videoRef.duration.toFixed(1)}s` : 'Unknown'}</div>
           <div>Video Dimensions: {videoRef ? `${videoRef.videoWidth || 'Unknown'}x${videoRef.videoHeight || 'Unknown'}` : 'Unknown'}</div>
           <div>Environment: {process.env.NODE_ENV}</div>
-          <div>Base Path: {process.env.NODE_ENV === 'production' ? '/crystalknotfilms' : 'none'}</div>
+          <div>Base Path: {process.env.NODE_ENV === 'development' ? 'none' : '/crystalknotfilms'}</div>
           <div className="mt-2 text-yellow-300">
             {showPlayButton ? 'Click the play button to start video' : 
              videoRef && videoRef.paused && !hasUserInteracted ? 'Click anywhere to start video' : ''}
