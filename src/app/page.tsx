@@ -15,7 +15,7 @@ function CameraModel({
   scaleRef: React.MutableRefObject<number>;
   rotationRef: React.MutableRefObject<number>;
 }) {
-  const { scene } = useGLTF('/models/nikon_d6.glb');
+  const { scene } = useGLTF('/models/nikon_d6-v4.glb');
 
   useFrame(() => {
     if (scene) {
@@ -190,11 +190,20 @@ gsap.to(modelRotation, {
         </Canvas>
       </div>
 
-      <section className="h-screen w-full flex items-center px-8">
-        <div className="flex-1 z-10">
-          <h1 className="text-5xl font-bold leading-tight">Capture Life<br />In Motion</h1>
-        </div>
-      </section>
+<section className="relative h-screen w-full flex items-center px-8 overflow-hidden">
+  {/* Blurred Background Layer */}
+  <div
+    className="absolute inset-0 bg-cover bg-center  "
+    style={{ backgroundImage: "url('/images/smoke.png')" }}
+  />
+
+  {/* Foreground Content */}
+  <div className="flex-1 z-10 text-white">
+    <h1 className="text-5xl font-bold leading-tight">Capture Life<br />In Motion</h1>
+  </div>
+</section>
+
+
 
       <section id="services">
         <Services />
