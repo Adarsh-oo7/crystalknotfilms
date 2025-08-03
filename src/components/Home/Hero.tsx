@@ -14,6 +14,22 @@ export function Hero() {
   const [videoRef, setVideoRef] = useState<HTMLVideoElement | null>(null)
   const [showPlayButton, setShowPlayButton] = useState(false)
   const [hasUserInteracted, setHasUserInteracted] = useState(false)
+  const [currentVideoSource, setCurrentVideoSource] = useState(0)
+  
+  // Define video sources directly in useState
+  const [videoSources] = useState(() => {
+    const isProd = process.env.NODE_ENV === 'production'
+    const basePath = isProd ? '/crystalknotfilms' : ''
+    
+    return [
+      // Try GitHub raw URL first since we know it works for download
+      isProd ? 'https://github.com/adarsh-oo7/crystalknotfilms/raw/main/public/videos/intro.mp4' : `${basePath}/videos/intro.mp4`,
+      // Standard GitHub Pages path
+      `${basePath}/videos/intro.mp4`,
+      // Media URL for LFS files (fallback)
+      isProd ? 'https://media.githubusercontent.com/media/adarsh-oo7/crystalknotfilms/main/public/videos/intro.mp4' : `${basePath}/videos/intro.mp4`
+    ]
+  })
 
   useEffect(() => {
     const storedValue = sessionStorage.getItem(HAS_HERO_ANIMATED_KEY)
@@ -92,7 +108,16 @@ export function Hero() {
 
   const handleVideoError = (e: React.SyntheticEvent<HTMLVideoElement, Event>) => {
     console.error("Video failed to load:", e.currentTarget.error)
-    setVideoError(true)
+    
+    // Try next video source if available
+    if (currentVideoSource < videoSources.length - 1) {
+      console.log(`Trying next video source: ${videoSources[currentVideoSource + 1]}`)
+      setCurrentVideoSource(prev => prev + 1)
+      setVideoLoaded(false)
+    } else {
+      console.error("All video sources failed")
+      setVideoError(true)
+    }
   }
 
   const handleVideoLoad = () => {
@@ -143,7 +168,16 @@ export function Hero() {
   const getVideoPath = () => {
     const isProd = process.env.NODE_ENV === 'production'
     const basePath = isProd ? '/crystalknotfilms' : ''
-    return `${basePath}/videos/intro.mp4`
+    
+    // For GitHub Pages, try multiple video sources - prioritize raw URL since it works
+    return {
+      // Try GitHub raw URL first since we know it works
+      rawUrl: isProd ? 'https://github.com/adarsh-oo7/crystalknotfilms/raw/main/public/videos/intro.mp4' : `${basePath}/videos/intro.mp4`,
+      // Standard GitHub Pages path
+      mp4: `${basePath}/videos/intro.mp4`,
+      // Media URL for LFS files (fallback)
+      mediaUrl: isProd ? 'https://media.githubusercontent.com/media/adarsh-oo7/crystalknotfilms/main/public/videos/intro.mp4' : `${basePath}/videos/intro.mp4`
+    }
   }
 
   return (
@@ -156,6 +190,7 @@ export function Hero() {
       {!videoError && (
         <div className="absolute inset-0 w-full h-full">
           <video 
+            key={currentVideoSource} // Force re-render when source changes
             ref={setVideoRef}
             autoPlay 
             muted 
@@ -165,16 +200,17 @@ export function Hero() {
             onError={handleVideoError}
             onLoadedData={handleVideoLoad}
             onCanPlay={handleCanPlay}
-            preload="auto"
-            crossOrigin="anonymous"
+            preload="metadata" // Changed back to metadata to reduce initial load
+            // Remove crossOrigin for GitHub raw URLs
+            crossOrigin={currentVideoSource === 0 ? undefined : "anonymous"}
             style={{ backgroundColor: '#000', minWidth: '200px', minHeight: '140px' }}
           >
-            <source src={getVideoPath()} type="video/mp4" />
+            <source src={videoSources[currentVideoSource]} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           
           {/* Manual Play Button */}
-          {showPlayButton && (
+          {(showPlayButton || (!videoLoaded && !videoError)) && (
             <div className="absolute inset-0 flex items-center justify-center z-10">
               <button
                 onClick={handleManualPlay}
@@ -189,6 +225,13 @@ export function Hero() {
                   <path d="M8 5v14l11-7z"/>
                 </svg>
               </button>
+            </div>
+          )}
+          
+          {/* Loading indicator */}
+          {!videoLoaded && !videoError && (
+            <div className="absolute inset-0 flex items-center justify-center z-5">
+              <div className="text-white text-sm">Loading video...</div>
             </div>
           )}
         </div>
@@ -252,7 +295,8 @@ export function Hero() {
       {/* Enhanced debug info */}
       {process.env.NODE_ENV === 'development' && (
         <div className="absolute top-20 left-4 text-white text-xs z-40 bg-black/70 p-3 rounded max-w-sm">
-          <div>Video Source: {getVideoPath()}</div>
+          <div>Current Video Source: {videoSources[currentVideoSource]}</div>
+          <div>Source Index: {currentVideoSource + 1}/{videoSources.length}</div>
           <div>Video Error: {videoError ? 'Yes' : 'No'}</div>
           <div>Video Loaded: {videoLoaded ? 'Yes' : 'No'}</div>
           <div>Video Playing: {videoRef && !videoRef.paused ? 'Yes' : 'No'}</div>
