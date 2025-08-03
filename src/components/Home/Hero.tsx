@@ -4,8 +4,6 @@ import { motion, Variants, easeInOut } from "framer-motion"
 import { useEffect, useState } from "react"
 import Image from "next/image"
 import { Header } from "../common/Header"
-// Use direct path instead of import due to Git LFS
-// import vediosss from "../../../public/videos/intro.mp4"
 
 const HAS_HERO_ANIMATED_KEY = "hasHeroAnimated"
 
@@ -13,6 +11,9 @@ export function Hero() {
   const [hasAnimated, setHasAnimated] = useState(false)
   const [videoError, setVideoError] = useState(false)
   const [videoLoaded, setVideoLoaded] = useState(false)
+  const [videoRef, setVideoRef] = useState<HTMLVideoElement | null>(null)
+  const [showPlayButton, setShowPlayButton] = useState(false)
+  const [hasUserInteracted, setHasUserInteracted] = useState(false)
 
   useEffect(() => {
     const storedValue = sessionStorage.getItem(HAS_HERO_ANIMATED_KEY)
@@ -22,6 +23,58 @@ export function Hero() {
       sessionStorage.setItem(HAS_HERO_ANIMATED_KEY, "true")
     }
   }, [])
+
+  // Handle video autoplay
+  useEffect(() => {
+    const handleVideoPlay = async () => {
+      if (videoRef && videoLoaded) {
+        try {
+          // Try to play the video
+          await videoRef.play()
+          console.log("Video started playing successfully")
+        } catch (error) {
+          console.log("Autoplay failed, this is normal in many browsers:", error)
+          // Autoplay failed - this is expected in many browsers
+          // The video will start when user interacts with the page
+        }
+      }
+    }
+
+    if (videoRef && videoLoaded) {
+      handleVideoPlay()
+    }
+  }, [videoRef, videoLoaded])
+
+  // Add click handler to start video if autoplay failed
+  useEffect(() => {
+    const handleUserInteraction = async (e: Event) => {
+      // Don't trigger if user clicked the play button (handled separately)
+      if (e.target && (e.target as HTMLElement).closest('.play-button')) {
+        return
+      }
+      
+      if (videoRef && videoRef.paused && !hasUserInteracted) {
+        try {
+          await videoRef.play()
+          setShowPlayButton(false)
+          setHasUserInteracted(true)
+        } catch (error) {
+          console.log("Could not start video on interaction:", error)
+        }
+      }
+    }
+
+    // Add event listeners for user interaction
+    document.addEventListener('click', handleUserInteraction)
+    document.addEventListener('touchstart', handleUserInteraction)
+    document.addEventListener('keydown', handleUserInteraction)
+
+    return () => {
+      document.removeEventListener('click', handleUserInteraction)
+      document.removeEventListener('touchstart', handleUserInteraction)
+      document.removeEventListener('keydown', handleUserInteraction)
+    }
+  }, [videoRef, hasUserInteracted])
 
   const logoVariants: Variants = {
     hidden: { scale: 2, opacity: 0, y: 50 },
@@ -47,27 +100,99 @@ export function Hero() {
     setVideoLoaded(true)
   }
 
+  const handleCanPlay = async (e: React.SyntheticEvent<HTMLVideoElement, Event>) => {
+    const video = e.currentTarget
+    setVideoRef(video)
+    console.log("Video can start playing")
+    
+    // Check if video meets minimum requirements for autoplay
+    const videoWidth = video.videoWidth || video.clientWidth
+    const videoHeight = video.videoHeight || video.clientHeight
+    const videoDuration = video.duration
+    
+    console.log(`Video dimensions: ${videoWidth}x${videoHeight}, Duration: ${videoDuration}s`)
+    
+    // Try to play immediately when video can play
+    try {
+      const playPromise = video.play()
+      if (playPromise !== undefined) {
+        await playPromise
+        console.log("Video autoplay successful")
+        setShowPlayButton(false)
+      }
+    } catch (error) {
+      console.log("Autoplay blocked by browser:", error)
+      setShowPlayButton(true) // Show manual play button
+    }
+  }
+
+  const handleManualPlay = async () => {
+    if (videoRef) {
+      try {
+        await videoRef.play()
+        setShowPlayButton(false)
+        setHasUserInteracted(true)
+        console.log("Manual play successful")
+      } catch (error) {
+        console.error("Manual play failed:", error)
+      }
+    }
+  }
+
+  // Get the base path for GitHub Pages - matches your next.config.js
+  const getVideoPath = () => {
+    const basePath = process.env.NODE_ENV === 'production' 
+      ? '/crystalknotfilms'
+      : ''
+    return `${basePath}/videos/intro.mp4`
+  }
+
   return (
     <section className="relative min-h-screen w-full flex flex-col overflow-hidden">
       <div className="absolute top-0 left-0 right-0 z-30">
         <Header/>
       </div>
       
-      {/* Video Background using imported video */}
+      {/* Video Background */}
       {!videoError && (
-        <video 
-          autoPlay 
-          muted 
-          loop 
-          playsInline 
-          className="absolute inset-0 w-full h-full object-cover"
-          onError={handleVideoError}
-          onLoadedData={handleVideoLoad}
-          preload="auto"
-        >
-          <source src="./videos/intro.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+        <div className="absolute inset-0 w-full h-full">
+          <video 
+            ref={setVideoRef}
+            autoPlay 
+            muted 
+            loop 
+            playsInline 
+            className="absolute inset-0 w-full h-full object-cover"
+            onError={handleVideoError}
+            onLoadedData={handleVideoLoad}
+            onCanPlay={handleCanPlay}
+            preload="auto"
+            crossOrigin="anonymous"
+            style={{ backgroundColor: '#000', minWidth: '200px', minHeight: '140px' }}
+          >
+            <source src={getVideoPath()} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          
+          {/* Manual Play Button */}
+          {showPlayButton && (
+            <div className="absolute inset-0 flex items-center justify-center z-10">
+              <button
+                onClick={handleManualPlay}
+                className="play-button bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-6 transition-all duration-300 group"
+                aria-label="Play video"
+              >
+                <svg 
+                  className="w-12 h-12 text-white ml-1 group-hover:scale-110 transition-transform" 
+                  fill="currentColor" 
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </button>
+            </div>
+          )}
+        </div>
       )}
       
       {/* Fallback Background if video fails */}
@@ -125,12 +250,24 @@ export function Hero() {
         </p>
       </div>
       
-      {/* Debug info - only in development */}
+      {/* Enhanced debug info */}
       {process.env.NODE_ENV === 'development' && (
         <div className="absolute top-20 left-4 text-white text-xs z-40 bg-black/70 p-3 rounded max-w-sm">
-          <div>Video Source: /videos/intro.mp4</div>
+          <div>Video Source: {getVideoPath()}</div>
           <div>Video Error: {videoError ? 'Yes' : 'No'}</div>
           <div>Video Loaded: {videoLoaded ? 'Yes' : 'No'}</div>
+          <div>Video Playing: {videoRef && !videoRef.paused ? 'Yes' : 'No'}</div>
+          <div>Video Muted: {videoRef?.muted ? 'Yes' : 'No'}</div>
+          <div>Show Play Button: {showPlayButton ? 'Yes' : 'No'}</div>
+          <div>User Interacted: {hasUserInteracted ? 'Yes' : 'No'}</div>
+          <div>Video Duration: {videoRef?.duration ? `${videoRef.duration.toFixed(1)}s` : 'Unknown'}</div>
+          <div>Video Dimensions: {videoRef ? `${videoRef.videoWidth || 'Unknown'}x${videoRef.videoHeight || 'Unknown'}` : 'Unknown'}</div>
+          <div>Environment: {process.env.NODE_ENV}</div>
+          <div>Base Path: {process.env.NODE_ENV === 'production' ? '/crystalknotfilms' : 'none'}</div>
+          <div className="mt-2 text-yellow-300">
+            {showPlayButton ? 'Click the play button to start video' : 
+             videoRef && videoRef.paused && !hasUserInteracted ? 'Click anywhere to start video' : ''}
+          </div>
         </div>
       )}
     </section>
