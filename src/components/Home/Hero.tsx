@@ -1,7 +1,7 @@
 // Fixed Hero.tsx with proper TypeScript types
 "use client"
 
-import { motion, Variants } from "framer-motion"
+import { motion, Variants, easeInOut } from "framer-motion"
 import { useEffect, useState } from "react"
 import Image from "next/image"
 import { Header } from "../common/Header"
@@ -33,7 +33,7 @@ export function Hero() {
       y: 0,
       transition: {
         duration: 1,
-        ease: [0.4, 0, 0.2, 1], // Using cubic-bezier array instead of string
+        ease: easeInOut, // imported easing function
         delay: 0.5,
       },
     },
