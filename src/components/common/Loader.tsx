@@ -47,7 +47,7 @@ export function Loader({ children, loadingTime = 3000 }: LoaderProps) {
           className="relative"
         >
           <Image
-            src="/images/Ck logo.png"
+            src="./images/Ck logo.png"
             alt="Company Logo"
             width={150}
             height={150}

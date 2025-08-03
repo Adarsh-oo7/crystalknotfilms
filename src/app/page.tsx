@@ -1,7 +1,7 @@
-import { Loader } from '@/components/common/Loader'
-import FluidCursor from '@/components/FluidCursor'
-import { Hero } from '@/components/Home/Hero'
-import ThreeDsection from '@/components/Home/ThreeDsection'
+import { Loader } from '../components/common/Loader'
+import FluidCursor from '../components/FluidCursor'
+import { Hero } from '../components/Home/Hero'
+import ThreeDsection from '../components/Home/ThreeDsection'
 import React from 'react'
 
 function page() {

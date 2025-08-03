@@ -39,7 +39,7 @@ export function Hero() {
         <Header/>
       </div>
       <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover">
-        <source src="/videos/intro.mp4" type="video/mp4" />
+        <source src="./videos/intro.mp4" type="video/mp4" />
       </video>
       <div className="absolute inset-0 bg-black/80 " />
       <div className="relative z-20 flex flex-1 items-center justify-center px-6 lg:px-8 min-h-screen">
