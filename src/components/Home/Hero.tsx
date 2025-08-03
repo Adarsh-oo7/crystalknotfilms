@@ -281,7 +281,7 @@ export function Hero() {
         <p className="leading-relaxed">
           INSPIRED BY FAMILY,
           <br />
-          FASHIONED BY HEART.
+          EDITE WITH SURGICAL PRECISION.
         </p>
       </div>
       
