@@ -51,7 +51,7 @@ export function Hero() {
             className="mb-8"
           >
             <Image
-              src="/images/Ck logo.png"
+              src="./images/Ck logo.png"
               alt="Company Logo"
               width={150}
               height={150}
