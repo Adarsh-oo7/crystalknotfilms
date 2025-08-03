@@ -4,8 +4,8 @@ import { motion, Variants, easeInOut } from "framer-motion"
 import { useEffect, useState } from "react"
 import Image from "next/image"
 import { Header } from "../common/Header"
-// Import video from public folder
-import vediosss from "../../../public/videos/intro.mp4"
+// Use direct path instead of import due to Git LFS
+// import vediosss from "../../../public/videos/intro.mp4"
 
 const HAS_HERO_ANIMATED_KEY = "hasHeroAnimated"
 
@@ -65,7 +65,7 @@ export function Hero() {
           onLoadedData={handleVideoLoad}
           preload="auto"
         >
-          <source src={vediosss} type="video/mp4" />
+          <source src="/videos/intro.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       )}
@@ -128,7 +128,7 @@ export function Hero() {
       {/* Debug info - only in development */}
       {process.env.NODE_ENV === 'development' && (
         <div className="absolute top-20 left-4 text-white text-xs z-40 bg-black/70 p-3 rounded max-w-sm">
-          <div>Video Source: {vediosss}</div>
+          <div>Video Source: /videos/intro.mp4</div>
           <div>Video Error: {videoError ? 'Yes' : 'No'}</div>
           <div>Video Loaded: {videoLoaded ? 'Yes' : 'No'}</div>
         </div>
