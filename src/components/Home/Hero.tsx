@@ -209,8 +209,8 @@ export function Hero() {
             Your browser does not support the video tag.
           </video>
           
-          {/* Manual Play Button */}
-          {(showPlayButton || (!videoLoaded && !videoError)) && (
+          {/* Manual Play Button - only show when autoplay is specifically blocked */}
+          {showPlayButton && videoLoaded && (
             <div className="absolute inset-0 flex items-center justify-center z-10">
               <button
                 onClick={handleManualPlay}
@@ -225,13 +225,6 @@ export function Hero() {
                   <path d="M8 5v14l11-7z"/>
                 </svg>
               </button>
-            </div>
-          )}
-          
-          {/* Loading indicator */}
-          {!videoLoaded && !videoError && (
-            <div className="absolute inset-0 flex items-center justify-center z-5">
-              <div className="text-white text-sm">Loading video...</div>
             </div>
           )}
         </div>
