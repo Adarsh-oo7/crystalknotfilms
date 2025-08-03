@@ -5,6 +5,8 @@ import { useGLTF, Preload, Environment, OrbitControls } from '@react-three/drei'
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import FluidCursor from '../components/FluidCursor';
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -175,6 +177,8 @@ gsap.to(modelRotation, {
 
 
   return (
+    <>
+      <FluidCursor />
     <main className="bg-black text-white font-sans relative">
       <div
         ref={cameraRef}
@@ -221,5 +225,6 @@ gsap.to(modelRotation, {
         <Contact />
       </section>
     </main>
+  </>
   );
 }
