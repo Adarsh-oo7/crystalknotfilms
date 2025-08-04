@@ -7,7 +7,7 @@ type StarBorderProps<T extends React.ElementType> = {
   color?: string;
   speed?: React.CSSProperties["animationDuration"];
   thickness?: number;
-} & React.ComponentPropsWithoutRef<T>;
+} & Omit<React.ComponentPropsWithoutRef<T>, "as" | "children" | "className">;
 
 const StarBorder = <T extends React.ElementType = "button">({
   as,
@@ -19,7 +19,7 @@ const StarBorder = <T extends React.ElementType = "button">({
   style,
   ...rest
 }: StarBorderProps<T>) => {
-  const Component = as || "button";
+  const Component = (as || "button") as React.ElementType;
 
   const mergedStyle: React.CSSProperties = {
     padding: `${thickness}px`,
@@ -28,11 +28,11 @@ const StarBorder = <T extends React.ElementType = "button">({
 
   return (
     <Component
-      className={`relative inline-block overflow-hidden rounded-[20px] border border-white ${className}`}
-      {...rest}
+      className={`relative inline-block overflow-hidden rounded-[20px] border border-dotted border-white ${className}`}
       style={mergedStyle}
+      {...rest}
     >
-      {/* Inner Glowing Effects */}
+      {/* Glowing star-like effects */}
       <div
         className="absolute w-[300%] h-[50%] opacity-50 bottom-[-12px] right-[-250%] rounded-full animate-star-movement-bottom z-0 pointer-events-none"
         style={{
@@ -48,7 +48,7 @@ const StarBorder = <T extends React.ElementType = "button">({
         }}
       />
 
-      {/* Transparent Inner Content */}
+      {/* Main content */}
       <div className="relative z-10 bg-transparent text-white text-center py-[12px] px-[22px] rounded-[20px]">
         {children}
       </div>
