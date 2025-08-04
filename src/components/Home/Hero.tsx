@@ -187,20 +187,20 @@ export function Hero() {
   }
 
   // Get the base path for GitHub Pages - matches your next.config.js
-  const getVideoPath = () => {
-    const isProd = process.env.NODE_ENV === 'production'
-    const basePath = isProd ? '/crystalknotfilms' : ''
+  // const getVideoPath = () => {
+  //   const isProd = process.env.NODE_ENV === 'production'
+  //   const basePath = isProd ? '/crystalknotfilms' : ''
 
-    // For GitHub Pages, try multiple video sources - prioritize raw URL since it works
-    return {
-      // Try GitHub raw URL first since we know it works
-      rawUrl: isProd ? 'https://github.com/adarsh-oo7/crystalknotfilms/raw/main/public/videos/intro.mp4' : `${basePath}/videos/intro.mp4`,
-      // Standard GitHub Pages path
-      mp4: `${basePath}/videos/intro.mp4`,
-      // Media URL for LFS files (fallback)
-      mediaUrl: isProd ? 'https://media.githubusercontent.com/media/adarsh-oo7/crystalknotfilms/main/public/videos/intro.mp4' : `${basePath}/videos/intro.mp4`
-    }
-  }
+  //   // For GitHub Pages, try multiple video sources - prioritize raw URL since it works
+  //   return {
+  //     // Try GitHub raw URL first since we know it works
+  //     rawUrl: isProd ? 'https://github.com/adarsh-oo7/crystalknotfilms/raw/main/public/videos/intro.mp4' : `${basePath}/videos/intro.mp4`,
+  //     // Standard GitHub Pages path
+  //     mp4: `${basePath}/videos/intro.mp4`,
+  //     // Media URL for LFS files (fallback)
+  //     mediaUrl: isProd ? 'https://media.githubusercontent.com/media/adarsh-oo7/crystalknotfilms/main/public/videos/intro.mp4' : `${basePath}/videos/intro.mp4`
+  //   }
+  // }
 
   return (
     <section className="relative min-h-screen w-full flex flex-col overflow-hidden">
