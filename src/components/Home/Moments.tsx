@@ -5,7 +5,7 @@
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 
-const images = ["/images/A7405470.jpg", "/images/A7405566.jpg", "/images/A7405701.jpg", "/images/Abbey&Andy_Previews (21 of 37).jpg", "/images/Chelsea&Liam (11 of 24).jpg", "/images/SONY (1272).jpg"]
+const images = ["./images/A7405470.jpg", "./images/A7405566.jpg", "./images/A7405701.jpg", "./images/Abbey&Andy_Previews (21 of 37).jpg", "./images/Chelsea&Liam (11 of 24).jpg", "./images/SONY (1272).jpg"]
 
 export default function LandingSection() {
     const [currentImageIndex, setCurrentImageIndex] = useState(0)
@@ -66,7 +66,7 @@ export default function LandingSection() {
                         <div className="relative aspect-[4/3] overflow-hidden rounded-md">
                             {/* Overlay Logo */}
                             <img
-                                src="/images/Ck logo.png"
+                                src="./images/Ck logo.png"
                                 alt="Logo overlay"
                                 className="absolute top-4 left-4 w-16 h-auto z-10 invert"
                             />

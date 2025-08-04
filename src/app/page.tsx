@@ -10,8 +10,8 @@ import HomePortfolio from '@/components/Home/HomePortfolio'
 function page() {
   return (
     <div>
-      {/* <Loader loadingTime={3000}> */}
-      {/* {" "} */}
+      <Loader loadingTime={3000}>
+      {" "}
       {/* The page content will appear after 3 seconds */}
       <FluidCursor/>
       <Hero/>
@@ -19,7 +19,7 @@ function page() {
       <Moments/>
       <Parallax/>
       <HomePortfolio/>
-    {/* </Loader> */}
+    </Loader>
     </div>
   )
 }

@@ -199,7 +199,7 @@ export default function About() {
                     >
 
                         <Image
-                            src="/images/A7401967.jpg"
+                            src="./images/A7401967.jpg"
                             alt="Couple by a river"
                             fill
                             className="object-cover rounded-lg"

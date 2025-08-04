@@ -10,7 +10,7 @@ const ParallaxHero = () => {
       <section
         className="relative min-h-[70vh] bg-fixed bg-center bg-cover flex items-center justify-center text-white"
         style={{
-          backgroundImage: "url('/images/A7405566.jpg')", // Replace with your actual image
+          backgroundImage: "url('./images/A7405566.jpg')", // Replace with your actual image
         }}
       >
         {/* Overlay */}
