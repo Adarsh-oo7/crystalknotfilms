@@ -24,11 +24,12 @@ const StarBorder = <T extends React.ElementType = "button">({
   return (
     <Component
       className={`relative inline-block overflow-hidden rounded-[20px] border border-white ${className}`}
-      {...(rest as any)}
+      {...rest}
       style={{
         padding: `${thickness}px`,
-        ...(rest as any).style,
+        ...(rest?.style || {}),
       }}
+
     >
       {/* Inner Glowing Effects */}
       <div

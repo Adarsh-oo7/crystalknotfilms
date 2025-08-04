@@ -64,8 +64,8 @@ export default function LandingSection() {
                     <div className="hidden md:block h-full w-px bg-gray-600 self-stretch"></div>
 
                     {/* Right Content (Image Carousel) */}
-                    <div className="relative w-full max-w-md mx-auto rounded-lg border border-white p-2 bg-black shadow-lg">
-                        <div className="relative aspect-[4/3] overflow-hidden rounded-md">
+                    <div className="relative w-full max-w-md mx-auto  border border-white p-3 bg-black shadow-lg">
+                        <div className="relative aspect-[4/3] overflow-hidden ">
                             {/* Overlay Logo */}
                             <Image
                                 src="/images/Ck logo.png"
