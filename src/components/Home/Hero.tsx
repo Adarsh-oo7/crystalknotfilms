@@ -7,10 +7,10 @@ import { Header } from "../common/Header"
 
 const HAS_HERO_ANIMATED_KEY = "hasHeroAnimated"
 
-    const logoVariants = {
-      hidden: { opacity: 0, y: 50 },
-      visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
-    }
+    // const logoVariants = {
+    //   hidden: { opacity: 0, y: 50 },
+    //   visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+    // }
 
     const textVariants: Variants = {
       hidden: { opacity: 0, y: 80 },

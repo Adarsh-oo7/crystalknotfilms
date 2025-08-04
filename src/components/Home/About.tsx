@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import { useEffect, useState, useRef } from "react"
-import { motion, Variants, easeInOut,easeOut, useScroll, useTransform, useInView } from "framer-motion"
+import { motion, Variants, easeInOut,easeOut, useScroll, useTransform } from "framer-motion"
 
 
 const imageLeftVariants: Variants = {
