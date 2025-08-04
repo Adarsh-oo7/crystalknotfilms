@@ -1,5 +1,5 @@
 import React, { type CSSProperties, type ReactNode } from "react";
-import type { JSX } from "react"; // ✅ Fix for JSX.IntrinsicElements
+import type { JSX } from "react";
 
 type ValidElement = keyof JSX.IntrinsicElements;
 
@@ -11,7 +11,7 @@ type StarBorderProps<T extends ValidElement = "button"> = {
   speed?: CSSProperties["animationDuration"];
   thickness?: number;
   style?: CSSProperties;
-} & Omit<React.ComponentPropsWithoutRef<T>, "as" | "children" | "className" | "style">;
+} & Omit<JSX.IntrinsicElements[T], "as" | "children" | "className" | "style">;
 
 const StarBorder = <T extends ValidElement = "button">({
   as,
@@ -34,7 +34,7 @@ const StarBorder = <T extends ValidElement = "button">({
     <Component
       className={`relative inline-block overflow-hidden rounded-[20px] border border-dotted border-white ${className}`}
       style={mergedStyle}
-      {...(rest as any)} // You can replace 'any' with more refined typing if needed
+      {...rest}
     >
       {/* Glowing star-like effects */}
       <div
