@@ -286,7 +286,7 @@ export function Hero() {
       </div>
       
       {/* Enhanced debug info */}
-      {process.env.NODE_ENV === 'development' && (
+      {/* {process.env.NODE_ENV === 'development' && (
         <div className="absolute top-20 left-4 text-white text-xs z-40 bg-black/70 p-3 rounded max-w-sm">
           <div>Current Video Source: {videoSources[currentVideoSource]}</div>
           <div>Source Index: {currentVideoSource + 1}/{videoSources.length}</div>
@@ -305,7 +305,7 @@ export function Hero() {
              videoRef && videoRef.paused && !hasUserInteracted ? 'Click anywhere to start video' : ''}
           </div>
         </div>
-      )}
+      )} */}
     </section>
   )
 }
