@@ -2,35 +2,39 @@
 
 import Image from "next/image"
 import { useEffect, useState, useRef } from "react"
-import { motion, Variants, easeInOut, useScroll, useTransform, useInView } from "framer-motion"
+import { motion, Variants, easeInOut,easeOut, useScroll, useTransform, useInView } from "framer-motion"
 
 
-const imageLeftVariants = {
+const imageLeftVariants: Variants = {
     hidden: { x: -100, opacity: 0 },
     visible: {
         x: 0,
         opacity: 1,
-        transition: { duration: 1, ease: "easeOut" },
+        transition: {
+            duration: 0.6,
+            ease: easeInOut, // ✅ Use imported function, not a string
+        },
     },
-}
+};
 
-const imageRightVariants = {
+const imageRightVariants: Variants = {
     hidden: { x: 100, opacity: 0 },
     visible: {
         x: 0,
         opacity: 1,
-        transition: { duration: 1, ease: "easeOut" },
+        transition: { duration: 1, ease: easeOut }, // ✅ use imported easeOut
     },
-}
+};
 
-const textVariants = {
+const textVariants: Variants = {
     hidden: { y: 100, opacity: 0 },
     visible: {
         y: 0,
         opacity: 1,
-        transition: { duration: 2, ease: "easeOut", delay: 0.1 },
+        transition: { duration: 2, ease: easeOut, delay: 0.1 }, // ✅ fixed
     },
-}
+};
+
 
 
 
