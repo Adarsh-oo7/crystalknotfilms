@@ -4,6 +4,8 @@
 
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
+import Image from "next/image"
+
 
 const images = ["./images/A7405470.jpg", "./images/A7405566.jpg", "./images/A7405701.jpg", "./images/Abbey&Andy_Previews (21 of 37).jpg", "./images/Chelsea&Liam (11 of 24).jpg", "./images/SONY (1272).jpg"]
 
@@ -65,25 +67,34 @@ export default function LandingSection() {
                     <div className="relative w-full max-w-md mx-auto rounded-lg border border-white p-2 bg-black shadow-lg">
                         <div className="relative aspect-[4/3] overflow-hidden rounded-md">
                             {/* Overlay Logo */}
-                            <img
-                                src="./images/Ck logo.png"
+                            <Image
+                                src="/images/Ck logo.png"
                                 alt="Logo overlay"
-                                className="absolute top-4 left-4 w-16 h-auto z-10 invert"
+                                width={64}
+                                height={64}
+                                className="absolute top-4 left-4 z-10 invert w-16 h-auto"
+                                priority
                             />
 
+
                             <AnimatePresence initial={false}>
-                                <motion.img
+                                <motion.div
                                     key={currentImageIndex}
-                                    src={images[currentImageIndex]}
-                                    alt={`Wedding image ${currentImageIndex + 1}`}
-                                    width={800}
-                                    height={600}
-                                    className="w-full h-full object-cover"
                                     initial={{ opacity: 0 }}
                                     animate={{ opacity: 1 }}
                                     exit={{ opacity: 0 }}
                                     transition={{ duration: 0.8 }}
-                                />
+                                    className="w-full h-full"
+                                >
+                                    <Image
+                                        src={images[currentImageIndex]}
+                                        alt={`Wedding image ${currentImageIndex + 1}`}
+                                        fill
+                                        className="object-cover"
+                                        priority
+                                    />
+                                </motion.div>
+
                             </AnimatePresence>
                         </div>
                     </div>
