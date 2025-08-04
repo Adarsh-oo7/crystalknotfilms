@@ -1,14 +1,13 @@
 import React from "react";
 
-type StarBorderProps<T extends React.ElementType> =
-  React.ComponentPropsWithoutRef<T> & {
-    as?: T;
-    className?: string;
-    children?: React.ReactNode;
-    color?: string;
-    speed?: React.CSSProperties['animationDuration'];
-    thickness?: number;
-  };
+type StarBorderProps<T extends React.ElementType> = {
+  as?: T;
+  className?: string;
+  children?: React.ReactNode;
+  color?: string;
+  speed?: React.CSSProperties['animationDuration'];
+  thickness?: number;
+} & React.ComponentPropsWithoutRef<T>;
 
 const StarBorder = <T extends React.ElementType = "button">({
   as,
@@ -21,15 +20,16 @@ const StarBorder = <T extends React.ElementType = "button">({
 }: StarBorderProps<T>) => {
   const Component = as || "button";
 
+  const mergedStyle = {
+    padding: `${thickness}px`,
+    ...(rest as any).style, // fallback: use unknown if exact typing isn't critical
+  };
+
   return (
     <Component
       className={`relative inline-block overflow-hidden rounded-[20px] border border-white ${className}`}
       {...rest}
-      style={{
-        padding: `${thickness}px`,
-        ...(rest?.style || {}),
-      }}
-
+      style={mergedStyle}
     >
       {/* Inner Glowing Effects */}
       <div
