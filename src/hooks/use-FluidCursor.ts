@@ -1,5 +1,5 @@
 /* eslint-disable */
-
+'use client'
 // Define the Pointer interface and class
 interface PointerData {
   id: number;
