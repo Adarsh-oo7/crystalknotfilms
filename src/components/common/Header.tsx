@@ -52,8 +52,13 @@ export function Header() {
           </a>
 
           {/* Desktop CONTACT button using StarBorder */}
-         
-            CONTACT
+                   <a
+            href="#Services"
+            className="text-white/90 hover:text-white transition-colors text-sm lg:text-base tracking-wide"
+          >
+                        CONTACT
+
+          </a>
         </nav>
       </header>
 
@@ -117,8 +122,14 @@ export function Header() {
               </div>
 
               {/* Mobile CONTACT button using StarBorder */}
-          
-                CONTACT
+           <a
+                  href="#investments"
+                  className="block text-white text-2xl tracking-wide hover:text-white/80 transition-colors transform hover:scale-105"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  CONTACT
+                </a>
+                
             </nav>
           </div>
         </>
