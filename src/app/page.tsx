@@ -6,20 +6,24 @@ import React from 'react'
 import Moments from '../components/Home/Moments'
 import Parallax from '../components/Home/Parallax'
 import HomePortfolio from '../components/Home/HomePortfolio'
+import { HowItWorks } from '@/components/Home/HowItWorks'
+import Portfolio from '@/components/Home/Portfolio'
 
 function page() {
   return (
     <div>
-      <Loader loadingTime={3000}>
-      {" "}
+      {/* <Loader loadingTime={3000}>
+      {" "} */}
       {/* The page content will appear after 3 seconds */}
       <FluidCursor/>
       <Hero/>
       <About/>
-      <Moments/>
-      <Parallax/>
-      <HomePortfolio/>
-    </Loader>
+      <HowItWorks/>
+      <Portfolio/>
+      {/* <Moments/> */}
+      {/* <Parallax/> */}
+      {/* <HomePortfolio/> */}
+    {/* </Loader> */}
     </div>
   )
 }

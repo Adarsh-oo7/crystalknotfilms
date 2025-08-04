@@ -205,7 +205,7 @@ export function Hero() {
   return (
     <section className="relative min-h-screen w-full flex flex-col overflow-hidden">
       <div className="absolute top-0 left-0 right-0 z-30">
-        <Header />
+        {/* <Header /> */}
       </div>
 
       {/* Video Background */}
