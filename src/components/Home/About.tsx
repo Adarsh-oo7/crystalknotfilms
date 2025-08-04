@@ -1,7 +1,38 @@
 'use client'
 
 import Image from "next/image"
-import { useEffect, useState } from "react"
+import { useEffect, useState, useRef } from "react"
+import { motion, Variants, easeInOut, useScroll, useTransform, useInView } from "framer-motion"
+
+
+const imageLeftVariants = {
+    hidden: { x: -100, opacity: 0 },
+    visible: {
+        x: 0,
+        opacity: 1,
+        transition: { duration: 1, ease: "easeOut" },
+    },
+}
+
+const imageRightVariants = {
+    hidden: { x: 100, opacity: 0 },
+    visible: {
+        x: 0,
+        opacity: 1,
+        transition: { duration: 1, ease: "easeOut" },
+    },
+}
+
+const textVariants = {
+    hidden: { y: 100, opacity: 0 },
+    visible: {
+        y: 0,
+        opacity: 1,
+        transition: { duration: 2, ease: "easeOut", delay: 0.1 },
+    },
+}
+
+
 
 export default function About() {
     const [videoRef, setVideoRef] = useState<HTMLVideoElement | null>(null)
@@ -16,7 +47,13 @@ export default function About() {
         '/videos/intro.mp4',
         'https://media.githubusercontent.com/media/adarsh-oo7/crystalknotfilms/main/public/videos/intro.mp4',
     ]
+    const contentRef = useRef(null)
+    const { scrollYProgress } = useScroll({
+        target: contentRef,
+        offset: ["start end", "end start"],
+    })
 
+    const opacity = useTransform(scrollYProgress, [0, 0.9, 1], [1, 0.3, 0])
     const storyContent = (
         <>
             <p>
@@ -152,19 +189,36 @@ export default function About() {
             <div className="hidden md:grid grid-cols-3 grid-rows-2 w-full min-h-screen relative">
                 {/* Image - Top Left */}
                 <div className="col-start-1 row-start-1 flex items-start justify-start p-10">
-                    <div className="w-[250px] h-[250px] relative z-10">
+                    {/* <div className="w-[250px] h-[250px] relative z-10"> */}
+                    <motion.div
+                        className="w-[250px] h-[250px] relative z-10"
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        variants={imageLeftVariants}
+                    >
+
                         <Image
                             src="/images/A7401967.jpg"
                             alt="Couple by a river"
                             fill
                             className="object-cover rounded-lg"
                         />
-                    </div>
+                    </motion.div>
+                    {/* </div> */}
                 </div>
 
                 {/* Centered Content */}
                 <div className="col-start-2 row-span-2 flex items-center justify-center text-center px-8 py-10 z-20">
-                    <div className="max-w-2xl">
+                    {/* <div className="max-w-2xl"> */}
+                    <motion.div
+                        className="max-w-2xl"
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        variants={textVariants}
+                    >
+
                         <h1 className="text-2xl md:text-3xl lg:text-4xl font-serif font-bold tracking-tight leading-tight mb-4">
                             LEGACY
                             <br />
@@ -172,16 +226,29 @@ export default function About() {
                         </h1>
                         {/* <div className="w-24 h-0.5 mb-8 " /> */}
                         <div className="text-base md:text-sm leading-relaxed">
-                            <div className=" text-center space-y-6 max-w-lg md:max-w-lg lg:max-w-lg xl:max-w-2xl">
+                            <motion.div
+                                ref={contentRef}
+                                style={{ opacity }}
+                                className="text-center space-y-6 max-w-lg md:max-w-lg lg:max-w-lg xl:max-w-2xl"
+                            >
                                 {storyContent}
-                            </div>
+                            </motion.div>
                         </div>
-                    </div>
+
+                    </motion.div>
+                    {/* </div> */}
                 </div>
 
                 {/* Video - Bottom Right */}
                 <div className="col-start-3 row-start-2 flex items-end justify-end p-10">
-                    <div className="w-[250px] h-[250px] relative z-10">
+                    {/* <div className="w-[250px] h-[250px] relative z-10"> */}
+                    <motion.div
+                        className="w-[250px] h-[250px] relative z-10"
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        variants={imageRightVariants}
+                    >
                         {!videoError ? (
                             <>
                                 <video
@@ -246,7 +313,8 @@ export default function About() {
                                 Video unavailable
                             </div>
                         )}
-                    </div>
+                    </motion.div>
+                    {/* </div> */}
                 </div>
             </div>
         </div>
