@@ -11,7 +11,7 @@ type StarBorderProps<T extends ValidElement = "button"> = {
   speed?: CSSProperties["animationDuration"];
   thickness?: number;
   style?: CSSProperties;
-} & Omit<JSX.IntrinsicElements[T], "as" | "children" | "className" | "style">;
+} & Omit<JSX.IntrinsicElements[T], "as" | "className" | "style">;
 
 const StarBorder = <T extends ValidElement = "button">({
   as,
