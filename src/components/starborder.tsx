@@ -1,15 +1,18 @@
 import React from "react";
 
-type StarBorderProps<T extends React.ElementType> = {
+type ValidElement = keyof JSX.IntrinsicElements;
+
+type StarBorderProps<T extends ValidElement = "button"> = {
   as?: T;
   className?: string;
   children?: React.ReactNode;
   color?: string;
   speed?: React.CSSProperties["animationDuration"];
   thickness?: number;
-} & Omit<React.ComponentPropsWithoutRef<T>, "as" | "children" | "className">;
+  style?: React.CSSProperties;
+} & Omit<React.ComponentPropsWithoutRef<T>, "as" | "children" | "className" | "style">;
 
-const StarBorder = <T extends React.ElementType = "button">({
+const StarBorder = <T extends ValidElement = "button">({
   as,
   className = "",
   color = "white",
@@ -19,7 +22,7 @@ const StarBorder = <T extends React.ElementType = "button">({
   style,
   ...rest
 }: StarBorderProps<T>) => {
-  const Component = (as || "button") as React.ElementType;
+  const Component = (as || "button") as ValidElement;
 
   const mergedStyle: React.CSSProperties = {
     padding: `${thickness}px`,
