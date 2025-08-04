@@ -5,7 +5,7 @@ type StarBorderProps<T extends React.ElementType> = {
   className?: string;
   children?: React.ReactNode;
   color?: string;
-  speed?: React.CSSProperties['animationDuration'];
+  speed?: React.CSSProperties["animationDuration"];
   thickness?: number;
 } & React.ComponentPropsWithoutRef<T>;
 
@@ -16,13 +16,14 @@ const StarBorder = <T extends React.ElementType = "button">({
   speed = "6s",
   thickness = 1,
   children,
+  style,
   ...rest
 }: StarBorderProps<T>) => {
   const Component = as || "button";
 
-  const mergedStyle = {
+  const mergedStyle: React.CSSProperties = {
     padding: `${thickness}px`,
-    ...(rest as any).style, // fallback: use unknown if exact typing isn't critical
+    ...style,
   };
 
   return (
