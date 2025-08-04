@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import { X } from "lucide-react";
-import StarBorder from "../starborder"; 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -53,16 +52,8 @@ export function Header() {
           </a>
 
           {/* Desktop CONTACT button using StarBorder */}
-          <StarBorder
-            as="a"
-            href="#contact"
-            color="white"
-            speed="4s"
-            thickness={1}
-            className="text-sm lg:text-base tracking-wide"
-          >
+         
             CONTACT
-          </StarBorder>
         </nav>
       </header>
 
@@ -126,16 +117,8 @@ export function Header() {
               </div>
 
               {/* Mobile CONTACT button using StarBorder */}
-              <StarBorder
-                as="a"
-                href="#contact"
-                onClick={() => setIsMenuOpen(false)}
-                color="white"
-                speed="4s"
-                className="text-2xl tracking-wide"
-              >
+          
                 CONTACT
-              </StarBorder>
             </nav>
           </div>
         </>
