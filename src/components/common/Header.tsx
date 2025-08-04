@@ -1,9 +1,8 @@
-
 "use client";
 
 import { useState, useEffect } from "react";
 import { X } from "lucide-react";
-
+import StarBorder from "../starborder"; 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -52,16 +51,22 @@ export function Header() {
           >
             SERVICES
           </a>
-          <a
+
+          {/* Desktop CONTACT button using StarBorder */}
+          <StarBorder
+            as="a"
             href="#contact"
-            className="text-white/90 hover:text-white transition-colors text-sm lg:text-base tracking-wide"
+            color="white"
+            speed="4s"
+            thickness={1}
+            className="text-sm lg:text-base tracking-wide"
           >
             CONTACT
-          </a>
+          </StarBorder>
         </nav>
       </header>
 
-      {/* Mobile Menu Toggle Button (Hamburger) */}
+      {/* Mobile Menu Toggle Button */}
       {!isMenuOpen && (
         <button
           className="md:hidden text-white p-3 rounded-full bg-black/20 fixed top-6 right-6 z-30"
@@ -120,13 +125,17 @@ export function Header() {
                 </a>
               </div>
 
-              <a
+              {/* Mobile CONTACT button using StarBorder */}
+              <StarBorder
+                as="a"
                 href="#contact"
-                  className="block text-white text-2xl tracking-wide hover:text-white/80 transition-colors transform hover:scale-105"
                 onClick={() => setIsMenuOpen(false)}
+                color="white"
+                speed="4s"
+                className="text-2xl tracking-wide"
               >
                 CONTACT
-              </a>
+              </StarBorder>
             </nav>
           </div>
         </>
