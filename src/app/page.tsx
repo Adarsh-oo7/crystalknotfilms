@@ -11,6 +11,7 @@ import { HowItWorks } from '@/components/Home/HowItWorks'
 // import Portfolio from '@/components/Home/Portfolio'
 import Faq from '@/components/Home/Faq'
 
+
 import {
   Navbar,
   NavBody,
