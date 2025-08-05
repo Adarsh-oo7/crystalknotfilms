@@ -2,6 +2,7 @@
 
 import { motion, Variants, easeInOut } from "framer-motion"
 import { useEffect, useState } from "react"
+import Image from "next/image"
 
 const HAS_HERO_ANIMATED_KEY = "hasHeroAnimated"
 
@@ -266,10 +267,12 @@ export function Hero() {
             variants={logoVariants}
             className="absolute top-15 left-5 lg:left-0 xl:left-35  z-40"
           >
-            <img
-              src="./images/Ck logo.png" // make sure the path is correct
+            <Image
+              src="/images/Ck logo.png" // ✅ Corrected path
               alt="Company Logo"
-              className="invert w-16 sm:w-20 md:w-24 lg:w-28 xl:w-30   h-auto"
+              width={112}               // You must specify either width+height or use 'fill'
+              height={48}
+              className="invert w-16 sm:w-20 md:w-24 lg:w-28 xl:w-30 h-auto"
             />
           </motion.div>
 
@@ -287,7 +290,7 @@ export function Hero() {
             <div className="mb-4">
               <span className="text-3xl lg:text-5xl font-light italic" style={{ fontFamily: "GingerBread, serif" }}
               >
-                Where Moments 
+                Where Moments
               </span>
             </div>
             <h2
