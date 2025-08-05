@@ -108,7 +108,7 @@ body {
 
 @font-face {
   font-family: 'Ginger';
-  src: url('https://github.com/adarsh-oo7/crystalknotfilms/raw/main/public/fonts/GingerBread.woff') format('woff');  
+  src: url('/crystalknotfilms/fonts/GingerBread.woff') format('woff');  
   font-weight: normal;
   font-style: normal;
   font-display: swap;
