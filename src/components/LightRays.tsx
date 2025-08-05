@@ -34,10 +34,10 @@ const hexToRgb = (hex: string): [number, number, number] => {
   const m = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
   return m
     ? [
-        parseInt(m[1], 16) / 255,
-        parseInt(m[2], 16) / 255,
-        parseInt(m[3], 16) / 255,
-      ]
+      parseInt(m[1], 16) / 255,
+      parseInt(m[2], 16) / 255,
+      parseInt(m[3], 16) / 255,
+    ]
     : [1, 1, 1];
 };
 
@@ -67,6 +67,31 @@ const getAnchorAndDir = (
   }
 };
 
+interface Uniforms {
+  iTime: { value: number };
+  iResolution: { value: number[] };
+
+  rayPos: { value: number[] };
+  rayDir: { value: number[] };
+
+  raysColor: { value: [number, number, number] };
+  raysSpeed: { value: number };
+  lightSpread: { value: number };
+  rayLength: { value: number };
+
+  pulsating: { value: number };
+  fadeDistance: { value: number };
+  saturation: { value: number };
+
+  mousePos: { value: number[] };
+  mouseInfluence: { value: number };
+
+  noiseAmount: { value: number };
+  distortion: { value: number };
+}
+
+
+
 const LightRays: React.FC<LightRaysProps> = ({
   raysOrigin = "top-center",
   raysColor = DEFAULT_COLOR,
@@ -83,12 +108,12 @@ const LightRays: React.FC<LightRaysProps> = ({
   className = "",
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
-const uniformsRef = useRef<HTMLDivElement | null>(null);
+  const uniformsRef = useRef<Uniforms | null>(null); // ✅ correct type
   const rendererRef = useRef<Renderer | null>(null);
   const mouseRef = useRef({ x: 0.5, y: 0.5 });
   const smoothMouseRef = useRef({ x: 0.5, y: 0.5 });
   const animationIdRef = useRef<number | null>(null);
-  const meshRef = useRef<HTMLDivElement | null>(null);
+  const meshRef = useRef<Mesh | null>(null);
   const cleanupFunctionRef = useRef<(() => void) | null>(null);
   const [isVisible, setIsVisible] = useState(false);
   const observerRef = useRef<IntersectionObserver | null>(null);
