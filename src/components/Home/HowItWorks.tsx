@@ -2,13 +2,7 @@
 
 import { Pencil, Video, Download } from 'lucide-react'
 import { motion } from 'framer-motion'
-import { Roboto } from 'next/font/google'
 
-const roboto = Roboto({
-    subsets: ['latin'],
-    weight: ['400', '500', '700'],
-    display: 'swap',
-})
 
 export function HowItWorks() {
     const steps = [

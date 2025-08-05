@@ -2,7 +2,6 @@
 
 import { motion, Variants, easeInOut } from "framer-motion"
 import { useEffect, useState } from "react"
-import Image from "next/image"
 
 const HAS_HERO_ANIMATED_KEY = "hasHeroAnimated"
 

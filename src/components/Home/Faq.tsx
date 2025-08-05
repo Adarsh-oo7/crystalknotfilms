@@ -24,7 +24,7 @@ export default function Faq() {
                 className="text-base sm:text-lg text-gray-700 max-w-md"
                 style={{ fontFamily: "Quicksand, Regular" }}
               >
-                Aren't there like a thousand Wedding Videography companies out there? What makes CrystalKnotfilms different?
+                Aren&apos;t there like a thousand Wedding Videography companies out there? What makes CrystalKnotfilms different?
               </p>
               <p
                 className="text-base sm:text-lg text-gray-700 max-w-md"
@@ -46,7 +46,7 @@ export default function Faq() {
                   className="text-sm sm:text-base text-gray-600"
                   style={{ fontFamily: "Quicksand, Regular" }}
                 >
-                  Don’t get us wrong, all those Sabyasachi and GQ poses have their place and time. But there is nothing better than the natural versions of our couples. If I have to define our videography style, that would be a perfect mix of - 'Documentary & Editorial.'
+                  Don’t get us wrong, all those Sabyasachi and GQ poses have their place and time. But there is nothing better than the natural versions of our couples. If I have to define our videography style, that would be a perfect mix of - &apos;Documentary &amp; Editorial.&apos;
                 </AccordionContent>
               </AccordionItem>
 
@@ -61,7 +61,7 @@ export default function Faq() {
                   className="text-sm sm:text-base text-gray-600"
                   style={{ fontFamily: "Quicksand, Regular" }}
                 >
-                  We understand the importance of family and make sure to incorporate not only the glittery part of our couple's wedding week but also their most beloved asset - Their Families.
+                  We understand the importance of family and make sure to incorporate not only the glittery part of our couple&apos;s wedding week but also their most beloved asset - Their Families.
                 </AccordionContent>
               </AccordionItem>
 
@@ -70,14 +70,14 @@ export default function Faq() {
                   className="text-sm sm:text-base md:text-lg font-bold text-gray-800 hover:no-underline"
                   style={{ fontFamily: "Quicksand, Regular" }}
                 >
-                  Our videos won't bore you to death!
+                  Our videos won&apos;t bore you to death!
                 </AccordionTrigger>
                 <AccordionContent
                   className="text-sm sm:text-base text-gray-600"
                   style={{ fontFamily: "Quicksand, Regular" }}
                 >
-                  Our videos won't bore you to death! <br /><br />
-                  Have you observed that most of the wedding videos you see are just plain slow-motion walking clips of the couple? God, it’s almost 2025! Your iPhones can do that! <br /><br />
+                  Our videos won&apos;t bore you to death! <br /><br />
+                  Have you observed that most of the wedding videos you see are just plain slow-motion walking clips of the couple? God, it&apos;s almost 2025! Your iPhones can do that! <br /><br />
                   Our wedding films bring in a perfect mixture of real-time emotions with those cinematic slow-motion sequences that will make your eyes sparkle with awe. <br /><br />
                   Each of our wedding Films is unique. Beautifully put together to reflect our couples, their journey and their love story.
                 </AccordionContent>

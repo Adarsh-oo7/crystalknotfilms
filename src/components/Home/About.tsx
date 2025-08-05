@@ -245,9 +245,9 @@ export default function About() {
                             <div className="text-base text-white md:text-sm leading-relaxed">
                                 <motion.div
                                     ref={contentRef}
-                                    style={{ opacity }}
+                                    style={{ opacity,fontFamily: "Cinzel, Regular" }}
                                     className="text-center space-y-6 max-w-lg md:max-w-lg lg:max-w-lg xl:max-w-2xl"
-                                    style={{ fontFamily: "Cinzel, Regular" }}
+                                   
                                 >
                                     {storyContent}
                                 </motion.div>
