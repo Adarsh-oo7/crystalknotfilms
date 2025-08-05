@@ -7,9 +7,7 @@ import { Loader } from '../components/common/Loader'
 import FluidCursor from '../components/FluidCursor'
 import { Hero } from '../components/Home/Hero'
 import React from 'react'
-import Moments from '../components/Home/Moments'
-import Parallax from '../components/Home/Parallax'
-import HomePortfolio from '../components/Home/HomePortfolio'
+
 import { HowItWorks } from '@/components/Home/HowItWorks'
 import Portfolio from '@/components/Home/Portfolio'
 import Faq from '@/components/Home/Faq'
@@ -27,7 +25,7 @@ import {
 } from "@/components/ui/resizable-navbar";
 
 
-function page() {
+function Page() {
 
   const [isMobileOpen, setIsMobileOpen] = useState(false);
 
@@ -40,8 +38,8 @@ function page() {
   ];
   return (
     <div>
-      {/* <Loader loadingTime={3000}>
-      {" "} */}
+      <Loader loadingTime={3000}>
+      {" "}
       {/* The page content will appear after 3 seconds */}
       <FluidCursor />
       <Navbar>
@@ -83,12 +81,10 @@ function page() {
       <HowItWorks />
       <Faq />
       <Portfolio />
-      {/* <Moments/> */}
-      {/* <Parallax/> */}
-      {/* <HomePortfolio/> */}
-      {/* </Loader> */}
+     
+      </Loader>
     </div>
   )
 }
 
-export default page
+export default Page
