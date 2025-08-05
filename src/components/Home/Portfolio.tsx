@@ -75,17 +75,17 @@ export default function PortfolioSection() {
   ]
 
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32 bg-background">
+    <section id="Portfolio" className="w-full my-20   bg-background">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">PORTFOLIO</h2>
-            <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+            <h2 className="text-3xl font-medium tracking-tighter sm:text-5xl"style={{ fontFamily: "Cinzel" }}>PORTFOLIO</h2>
+            <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed"style={{ fontFamily: "Quicksand, serif" }}>
               Explore our diverse collection of work, from captivating wedding films to dynamic corporate event coverage
               and stunning photography.
             </p>
           </div>
-          <div className="flex flex-wrap justify-center gap-2 py-4 z-10">
+          <div className="flex flex-wrap justify-center gap-2 py-10 z-10">
             {["Wedding", "Corporate Events", "Reels", "Photos"].map((category) => (
               <button
                 key={category}

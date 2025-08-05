@@ -3,28 +3,27 @@
 import { motion, Variants, easeInOut } from "framer-motion"
 import { useEffect, useState } from "react"
 import Image from "next/image"
-import { Header } from "../common/Header"
 
 const HAS_HERO_ANIMATED_KEY = "hasHeroAnimated"
 
-    // const logoVariants = {
-    //   hidden: { opacity: 0, y: 50 },
-    //   visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
-    // }
+// const logoVariants = {
+//   hidden: { opacity: 0, y: 50 },
+//   visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+// }
 
-    const textVariants: Variants = {
-      hidden: { opacity: 0, y: 80 },
-      visible: {
-        opacity: 1,
-        y: 0,
-        transition: {
-          duration: 1,
-          ease: "easeOut",
-          staggerChildren: 0.1,
-          delayChildren: 0.5,
-        },
-      },
-    }
+const textVariants: Variants = {
+  hidden: { opacity: 0, y: 80 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1,
+      ease: "easeOut",
+      staggerChildren: 0.1,
+      delayChildren: 0.5,
+    },
+  },
+}
 
 export function Hero() {
   const [hasAnimated, setHasAnimated] = useState(false)
@@ -205,7 +204,6 @@ export function Hero() {
   return (
     <section className="relative min-h-screen w-full flex flex-col overflow-hidden">
       <div className="absolute top-0 left-0 right-0 z-30">
-        {/* <Header /> */}
       </div>
 
       {/* Video Background */}
@@ -267,17 +265,16 @@ export function Hero() {
             initial={hasAnimated ? "visible" : "hidden"}
             animate="visible"
             variants={logoVariants}
-            className="mb-8"
+            className="absolute top-15 left-5 lg:left-0 xl:left-35  z-40"
           >
-            <Image
-              src="./images/Ck logo.png"
+            <img
+              src="./images/Ck logo.png" // make sure the path is correct
               alt="Company Logo"
-              width={150}
-              height={150}
-              priority
-              className="mx-auto invert"
+              className="invert w-16 sm:w-20 md:w-24 lg:w-28 xl:w-30   h-auto"
             />
           </motion.div>
+
+
 
           <div className="flex items-center justify-center mb-6">
             <div className="w-16 h-px bg-white/60" />
@@ -289,15 +286,18 @@ export function Hero() {
             className="text-center text-white max-w-4xl"
           >
             <div className="mb-4">
-              <span className="text-3xl lg:text-5xl font-light italic" style={{ fontFamily: "serif" }}>
-                Feel Good
+              <span className="text-3xl lg:text-5xl font-light italic" style={{ fontFamily: "GingerBread, serif" }}
+              >
+                Where Moments 
               </span>
             </div>
             <h2
               className="text-4xl lg:text-7xl xl:text-8xl font-light tracking-wider mb-8"
-              style={{ fontFamily: "serif" }}
+              style={{ fontFamily: "Essential sans, serif" }}
+
+
             >
-              WEDDING FILMS
+              Meet Style
             </h2>
           </motion.div>
 
@@ -308,13 +308,13 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="absolute bottom-8 right-8 text-right text-white/80 text-sm lg:text-base tracking-wide max-w-xs z-20">
+      {/* <div className="absolute bottom-8 right-8 text-right text-white/80 text-sm lg:text-base tracking-wide max-w-xs z-20">
         <p className="leading-relaxed">
           INSPIRED BY FAMILY,
           <br />
           EDITE WITH SURGICAL PRECISION.
         </p>
-      </div>
+      </div> */}
 
       {/* Enhanced debug info */}
       {/* {process.env.NODE_ENV === 'development' && (

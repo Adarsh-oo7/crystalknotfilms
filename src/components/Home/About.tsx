@@ -106,19 +106,19 @@ export default function About() {
     return (
         // <div className="relative min-h-screen bg-black text-light-text p-4 overflow-hidden">
 
-        <div className="relative min-h-screen bg-black text-light-text p-4 overflow-hidden w-full">
+        <div id="about" className="relative bg-gradient-to-b from-black via-black/100 to-black/70 text-light-text p-4 overflow-hidden w-full min-h-screen">
             <div className="absolute inset-0 z-0">
                 <LightRays
                     raysOrigin="top-center"
                     raysColor="#00ffff"
-                    raysSpeed={1.5}
-                    lightSpread={0.8}
-                    rayLength={1.2}
+                    raysSpeed={2.5}
+                    lightSpread={0.9}
+                    rayLength={2.5}
                     followMouse={true}
-                    mouseInfluence={0.1}
+                    mouseInfluence={0.5}
                     noiseAmount={0.1}
                     distortion={0.05}
-                    className="pointer-events-none w-full h-full"
+                    className="pointer-events-none w-full h-full "
                 />
             </div>
             <div className="relative z-10">
@@ -194,7 +194,7 @@ export default function About() {
 
                     {/* Mobile Content */}
                     <div className="flex flex-col items-center text-center w-full px-4">
-                        <h1 className="text-3xl text-white font-bold tracking-tight leading-tight mb-3">
+                        <h1 className="text-3xl text-white  tracking-tight leading-tight mb-3" style={{ fontFamily: "Essential sans, serif" }}>
                             Foundering story
 
                         </h1>
@@ -237,8 +237,8 @@ export default function About() {
                             variants={textVariants}
                         >
 
-                            <h1 className="text-2xl text-white md:text-3xl lg:text-4xl font-serif font-bold tracking-tight leading-tight mb-4">
-                                Foundering story
+                            <h1 className="text-2xl text-white md:text-3xl lg:text-4xl  font-bold tracking-tight leading-tight mb-4" style={{ fontFamily: "Cinzel, Regular" }}>
+                                FOUNDERING STORY
 
                             </h1>
                             {/* <div className="w-24 h-0.5 mb-8 " /> */}
@@ -247,6 +247,7 @@ export default function About() {
                                     ref={contentRef}
                                     style={{ opacity }}
                                     className="text-center space-y-6 max-w-lg md:max-w-lg lg:max-w-lg xl:max-w-2xl"
+                                    style={{ fontFamily: "Cinzel, Regular" }}
                                 >
                                     {storyContent}
                                 </motion.div>
