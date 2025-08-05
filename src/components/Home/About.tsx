@@ -48,11 +48,11 @@ export default function About() {
     const [showPlayButton, setShowPlayButton] = useState(false)
     const [hasUserInteracted, setHasUserInteracted] = useState(false)
 
-    const videoSources = [
-        'https://github.com/adarsh-oo7/crystalknotfilms/raw/main/public/videos/intro.mp4',
-        '/videos/intro.mp4',
-        'https://media.githubusercontent.com/media/adarsh-oo7/crystalknotfilms/main/public/videos/intro.mp4',
-    ]
+    // const videoSources = [
+    //     'https://github.com/adarsh-oo7/crystalknotfilms/raw/main/public/videos/intro.mp4',
+    //     '/videos/intro.mp4',
+    //     'https://media.githubusercontent.com/media/adarsh-oo7/crystalknotfilms/main/public/videos/intro.mp4',
+    // ]
     const contentRef = useRef(null)
     const { scrollYProgress } = useScroll({
         target: contentRef,
@@ -77,31 +77,31 @@ export default function About() {
     )
 
     // Attempt autoplay when loaded
-    useEffect(() => {
-        if (videoRef && videoLoaded) {
-            videoRef.play().catch(() => setShowPlayButton(true))
-        }
-    }, [videoRef, videoLoaded])
+    // useEffect(() => {
+    //     if (videoRef && videoLoaded) {
+    //         videoRef.play().catch(() => setShowPlayButton(true))
+    //     }
+    // }, [videoRef, videoLoaded])
 
-    // User interaction fallback
-    useEffect(() => {
-        const handler = async () => {
-            if (videoRef && videoRef.paused && !hasUserInteracted) {
-                try {
-                    await videoRef.play()
-                    setShowPlayButton(false)
-                    setHasUserInteracted(true)
-                } catch { }
-            }
-        }
+    // // User interaction fallback
+    // useEffect(() => {
+    //     const handler = async () => {
+    //         if (videoRef && videoRef.paused && !hasUserInteracted) {
+    //             try {
+    //                 await videoRef.play()
+    //                 setShowPlayButton(false)
+    //                 setHasUserInteracted(true)
+    //             } catch { }
+    //         }
+    //     }
 
-        document.addEventListener("click", handler)
-        document.addEventListener("keydown", handler)
-        return () => {
-            document.removeEventListener("click", handler)
-            document.removeEventListener("keydown", handler)
-        }
-    }, [videoRef, hasUserInteracted])
+    //     document.addEventListener("click", handler)
+    //     document.addEventListener("keydown", handler)
+    //     return () => {
+    //         document.removeEventListener("click", handler)
+    //         document.removeEventListener("keydown", handler)
+    //     }
+    // }, [videoRef, hasUserInteracted])
 
     return (
         // <div className="relative min-h-screen bg-black text-light-text p-4 overflow-hidden">
@@ -123,10 +123,10 @@ export default function About() {
             </div>
             <div className="relative z-10">
 
-                {/* Mobile Layout */}
+                Mobile Layout
                 <div className="md:hidden flex flex-col items-center justify-center w-full py-8 relative">
                     <div className="w-[250px] h-[250px] mb-8 relative">
-                        {!videoError ? (
+                        {/* {!videoError ? (
                             <>
                                 <video
                                     key={currentVideoSource}
@@ -156,7 +156,6 @@ export default function About() {
                                         }
                                     }}
                                 >
-                                    <source src={videoSources[currentVideoSource]} type="video/mp4" />
                                 </video>
 
                                 {showPlayButton && videoLoaded && (
@@ -189,7 +188,7 @@ export default function About() {
                             <div className="w-full h-full bg-black rounded-lg flex items-center justify-center text-white text-sm">
                                 Video unavailable
                             </div>
-                        )}
+                        )} */}
                     </div>
 
                     {/* Mobile Content */}
@@ -215,13 +214,13 @@ export default function About() {
                             viewport={{ once: true }}
                             variants={imageLeftVariants}
                         >
-
+{/* 
                             <Image
                                 src="./images/A7401967.jpg"
                                 alt="Couple by a river"
                                 fill
                                 className="object-cover rounded-lg"
-                            />
+                            /> */}
                         </motion.div>
                         {/* </div> */}
                     </div>
@@ -267,7 +266,7 @@ export default function About() {
                             viewport={{ once: true }}
                             variants={imageRightVariants}
                         >
-                            {!videoError ? (
+                            {/* {!videoError ? (
                                 <>
                                     <video
                                         key={currentVideoSource}
@@ -330,7 +329,7 @@ export default function About() {
                                 <div className="w-full h-full bg-black rounded-lg flex items-center justify-center text-white text-sm">
                                     Video unavailable
                                 </div>
-                            )}
+                            )} */}
                         </motion.div>
                         {/* </div> */}
                     </div>
