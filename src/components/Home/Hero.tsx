@@ -268,7 +268,7 @@ export function Hero() {
             className="absolute top-15 left-5 lg:left-0 xl:left-35  z-40"
           >
             <Image
-              src="/images/Ck logo.png" // ✅ Corrected path
+              src="./images/Ck logo.png" // ✅ Corrected path
               alt="Company Logo"
               width={112}               // You must specify either width+height or use 'fill'
               height={48}
