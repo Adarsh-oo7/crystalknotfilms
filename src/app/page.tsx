@@ -8,7 +8,7 @@ import FluidCursor from '../components/FluidCursor'
 import { Hero } from '../components/Home/Hero'
 import React from 'react'
 import { HowItWorks } from '@/components/Home/HowItWorks'
-// import Portfolio from '@/components/Home/Portfolio'
+import Portfolio from '@/components/Home/Portfolio'
 import Faq from '@/components/Home/Faq'
 
 
@@ -80,7 +80,7 @@ function Page() {
         <About />
         <HowItWorks />
         <Faq />
-        {/* <Portfolio /> */}
+        <Portfolio />
 
       </Loader>
     </div>
