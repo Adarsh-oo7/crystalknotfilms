@@ -226,8 +226,8 @@ export default function About() {
                     </div>
 
                     {/* Centered Content */}
-       <div className="col-start-2 row-span-2 flex items-center justify-center text-center px-8 py-10 z-20">
-  <div className="backdrop-blur-md border border-white/30 bg-white/10 rounded-xl shadow-lg p-10 md:p-12 lg:p-16 w-full max-w-6xl min-h-[500px] lg:min-h-[600px] xl:min-h-[650px]">
+        <div className="col-start-2 row-span-2 flex items-center justify-center text-center px-8 py-10 z-20">
+  <div className="backdrop-blur-md border border-white/30 bg-white/10 rounded-xl shadow-lg p-6 max-w-4xl w-full">
     <motion.div
       className="w-full"
       initial="hidden"
@@ -236,17 +236,17 @@ export default function About() {
       variants={textVariants}
     >
       <h1
-        className="text-2xl text-white md:text-3xl lg:text-4xl font-bold tracking-tight leading-tight mb-6"
+        className="text-2xl text-white md:text-3xl lg:text-4xl font-bold tracking-tight leading-tight mb-4"
         style={{ fontFamily: "Cinzel, Regular" }}
       >
         FOUNDERING STORY
       </h1>
 
-      <div className="text-base text-white md:text-lg leading-relaxed">
+      <div className="text-base text-white md:text-sm leading-relaxed">
         <motion.div
           ref={contentRef}
           style={{ opacity, fontFamily: "Cinzel, Regular" }}
-          className="text-center space-y-6 max-w-3xl mx-auto"
+          className="text-center space-y-6 max-w-lg md:max-w-lg lg:max-w-lg xl:max-w-2xl mx-auto"
         >
           {storyContent}
         </motion.div>
