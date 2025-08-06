@@ -7,7 +7,7 @@ import { CardBody, CardContainer, CardItem } from "../ui/3d-card";
 export function ProfileCard() {
   return (
     <CardContainer className="inter-var">
-      <CardBody className="bg-white/8 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white border-white w-[16rem] sm:w-[20rem] md:w-[20rem] lg:w-[25rem] h-auto rounded-xl p-4 border">
+      <CardBody className="bg-white/8 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white border-white w-[16rem] sm:w-[20rem] md:w-[20rem] lg:w-[22rem] h-auto rounded-xl p-4 border">
         <CardItem
           translateZ="50"
           className="w-full text-center text-2xl font-bold text-neutral-100 dark:text-white"
