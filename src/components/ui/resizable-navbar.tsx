@@ -254,8 +254,8 @@ export const NavbarLogo = () => {
         height={30}
       /> */}
       <span className="font-medium text-white dark:text-white">
-        <span style={{ fontFamily: 'Ginger, sans-serif' }}>Crystalknot </span>
-        <span style={{ fontFamily: 'Essential Sans' }}>films</span>
+        <span style={{ fontFamily: 'Ginger, sans-serif' }}>Crystal Knot </span>
+        <span style={{ fontFamily: 'Essential Sans' }}>Films</span>
       </span>
     </a>
   );

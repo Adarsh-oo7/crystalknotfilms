@@ -18,13 +18,13 @@ export default function Faq() {
                 className="text-3xl sm:text-4xl lg:text-5xl tracking-tight text-gray-900"
                 style={{ fontFamily: "Cinzel, Regular" }}
               >
-                WHY <br /> CRYSTALKNOT?
+                WHY <br /> CRYSTAL KNOT FILMS?
               </h2>
               <p
                 className="text-base sm:text-lg text-gray-700 max-w-md"
                 style={{ fontFamily: "Quicksand, Regular" }}
               >
-                Aren&apos;t there like a thousand Wedding Videography companies out there? What makes CrystalKnotfilms different?
+                Aren&apos;t there like a thousand Wedding Videography companies out there? What makes Crystal Knot films different?
               </p>
               <p
                 className="text-base sm:text-lg text-gray-700 max-w-md"
