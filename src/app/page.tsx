@@ -39,10 +39,10 @@ function Page() {
   ];
   return (
     <div>
-      {/* <Loader loadingTime={3000}>
-        {" "} */}
+      <Loader loadingTime={3000}>
+        {" "}
       {/* The page content will appear after 3 seconds */}
-      {/* <FluidCursor /> */}
+      <FluidCursor />
       <Navbar>
 
         <NavBody>
@@ -86,7 +86,7 @@ function Page() {
       {/* <HowItWorks /> */}
       <Faq />
 
-      {/* </Loader> */}
+      </Loader>
     </div>
   )
 }
