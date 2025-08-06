@@ -6,7 +6,6 @@ import { Loader } from '../components/common/Loader'
 import FluidCursor from '../components/FluidCursor'
 import { Hero } from '../components/Home/Hero'
 import React from 'react'
-import { HowItWorks } from '@/components/Home/HowItWorks'
 import Faq from '@/components/Home/Faq'
 
 
@@ -34,7 +33,7 @@ function Page() {
     { name: "ABOUT", link: "#about" },
     { name: "PORTFOLIO", link: "#Portfolio" },
     { name: "SERVICES", link: "#Service" },
-    { name: "HOW IT WORKS", link: "#HowItWorks" },
+    { name: "HOW IT WORKS", link: "/HowItWorks" },
     { name: "CONTACT", link: "#contact" },
   ];
   return (
@@ -83,7 +82,6 @@ function Page() {
       <div className="flex flex-col items-center justify-center min-h-screen">
         <MarqueeDemo />
       </div>
-      {/* <HowItWorks /> */}
       <Faq />
 
       </Loader>
