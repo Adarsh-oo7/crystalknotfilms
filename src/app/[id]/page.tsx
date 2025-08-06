@@ -1,13 +1,24 @@
+import { notFound } from "next/navigation";
 import { videos } from "@/lib/video-data";
 import ClientVideoSection from "@/components/Home/ClientVideoSection";
-import { notFound } from "next/navigation";
 
-// ✅ Use direct destructuring and no custom types here
-export default function VideoPage({ params }: { params: { id: string } }) {
-  const video = videos.find((v) => v.id === params.id);
+// ✅ Static params for static site generation
+export async function generateStaticParams() {
+  return videos.map((video) => ({
+    id: video.id,
+  }));
+}
+
+// ✅ Declare page as async
+export default async function VideoPage(props: {
+  params: Promise<{ id: string }>; // ✅ Await the params
+}) {
+  const { id } = await props.params; // ✅ Await before accessing `id`
+
+  const video = videos.find((v) => v.id === id);
 
   if (!video) {
-    notFound(); // Next.js built-in 404
+    notFound();
   }
 
   const youtubeEmbedUrl = `${video.baseEmbedUrl}&autoplay=1`;
@@ -22,8 +33,8 @@ export default function VideoPage({ params }: { params: { id: string } }) {
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
-            title={`YouTube video ${params.id}`}
-          />
+            title={`YouTube video ${id}`}
+          ></iframe>
         </div>
 
         <h3 className="text-2xl font-semibold mb-4">More from Weddings</h3>
@@ -34,11 +45,4 @@ export default function VideoPage({ params }: { params: { id: string } }) {
       </div>
     </div>
   );
-}
-
-// ✅ This must return array of params like { id: string }
-export async function generateStaticParams() {
-  return videos.map((video) => ({
-    id: video.id,
-  }));
 }
