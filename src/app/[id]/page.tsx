@@ -1,13 +1,11 @@
 import ClientVideoSection from "@/components/Home/ClientVideoSection";
 import { videos } from "@/lib/video-data";
 
-interface VideoPageProps {
-  params: {
-    id: string;
-  };
-}
-
-export default function VideoPage({ params }: VideoPageProps) {
+export default function VideoPage({
+  params,
+}: {
+  params: { id: string };
+}) {
   const video = videos.find((v) => v.id === params.id);
 
   if (!video) {
