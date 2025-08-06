@@ -2,17 +2,12 @@ import { videos } from "@/lib/video-data";
 import ClientVideoSection from "@/components/Home/ClientVideoSection";
 import { notFound } from "next/navigation";
 
-interface Params {
-  params: {
-    id: string;
-  };
-}
-
-export default function VideoPage({ params }: Params) {
+// ✅ Use direct destructuring and no custom types here
+export default function VideoPage({ params }: { params: { id: string } }) {
   const video = videos.find((v) => v.id === params.id);
 
   if (!video) {
-    notFound(); // built-in 404 handling
+    notFound(); // Next.js built-in 404
   }
 
   const youtubeEmbedUrl = `${video.baseEmbedUrl}&autoplay=1`;
@@ -28,7 +23,7 @@ export default function VideoPage({ params }: Params) {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
             title={`YouTube video ${params.id}`}
-          ></iframe>
+          />
         </div>
 
         <h3 className="text-2xl font-semibold mb-4">More from Weddings</h3>
@@ -41,7 +36,7 @@ export default function VideoPage({ params }: Params) {
   );
 }
 
-// ✅ This must return an array of params to be statically generated
+// ✅ This must return array of params like { id: string }
 export async function generateStaticParams() {
   return videos.map((video) => ({
     id: video.id,
