@@ -103,7 +103,7 @@ export default function Faq() {
           {/* Right Column: Image */}
           <div className="flex justify-center md:justify-end">
             <Image
-              src="./images/Chelsea&Liam (11 of 24) (1).jpg"
+              src="./images/Chelsea&Liam (11 of 24).jpg"
               width={500}
               height={550}
               alt="A smiling couple, with the woman laughing and the man smiling in the background."

@@ -29,7 +29,7 @@ export const videos = [
   },
   {
     id: "lTRiuFIWV54",
-    thumbnail: "./images/Chelsea&Liam (11 of 24) (1).jpg",
+    thumbnail: "./images/Chelsea&Liam (11 of 24).jpg",
     baseEmbedUrl: "https://www.youtube.com/embed/mDfpW_IgN6Y?si=HNyROHMvGvEiql2N",
   },
 ];
