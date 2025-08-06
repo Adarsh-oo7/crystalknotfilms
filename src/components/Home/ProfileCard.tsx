@@ -33,7 +33,7 @@ export function ProfileCard() {
         >
           <div className="relative w-full h-auto aspect-[4/5] rounded-xl overflow-hidden group-hover/card:shadow-xl">
             <Image
-              src="/images/Without background.png"
+              src="./images/Without background.png"
               alt="thumbnail"
               fill
               className="object-contain"
