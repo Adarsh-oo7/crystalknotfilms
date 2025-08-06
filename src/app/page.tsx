@@ -2,13 +2,11 @@
 
 
 import { useState } from "react";
-import About from '@/components/Home/About'
 import { Loader } from '../components/common/Loader'
 import FluidCursor from '../components/FluidCursor'
 import { Hero } from '../components/Home/Hero'
 import React from 'react'
 import { HowItWorks } from '@/components/Home/HowItWorks'
-import Portfolio from '@/components/Home/ClientVideoSection'
 import Faq from '@/components/Home/Faq'
 
 
@@ -82,13 +80,11 @@ function Page() {
       <Hero />
       <Story />
       <Testimonial />
-      {/* <About /> */}
       <div className="flex flex-col items-center justify-center min-h-screen">
         <MarqueeDemo />
       </div>
       {/* <HowItWorks /> */}
       <Faq />
-      {/* <Portfolio /> */}
 
       {/* </Loader> */}
     </div>

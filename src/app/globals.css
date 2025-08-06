@@ -108,7 +108,7 @@ body {
 
 @font-face {
   font-family: 'Ginger';
-  src: url('/crystalknotfilms/fonts/GingerBread.woff') format('woff');  
+  src: url('/fonts/GingerBread.woff') format('woff');  
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -116,7 +116,7 @@ body {
 
 @font-face {
   font-family: 'Essential Sans';
-  src: url('/crystalknotfilms/fonts/Essence Sans Light.ttf') format('truetype');
+  src: url('/fonts/Essence Sans Light.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -124,7 +124,7 @@ body {
 
 @font-face {
   font-family: 'Cinzel';
-  src: url('/crystalknotfilms/fonts/Cinzel-Regular.otf') format('opentype');
+  src: url('/fonts/Cinzel-Regular.otf') format('opentype');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -134,7 +134,7 @@ body {
 
 @font-face {
   font-family: 'Quicksand';
-  src: url('/crystalknotfilms/fonts/Quicksand_Book.otf') format('opentype');
+  src: url('/fonts/Quicksand_Book.otf') format('opentype');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -142,7 +142,7 @@ body {
 
 @font-face {
   font-family: 'Roboto';
-  src: url('/crystalknotfilms/fonts/Roboto-Regular.ttf') format('truetype');
+  src: url('/fonts/Roboto-Regular.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
