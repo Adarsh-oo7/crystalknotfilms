@@ -4,7 +4,7 @@ import { Pencil, Video, Download } from 'lucide-react'
 import { motion } from 'framer-motion'
 
 
-export function HowItWorks() {
+export default function Page() {
     const steps = [
         {
             label: 'Tell Us',
