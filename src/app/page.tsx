@@ -8,7 +8,7 @@ import FluidCursor from '../components/FluidCursor'
 import { Hero } from '../components/Home/Hero'
 import React from 'react'
 import { HowItWorks } from '@/components/Home/HowItWorks'
-import Portfolio from '@/components/Home/Portfolio'
+import Portfolio from '@/components/Home/ClientVideoSection'
 import Faq from '@/components/Home/Faq'
 
 
@@ -23,6 +23,9 @@ import {
   MobileNavMenu,
   MobileNavToggle,
 } from "@/components/ui/resizable-navbar";
+import Story from "@/components/Home/Story";
+import Testimonial from "@/components/Home/Testimonial";
+import MarqueeDemo from "@/components/Home/marquee-demo";
 
 
 function Page() {
@@ -38,51 +41,56 @@ function Page() {
   ];
   return (
     <div>
-      <Loader loadingTime={3000}>
-        {" "}
-        {/* The page content will appear after 3 seconds */}
-        <FluidCursor />
-        <Navbar>
+      {/* <Loader loadingTime={3000}>
+        {" "} */}
+      {/* The page content will appear after 3 seconds */}
+      {/* <FluidCursor /> */}
+      <Navbar>
 
-          <NavBody>
+        <NavBody>
+          <NavbarLogo />
+          <NavItems items={navItems} />
+          <NavbarButton href="#contact">Get in Touch</NavbarButton>
+        </NavBody>
+
+
+        <MobileNav>
+          <MobileNavHeader>
             <NavbarLogo />
-            <NavItems items={navItems} />
+            <MobileNavToggle
+              isOpen={isMobileOpen}
+              onClick={() => setIsMobileOpen(!isMobileOpen)}
+            />
+          </MobileNavHeader>
+
+          <MobileNavMenu isOpen={isMobileOpen} onClose={() => setIsMobileOpen(false)}>
+            {navItems.map((item) => (
+              <a
+                key={item.name}
+                href={item.link}
+                className="text-black dark:text-white"
+                onClick={() => setIsMobileOpen(false)}
+              >
+                {item.name}
+              </a>
+            ))}
             <NavbarButton href="#contact">Get in Touch</NavbarButton>
-          </NavBody>
+          </MobileNavMenu>
+        </MobileNav>
+      </Navbar>
 
+      <Hero />
+      <Story />
+      <Testimonial />
+      {/* <About /> */}
+      <div className="flex flex-col items-center justify-center min-h-screen">
+        <MarqueeDemo />
+      </div>
+      {/* <HowItWorks /> */}
+      <Faq />
+      {/* <Portfolio /> */}
 
-          <MobileNav>
-            <MobileNavHeader>
-              <NavbarLogo />
-              <MobileNavToggle
-                isOpen={isMobileOpen}
-                onClick={() => setIsMobileOpen(!isMobileOpen)}
-              />
-            </MobileNavHeader>
-
-            <MobileNavMenu isOpen={isMobileOpen} onClose={() => setIsMobileOpen(false)}>
-              {navItems.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.link}
-                  className="text-black dark:text-white"
-                  onClick={() => setIsMobileOpen(false)}
-                >
-                  {item.name}
-                </a>
-              ))}
-              <NavbarButton href="#contact">Get in Touch</NavbarButton>
-            </MobileNavMenu>
-          </MobileNav>
-        </Navbar>
-
-        <Hero />
-        <About />
-        <HowItWorks />
-        <Faq />
-        <Portfolio />
-
-      </Loader>
+      {/* </Loader> */}
     </div>
   )
 }

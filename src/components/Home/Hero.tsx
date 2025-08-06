@@ -288,18 +288,18 @@ export function Hero() {
             className="text-center text-white max-w-4xl"
           >
             <div className="mb-4">
-              <span className="text-3xl lg:text-5xl font-light italic" style={{ fontFamily: "GingerBread, serif" }}
+              <span className="text-3xl lg:text-4xl font-light italic" style={{ fontFamily: "GingerBread, serif" }}
               >
-                Where Moments
+                Emotionally Crafted Edits for 
               </span>
             </div>
             <h2
-              className="text-4xl lg:text-7xl xl:text-8xl font-light tracking-wider mb-8"
+              className="text-4xl lg:text-4xl xl:text-7xl font-light tracking-wider mb-8"
               style={{ fontFamily: "Essential sans, serif" }}
 
 
             >
-              Meet Style
+              Weddings, Reels & Events
             </h2>
           </motion.div>
 
