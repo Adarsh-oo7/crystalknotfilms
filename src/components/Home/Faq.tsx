@@ -3,11 +3,11 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 
 export default function Faq() {
   return (
-    <div className="relative min-h-screen bg-white overflow-hidden flex items-center justify-center py-16">
+    <div className="relative min-h-screen bg-[#f5f5f5] overflow-hidden flex items-center justify-center py-16">
       {/* Top-left diagonal background shape */}
-      <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-gray-400 transform -rotate-45 -translate-x-1/2 -translate-y-1/2 md:w-[600px] md:h-[600px] lg:w-[800px] lg:h-[800px]" />
+      {/* <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-[#1E1E1E] transform -rotate-45 -translate-x-1/2 -translate-y-1/2 md:w-[600px] md:h-[600px] lg:w-[800px] lg:h-[800px]" /> */}
       {/* Bottom-right diagonal background shape */}
-      <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-gray-400 transform rotate-45 translate-x-1/2 translate-y-1/2 md:w-[600px] md:h-[600px] lg:w-[800px] lg:h-[800px]" />
+      {/* <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-[#1E1E1E] transform rotate-45 translate-x-1/2 translate-y-1/2 md:w-[600px] md:h-[600px] lg:w-[800px] lg:h-[800px]" /> */}
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -15,13 +15,13 @@ export default function Faq() {
           <div className="space-y-8">
             <div className="space-y-4">
               <h2
-                className="text-3xl sm:text-4xl lg:text-5xl tracking-tight text-gray-900"
-                style={{ fontFamily: "Cinzel, Regular" }}
+                className="text-[26px] sm:text-[28px] md:text-[30px] lg:text-[34px] xl:text-[36px] font-normal tracking-tight text-black"
+                style={{ fontFamily: 'Cinzel, sans-serif', letterSpacing: '0.09em', lineHeight: 1.4, }}
               >
                 WHY <br /> CRYSTAL KNOT FILMS?
               </h2>
               <p
-                className="text-base sm:text-lg text-gray-700 max-w-md"
+                className="text-base sm:text-lg text-gray-400 max-w-md"
                 style={{ fontFamily: "Quicksand, Regular" }}
               >
                 Aren&apos;t there like a thousand Wedding Videography companies out there? What makes Crystal Knot films different?

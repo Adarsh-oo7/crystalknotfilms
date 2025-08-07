@@ -202,7 +202,7 @@ export function Hero() {
   // }
 
   return (
-    <section className="relative min-h-screen w-full flex flex-col overflow-hidden">
+<section className="fixed top-0 left-0 w-full h-screen z-0 flex flex-col overflow-hidden">
       <div className="absolute top-0 left-0 right-0 z-30">
       </div>
 
@@ -272,7 +272,7 @@ export function Hero() {
               alt="Company Logo"
               width={112}               // You must specify either width+height or use 'fill'
               height={48}
-              className="invert w-16 sm:w-20 md:w-24 lg:w-28 xl:w-30 h-auto"
+              className="invert w-20 sm:w-25 md:w-30 lg:w-35 xl:w-40 h-auto"
             />
           </motion.div>
 

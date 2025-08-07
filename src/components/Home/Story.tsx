@@ -1,108 +1,75 @@
-'use client'
-
-import { useRef } from "react"
-import { motion, Variants, easeOut, useScroll, useTransform } from "framer-motion"
-import LightRays from "../LightRays"
-import { ProfileCard } from "./ProfileCard"
-
-const slideLeft: Variants = {
-    hidden: { x: -100, opacity: 0 },
-    visible: {
-        x: 0,
-        opacity: 1,
-        transition: { duration: 1.5, ease: easeOut },
-    },
-}
-
-const slideRight: Variants = {
-    hidden: { x: 100, opacity: 0 },
-    visible: {
-        x: 0,
-        opacity: 1,
-        transition: { duration: 1.5, ease: easeOut },
-    },
-}
-
-
 export default function Story() {
-    const contentRef = useRef(null)
-    const { scrollYProgress } = useScroll({
-        target: contentRef,
-        offset: ["start end", "end start"],
-    })
-    const opacity = useTransform(scrollYProgress, [0, 0.9, 1], [1, 0.3, 0])
-
-    const storyContent = (
-        <>
-            <p>
-                Working with other big brands in the Video editing industry for almost 8 years, I realized that almost every editor was after one thing – to cover as many weddings and make as much money as possible.
-                There was no character in the wedding films. Have you observed that most wedding videos are just plain slow-motion walking clips of the couple? God, it’s almost 2025! Your iPhones can do that!
-                And no one even tried to change that. That killed me as an artist. In 2020,
-                I decided to start Crystal Knot Films — a place where edits aren’t rushed, stories aren’t recycled, and every timeline is built with care, coffee, and just the right amount of drama.
-            </p>
-            <p>
-                Today, we create wedding films that don’t just look good — they feel right.
-                Real stories. Real emotion. Zero copy-paste vibes.
-            </p>
-        </>
-    )
-
     return (
-        <div id="about" className="relative bg-gradient-to-b from-black via-black/100 to-black/70 text-white min-h-screen px-6 py-12 md:py-0 flex items-center justify-center">
-            {/* Light Rays Background */}
-            <div className="absolute inset-0 z-0">
-                <LightRays
-                    raysOrigin="top-center"
-                    raysColor="ffffff"
-                    raysSpeed={2.5}
-                    lightSpread={0.9}
-                    rayLength={2.5}
-                    followMouse={true}
-                    mouseInfluence={0.5}
-                    noiseAmount={0.1}
-                    distortion={0.05}
-                    className="pointer-events-none w-full h-full"
-                />
-            </div>
+        <main className="relative z-10 mt-[100vh] bg-[#f5f5f5]">
 
-            {/* Two Column Content */}
-            <div className="relative z-10 max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                {/* Left: Story */}
-
-                <motion.div
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, amount: 0.3 }}
-                    variants={slideLeft}
-                    className="mt-8 md:mt-5 md:mb-5 backdrop-blur-md border border-white/30 bg-white/10 rounded-xl shadow-lg p-6 space-y-6"
-                >
-
-
-                    <h1 className="text-3xl md:text-3xl font-bold text-white tracking-tight text-center md:text-left" style={{ fontFamily: "Cinzel, Regular" }}>
-                        FOUNDERING STORY
+            <main className="flex min-h-screen flex-col items-center justify-center bg-[#f5f5f5] py-12 px-4">
+                <div className="text-center max-w-4xl mx-auto">
+                    <h1
+                        className="text-[26px] sm:text-[28px] md:text-[30px] lg:text-[34px] xl:text-[36px] font-normal mb-4 text-gray-800"
+                        style={{ fontFamily: 'Montserrat, sans-serif', letterSpacing: '0.1em', lineHeight: 1.4, }}>
+                        WEDDING VIDEOGRAPHY & CINEMATOGRAPHY
                     </h1>
 
-                    <motion.div
-                        ref={contentRef}
-                        style={{ opacity, fontFamily: "Cinzel, Regular" }}
-                        className="text-white leading-relaxed text-sm sm:text-sm md:text-sm lg:text-base space-y-6"
-                    >
-                        {storyContent}
-                    </motion.div>
-                </motion.div>
 
-                {/* Right: Profile Card */}
-                <motion.div
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, amount: 0.3 }}
-                    variants={slideRight}
-                    className="flex justify-center md:justify-end"
-                >
-                    <ProfileCard />
-                </motion.div>
+                    <p className="text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[18px] font-normal mb-12 text-gray-700" style={{ fontFamily: 'Montserrat, sans-serif', letterSpacing: '0.1em', lineHeight: 1.4, }}>
+                        &quot;NEW AGE LOVE STORIES FOR THE MODERN COUPLE.&quot;
+                    </p>
 
-            </div>
-        </div>
+                    {/* New container for Foundering Story and Image */}
+                    <div className="flex flex-col md:flex-row items-start gap-26 max-w-7xl px-0 md:px-0 mx-auto mt-12 justify-between">
+                        {/* TEXT CONTAINER */}
+                        <div className="bg-white p-5 md:p-10 pr-2 md:pr-5 shadow-sm w-full md:w-[100%] text-start ">
+                            <h2
+                                className="text-xl md:text-2xl font-normal tracking-wide mb-6 text-gray-800 text-center md:text-left"
+                                style={{
+                                    fontFamily: 'Montserrat, sans-serif',
+                                    letterSpacing: '0.1em',
+                                    lineHeight: 1.4,
+                                }}
+                            >
+                                FOUNDERING STORY
+                            </h2>
+                            <p
+                                className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] xl:text-[16px] leading-relaxed mb-6 text-gray-700"
+                                style={{ fontFamily: 'Quicksand, sans-serif' }}
+                            >
+                                &quot;Working with other big brands in the Video editing industry for almost 8 years, I realized that Almost editors was after one thing - to cover as many weddings and make as much money as possible.
+                                There was no character in the wedding Films, Have you observed that most of the wedding videos you see are just plain slow-motion walking clips of the couple? God, it’s almost 2025! Your iPhones can do that!
+                                And no one even tried to change that. That killed me as an artist. In 2020,
+
+                            </p>
+                            <p
+                                className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] xl:text-[16px] leading-relaxed text-gray-700"
+                                style={{ fontFamily: 'Quicksand, sans-serif' }}
+                            >
+                                I decided to start Crystal Knot Films — a place where edits aren’t rushed, stories aren’t recycled, and every timeline is built with care, coffee, and just the right amount of drama.
+                                Today, we create wedding films that don’t just look good — they feel right.
+                                Real stories. Real emotion. Zero copy-paste vibes.
+                            </p>
+                        </div>
+
+                        {/* IMAGE */}
+                        <div className="w-full md:w-[70%] mt-0 sm:mb-10 sm:mt-0 md:mt-35 lg:mt-30 pl-2 md:pl-10 flex justify-end">
+                            <img
+                                src="./images/Without background.png"
+                                alt="Wedding Videography Equipment"
+                                className="w-[70%] sm:w-[50%] mx-auto sm:mx-auto md:mx-auto  md:w-full h-auto object-cover rounded-lg"
+                            />
+                        </div>
+
+                    </div>
+
+
+
+
+                    <div className="mt-12">
+                        <button className="bg-black text-white px-2 py-3 rounded-lg md:px-3 lg:px-7 lg:py-4 text-lg hover:bg-gray-800 transition-colors duration-200" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                            Browse our Portfolio
+                        </button>
+                    </div>
+                </div>
+            </main>
+        </main>
+
     )
 }
