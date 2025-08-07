@@ -126,11 +126,12 @@ export default function ClientVideoSection() {
                     />
                   ) : (
                     <button onClick={() => setPlayingVideoId(video.id)} className="group relative w-full h-full">
+
                       <Image
                         src={video.thumbnail}
                         alt={video.title}
                         fill
-                        className="object-cover transition-transform duration-300 group-hover:scale-105"
+                        className="object-cover transition-transform duration-300 group-hover:scale-100"
                       />
                       <div className="absolute inset-0 flex items-center justify-center bg-black/50">
                         <FaPlay className="text-white text-4xl opacity-90 hover:scale-110 transition-transform" />

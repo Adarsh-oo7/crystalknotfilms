@@ -58,7 +58,7 @@ export default function Brands() {
 
       {/* White Box Content */}
       <div className="relative z-20 flex items-center justify-center h-full px-4">
-        <div className="bg-white p-10 md:p-16 rounded-lg shadow-lg max-w-5xl w-full text-center">
+        <div className="bg-[#f5f5f5] p-10 md:p-16 rounded-lg shadow-lg max-w-5xl w-full text-center">
           <h2 className="text-2xl md:text-3xl  font-normal mb-8 text-black"style={{ fontFamily: 'Montserrat, sans-serif', letterSpacing: '0.1em', lineHeight: 1.4, }}>
             AS SEEN ON:
           </h2>

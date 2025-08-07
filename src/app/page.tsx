@@ -26,6 +26,7 @@ import MarqueeDemo from "@/components/Home/marquee-demo";
 import ParallaxHero from "@/components/Home/Parallax";
 import Brands from "@/components/Home/Brands";
 import ContactForm from "@/components/common/ContactForm";
+import Footer from "@/components/common/Footer";
 
 function Page() {
   return (
@@ -37,17 +38,18 @@ function Page() {
           <Story />
         </div>
         <div className="relative inset-0 z-0">
-          <ParallaxHero /> 
+          <ParallaxHero />
         </div>
-        <section className="relative z-10 bg-[#1E1E1E]"> 
+        <section className="relative z-0 bg-[#1E1E1E]">
           <Testimonial />
         </section>
         <MarqueeDemo />
         <Faq />
-        <Brands/>
-        <section className="relative z-10 bg-[#f5f5f5]"> 
-          <ContactForm/>
+        <Brands />
+        <section className="relative z-10 bg-[#f5f5f5]">
+          <ContactForm />
         </section>
+        
       </Loader>
     </div>
   );

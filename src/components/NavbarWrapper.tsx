@@ -15,9 +15,11 @@ import {
 
 const navItems = [
   { name: "HOW IT WORKS", link: "/HowItWorks" },
-  { name: "PORTFOLIO", link: "#Portfolio" },
-  { name: "SERVICES", link: "#Service" },
-  { name: "ABOUT", link: "#about" },
+  { name: "PORTFOLIO", link: "/Portfolio" },
+  { name: "SERVICES", link: "/Service" },
+  { name: "ABOUT", link: "/about" },
+  { name: "PRICING", link: "/Pricing" },
+
   // { name: "CONTACT", link: "#contact" },
 ];
 
@@ -29,7 +31,7 @@ export default function NavbarWrapper() {
       <NavBody>
         <NavbarLogo />
         <NavItems items={navItems} />
-        <NavbarButton href="#contact">Get in Touch</NavbarButton>
+        <NavbarButton href="/contact">Get in Touch</NavbarButton>
       </NavBody>
 
       <MobileNav>
@@ -52,7 +54,7 @@ export default function NavbarWrapper() {
               {item.name}
             </a>
           ))}
-          <NavbarButton href="#contact">Get in Touch</NavbarButton>
+          <NavbarButton href="/contact">Get in Touch</NavbarButton>
         </MobileNavMenu>
       </MobileNav>
     </Navbar>

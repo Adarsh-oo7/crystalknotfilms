@@ -96,6 +96,22 @@ body {
 
 }
 /* globals.css */
+@keyframes animated-border {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.animated-border-wrapper {
+  padding: 2px;
+  border-radius: 0.5rem; /* same as rounded-lg */
+  background: linear-gradient(270deg, #ec4899, #3b82f6, #8b5cf6);
+  background-size: 600% 600%;
+  animation: animated-border 4s linear infinite;
+}
 
 
 

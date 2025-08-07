@@ -1,6 +1,6 @@
 export default function Story() {
     return (
-        <main className="relative z-10 mt-[100vh] bg-[#f5f5f5]">
+        <main className="relative z-0 mt-[100vh] bg-[#f5f5f5]">
 
             <main className="flex min-h-screen flex-col items-center justify-center bg-[#f5f5f5] py-12 px-4">
                 <div className="text-center max-w-4xl mx-auto">

@@ -120,7 +120,7 @@ export default function TestimonialSection() {
 
 
     return (
-        <div className="flex min-h-screen items-center justify-center bg-[#1E1E1E] p-4 md:p-8">
+        <div className="flex min-h-screen items-center justify-center bg-[#1E1E1E] p-4 md:p-8 ">
             <div className="w-full max-w-6xl space-y-8">
                 <h2 className="text-center text-[26px] sm:text-[28px] md:text-[30px] lg:text-[34px] xl:text-[40px]  text-white tracking-widest " style={{ fontFamily: 'Cinzel, sans-serif', letterSpacing: '0.1em', lineHeight: 1.4, }}>
                     "KIND WORDS"

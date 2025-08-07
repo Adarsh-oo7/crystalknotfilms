@@ -4,32 +4,37 @@
 export const videos = [
   {
     id: "dQw4w9WgXcQ",
-    thumbnail: "./images/A7401967.jpg",
-    baseEmbedUrl: "https://www.youtube.com/embed/mDfpW_IgN6Y?si=HNyROHMvGvEiql2N",
+    thumbnail: "./images/video-data/v1.png",
+    baseEmbedUrl: "https://www.youtube.com/embed/-mhTawVXNSk?si=Q8SEKEwfGtPs8r9W",
   },
   {
     id: "LXb3EKWsInQ",
-    thumbnail: "./images/A7405470.jpg",
-    baseEmbedUrl: "https://www.youtube.com/embed/mDfpW_IgN6Y?si=HNyROHMvGvEiql2N",
+    thumbnail: "./images/video-data/v2.png",
+    baseEmbedUrl: "https://www.youtube.com/embed/Nr1mu8u2FeU?si=qTO2jsnc-03I_k-5",
   },
   {
     id: "k_okcNVz_FM",
-    thumbnail: "./images/A7405566.jpg",
-    baseEmbedUrl: "https://www.youtube.com/embed/mDfpW_IgN6Y?si=HNyROHMvGvEiql2N",
+    thumbnail: "./images/video-data/v3.png",
+    baseEmbedUrl: "https://www.youtube.com/embed/Uvq75p4yeq8?si=yegVq2hb_DVwjYkY",
   },
   {
     id: "jfKfPfyDnLM",
-    thumbnail: "./images/Abbey&Andy_Previews (21 of 37).jpg",
-    baseEmbedUrl: "https://www.youtube.com/embed/mDfpW_IgN6Y?si=HNyROHMvGvEiql2N",
+    thumbnail: "./images/video-data/v4.jpg",
+    baseEmbedUrl: "https://www.youtube.com/embed/HdYf4KAzb3g?si=x0ROIvqYiBUDJn87",
   },
   {
     id: "M7lc1UVf-VE",
-    thumbnail: "./images/SONY (1272).jpg",
-    baseEmbedUrl: "https://www.youtube.com/embed/mDfpW_IgN6Y?si=HNyROHMvGvEiql2N",
+    thumbnail: "./images/video-data/v5.png",
+    baseEmbedUrl: "https://www.youtube.com/embed/Ntfg592ufcs?si=sNu7wtPxq0oIMNiR",
   },
   {
     id: "lTRiuFIWV54",
-    thumbnail: "./images/Chelsea&Liam (11 of 24).jpg",
-    baseEmbedUrl: "https://www.youtube.com/embed/mDfpW_IgN6Y?si=HNyROHMvGvEiql2N",
+    thumbnail: "./images/video-data/v6.png",
+    baseEmbedUrl: "https://www.youtube.com/embed/YyTIZfHIALc?si=2LQgOj1Wo27JOZOb",
+  },
+  {
+    id: "lTRiuFIWV54",
+    thumbnail: "./images/video-data/v7.png",
+    baseEmbedUrl: "https://www.youtube.com/embed/BQvWtk7BL_U?si=kLk2vsQKESv8fqXX",
   },
 ];
