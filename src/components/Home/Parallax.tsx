@@ -50,7 +50,7 @@ const ParallaxHero = () => {
         <div className="relative z-10 text-center px-4">
           <div className="mb-6 flex justify-center">
             <Image
-              src="/images/Ck logo.png"
+              src="./images/Ck logo.png"
               alt="Logo"
               width={100}
               height={100}

@@ -6,24 +6,24 @@ import Image from "next/image";
 
 const logoPairs = [
   [
-    "/images/brands/gerdau-logo-removebg-preview.png",
-    "/images/brands/timeSquare-removebg-preview.png",
+    "./images/brands/gerdau-logo-removebg-preview.png",
+    "./images/brands/timeSquare-removebg-preview.png",
   ],
   [
-    "/images/brands/ninja-removebg-preview.png",
-    "/images/brands/TV9-removebg-preview.png",
+    "./images/brands/ninja-removebg-preview.png",
+    "./images/brands/TV9-removebg-preview.png",
   ],
   [
-    "/images/brands/TEDx-Logo-500x281-removebg-preview.png",
-    "/images/brands/gerdau-logo-removebg-preview.png",
+    "./images/brands/TEDx-Logo-500x281-removebg-preview.png",
+    "./images/brands/gerdau-logo-removebg-preview.png",
   ],
   [
-    "/images/brands/timeSquare-removebg-preview.png",
-    "/images/brands/ninja-removebg-preview.png",
+    "./images/brands/timeSquare-removebg-preview.png",
+    "./images/brands/ninja-removebg-preview.png",
   ],
   [
-    "/images/brands/TV9-removebg-preview.png",
-    "/images/brands/TEDx-Logo-500x281-removebg-preview.png",
+    "./images/brands/TV9-removebg-preview.png",
+    "./images/brands/TEDx-Logo-500x281-removebg-preview.png",
   ],
 ];
 
