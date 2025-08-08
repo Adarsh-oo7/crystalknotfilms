@@ -21,8 +21,8 @@ export default function VideoBanner() {
       <div className="absolute inset-0 bg-black/40 z-10" />
 
       {/* Centered content */}
-      <div className="relative z-20 flex flex-col items-center justify-center h-full px-4 text-center">
-        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2 drop-shadow-md">
+      <div className="relative z-20 flex flex-col items-center justify-center h-full px-4 text-center" style={{ fontFamily: 'Cinzel, sans-serif', letterSpacing: '0.1em', lineHeight: 1.4, }}>
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-normal text-white mb-2 drop-shadow-md">
           The Clarity You Deserve
         </h1>
         
