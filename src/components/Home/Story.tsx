@@ -1,3 +1,4 @@
+import Image from "next/image"
 export default function Story() {
     return (
         <main className="relative z-0 mt-[100vh] bg-[#f5f5f5]">
@@ -50,11 +51,13 @@ export default function Story() {
 
                         {/* IMAGE */}
                         <div className="w-full md:w-[70%] mt-0 sm:mb-10 sm:mt-0 md:mt-35 lg:mt-30 pl-2 md:pl-10 flex justify-end">
-                            <img
-                                src="./images/Without background.png"
-                                alt="Wedding Videography Equipment"
-                                className="w-[70%] sm:w-[50%] mx-auto sm:mx-auto md:mx-auto  md:w-full h-auto object-cover rounded-lg"
-                            />
+                           <Image
+  src="/images/Without background.png"
+  alt="Wedding Videography Equipment"
+  width={600} // specify appropriate width
+  height={400} // specify appropriate height
+  priority // optional: load image faster
+/>
                         </div>
 
                     </div>
