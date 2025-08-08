@@ -4,7 +4,7 @@ import VideoBanner from '@/components/common/Video-banner';
 import React, { useState } from 'react';
 import { Plus, Minus } from 'lucide-react';
 
-function page() {
+function Page() {
     const [activeIndex, setActiveIndex] = useState(null);
 
     const handleToggle = (index) => {
@@ -243,4 +243,4 @@ function CheckIcon({ disabled = false }) {
     );
 }
 
-export default page;
+export default Page;
