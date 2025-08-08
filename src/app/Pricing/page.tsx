@@ -5,11 +5,12 @@ import React, { useState } from 'react';
 import { Plus, Minus } from 'lucide-react';
 
 function Page() {
-    const [activeIndex, setActiveIndex] = useState(null);
+    const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
-    const handleToggle = (index) => {
+    const handleToggle = (index: number) => {
         setActiveIndex(activeIndex === index ? null : index);
     };
+
 
     return (
         <div className="bg-[#f5f5f5]">
