@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'next/link'
+
 function Pricing() {
     return (
         <div className="bg-[#1E1E1E] py-20 text-white">
@@ -26,12 +26,12 @@ function Pricing() {
                             <li><CheckIcon /><span>Upto 10hrs of raw footage</span></li>
                             <li><CheckIcon /><span>Three Revisions + Premiere files</span></li>
                         </ul>
-                        <Link
+                        <a
                             href="/Pricing"
                             className="mt-6 inline-block px-6 py-2 rounded-md border border-white text-white bg-white/20 backdrop-blur-md hover:bg-white hover:text-black transition"
                         >
                             View More
-                        </Link>
+                        </a>
 
                     </div>
                 </div>
@@ -54,12 +54,12 @@ function Pricing() {
                             <li><CheckIcon /><span>Upto 10hrs of raw footage</span></li>
                             <li><CheckIcon /><span>Three Revisions + Premiere files</span></li>
                         </ul>
-                        <Link
+                        <a
                             href="/Pricing"
                             className="mt-6 inline-block px-6 py-2 rounded-md border border-white text-white bg-white/20 backdrop-blur-md hover:bg-white hover:text-black transition"
                         >
                             View More
-                        </Link>
+                        </a>
 
                     </div>
                 </div>
