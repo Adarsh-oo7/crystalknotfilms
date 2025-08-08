@@ -1,8 +1,32 @@
 'use client';
 
-import VideoBanner from '@/components/common/Video-banner';
 import React, { useState } from 'react';
+import VideoBanner from '@/components/common/Video-banner';
 import { Plus, Minus } from 'lucide-react';
+
+// -------------------- Component Types --------------------
+
+interface PricingCardProps {
+    title: string;
+    price: number;
+    features: string[];
+    addons?: string[];
+}
+
+interface CollapsibleCardProps {
+    index: number;
+    title: string;
+    features: string[];
+    price: number;
+    isOpen: boolean;
+    toggle: (index: number) => void;
+}
+
+interface CheckIconProps {
+    disabled?: boolean;
+}
+
+// -------------------- Main Page Component --------------------
 
 function Page() {
     const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -11,22 +35,21 @@ function Page() {
         setActiveIndex(activeIndex === index ? null : index);
     };
 
-
     return (
         <div className="bg-[#f5f5f5]">
             <VideoBanner
                 title="The Clarity You Deserve"
-                videoSrc="/videos/intro.mp4" />
+                videoSrc="/videos/intro.mp4"
+            />
 
-            <section className="py-20 px-6 md:px-16 ">
+            {/* Section: Intro + List */}
+            <section className="py-20 px-6 md:px-16">
                 <div className="max-w-6xl mx-auto">
-                    <h3 className="text-[26px] sm:text-[28px] md:text-[30px] lg:text-[34px] xl:text-[40px]  text-center text-gray-900 mb-6" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.08em', lineHeight: 1.4, }}>
+                    <h3 className="text-[26px] sm:text-[28px] md:text-[30px] lg:text-[34px] xl:text-[40px]  text-center text-gray-900 mb-6" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.08em', lineHeight: 1.4 }}>
                         Wedding Video Editing Price
                     </h3>
                     <p className="text-start text-gray-700 text-[13px] sm:text-[14px] md:text-[16px] lg:text-[18px] xl:text-[18px] mb-8 max-w-3xl mx-auto" style={{ fontFamily: 'Quicksand, sans-serif' }}>
-                        We are fully committed to giving our clients cost-efficient wedding video editing services.
-                        We’re always striving to provide the best price–quality ratio so you’ll get the outcome you’re
-                        looking for at a reasonable price.
+                        We are fully committed to giving our clients cost-efficient wedding video editing services. We’re always striving to provide the best price – 2 – quality ratio so you’ll get the outcome you’re looking for at a reasonable price. Our professional wedding video editing price structure is based on several factors. To determine how much our service is going to cost, you’ll have to take the following in consideration:
                     </p>
 
                     <ul className="text-gray-700 text-[13px] sm:text-[14px] md:text-[16px] lg:text-[18px] xl:text-[18px] space-y-2 max-w-2xl mx-auto text-start" style={{ fontFamily: 'Quicksand, sans-serif' }}>
@@ -39,40 +62,29 @@ function Page() {
                     </ul>
 
                     <p className="text-start text-gray-700 text-[13px] sm:text-[14px] md:text-[16px] lg:text-[18px] xl:text-[18px] mt-8 mb-8 max-w-3xl mx-auto" style={{ fontFamily: 'Quicksand, sans-serif' }}>
-                        There isn’t a one-size-fits-all solution in terms of wedding video editing and post-production.
-                        We will create a tailored offer for you that will be based on those factors.
+                        There isn’t a one-size-fits-all solution in terms of wedding video editing and post-production. We will create a tailored offer for you that will be based on those factors.
                     </p>
 
                     <div className="border border-pink-100 shadow-lg rounded-2xl p-10 md:p-14 bg-[#e2e2e2df]">
-                        <h3 className="ext-[20px] sm:text-[20px] md:text-[25px] lg:text-[30px] xl:text-[35px] font-bold text-center text-gray-900 mb-6" style={{ fontFamily: 'Quicksand, sans-serif' }}>
+                        <h3 className="text-[20px] sm:text-[20px] md:text-[25px] lg:text-[30px] xl:text-[35px] font-bold text-center text-gray-900 mb-6" style={{ fontFamily: 'Quicksand, sans-serif' }}>
                             Elevate Your Business with Expert Editing
                         </h3>
                         <p className="text-center text-gray-800 text-[13px] sm:text-[14px] md:text-[16px] lg:text-[18px] xl:text-[18px] mb-6 max-w-3xl mx-auto" style={{ fontFamily: 'Quicksand, sans-serif' }}>
-                            Outsourcing wedding video editing saves you a lot of time – you can dedicate this newfound time
-                            to finding new clients, shooting videos, and generating revenue for your business.
-                        </p>
-                        <p className="text-center text-gray-800 text-[13px] sm:text-[14px] md:text-[16px] lg:text-[18px] xl:text-[18px] mb-6 max-w-3xl mx-auto" style={{ fontFamily: 'Quicksand, sans-serif' }}>
-                            Strategically speaking, a partnership with an experienced team like ours will enable you to
-                            optimise corporate processes, thus saving money and boosting your income.
+                           Outsourcing wedding video editing saves you a lot of time – You can dedicate this newfound time to finding new clients, shooting videos and generating revenue for your business.
+                           Strategically speaking, a partnership with an experienced team like ours will enable you to optimise corporate processes, thus saving money and boosting your income.
                         </p>
                         <p className="text-center text-gray-800 text-[13px] sm:text-[14px] md:text-[16px] lg:text-[18px] xl:text-[18px] max-w-3xl mx-auto" style={{ fontFamily: 'Quicksand, sans-serif' }}>
-                            Looking for the biggest bargain in terms of wedding video editing isn’t always the best approach.
-                            There could be hidden fees and additional charges you weren’t made aware of in the beginning.
-                            <br />
-                            <span className="block mt-4 font-medium" style={{ fontFamily: 'Quicksand, sans-serif' }}>
-                                At <span className="text-[#D4AF37] font-semibold" style={{ fontFamily: 'Ginger, sans-serif' }}>Crystal Knot Films</span>, we believe in complete transparency
-                                and offer competitive wedding video editing services that are reasonably priced even for the
-                                one-man team.
+                            Looking for the biggest bargain in terms of wedding video editing isn’t always the best approach. There could be hidden fees and additional charges you weren’t made aware of in the beginning.<br />
+                            <span className="block mt-4 font-medium">
+                                At <span className="text-[#D4AF37] font-semibold" style={{ fontFamily: 'Ginger, sans-serif' }}>Crystal Knot Films</span>, we believe in complete transparency and we offer competitive wedding video editing services that are reasonably priced even for the one-man team.
                             </span>
                         </p>
-
-
                     </div>
                 </div>
             </section>
 
-            {/* Original Pricing Cards */}
-            <div className="flex flex-wrap justify-center gap-6 px-4" >
+            {/* Static Pricing Cards */}
+            <div className="flex flex-wrap justify-center gap-6 px-4">
                 <PricingCard
                     title="HIGHLIGHT"
                     price={200}
@@ -84,9 +96,7 @@ function Page() {
                         '480p - 4K',
                         '7 - 30 days turnaround',
                     ]}
-                    addons={[
-                        '1 min Trailer',
-                    ]}
+                    addons={['1 min Trailer']}
                 />
                 <PricingCard
                     title="FEATURE"
@@ -99,10 +109,7 @@ function Page() {
                         '480p - 4K',
                         '7 - 30 days turnaround',
                     ]}
-                    addons={[
-                        '1 min Trailer',
-
-                    ]}
+                    addons={['1 min Trailer']}
                 />
                 <PricingCard
                     title="FULL LENGTH"
@@ -123,10 +130,9 @@ function Page() {
                 />
             </div>
 
-
             {/* Accordion Pricing Section */}
             <section className="w-full px-4 py-16">
-                <h2 className="text-[26px] sm:text-[28px] md:text-[30px] lg:text-[34px] xl:text-[40px] font-bold text-center text-gray-900 mb-10" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.08em', lineHeight: 1.4, }}>
+                <h2 className="text-[26px] sm:text-[28px] md:text-[30px] lg:text-[34px] xl:text-[40px] font-bold text-center text-gray-900 mb-10" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.08em', lineHeight: 1.4 }}>
                     Wedding Video Editing Packages
                 </h2>
                 <div className="flex flex-wrap justify-center gap-6 items-start">
@@ -136,11 +142,7 @@ function Page() {
                         toggle={handleToggle}
                         title="Package (1)"
                         price={325}
-                        features={[
-                            '1 min trailer',
-                            '3 – 8 min highlight',
-
-                        ]}
+                        features={['1 min trailer', '3 – 8 min highlight']}
                     />
                     <CollapsibleCard
                         index={1}
@@ -164,12 +166,14 @@ function Page() {
     );
 }
 
-function PricingCard({ title, price, features, addons = [] }) {
+// -------------------- Pricing Card --------------------
+
+function PricingCard({ title, price, features, addons = [] }: PricingCardProps) {
     return (
         <div className="w-full sm:w-[90%] md:w-[45%] lg:w-[30%] bg-[#e2e2e2df] border border-gray-300 rounded-xl shadow-sm p-6">
             <div className="flex flex-col items-center">
                 <h2 className="text-center">
-                    <span className="bg-[#D4AF37] w-full text-white px-4 py-1 rounded text-xl " style={{ fontFamily: 'Quicksand, sans-serif' }}>{title}</span>
+                    <span className="bg-[#D4AF37] w-full text-white px-4 py-1 rounded text-xl" style={{ fontFamily: 'Quicksand, sans-serif' }}>{title}</span>
                 </h2>
 
                 <p className="text-lg text-center mt-2 font-medium" style={{ fontFamily: 'Montserrat, sans-serif' }}>FROM</p>
@@ -183,11 +187,10 @@ function PricingCard({ title, price, features, addons = [] }) {
                     ))}
                 </ul>
 
-                {/* Add-ons */}
                 {addons.length > 0 && (
                     <div className="mt-6 w-full text-center">
-                        <h4 className="text-sm font-bold mb-2 text-gray-800" style={{ fontFamily: 'Quicksand, sans-serif' }}>Add-ons</h4>
-                        <ul className="text-sm text-gray-600 space-y-1 " style={{ fontFamily: 'Quicksand, sans-serif' }}>
+                        <h4 className="text-sm font-bold mb-2 text-gray-800">Add-ons</h4>
+                        <ul className="text-sm text-gray-600 space-y-1">
                             {addons.map((addon, idx) => (
                                 <li key={idx}>• {addon}</li>
                             ))}
@@ -199,8 +202,9 @@ function PricingCard({ title, price, features, addons = [] }) {
     );
 }
 
+// -------------------- Collapsible Card --------------------
 
-function CollapsibleCard({ index, title, features = [], price, isOpen, toggle }) {
+function CollapsibleCard({ index, title, features = [], price, isOpen, toggle }: CollapsibleCardProps) {
     return (
         <div className="border rounded-xl bg-[#e2e2e2df] p-6 shadow-md transition hover:shadow-lg w-full max-w-sm">
             <div className="flex justify-between items-start mb-4">
@@ -210,17 +214,14 @@ function CollapsibleCard({ index, title, features = [], price, isOpen, toggle })
                 </button>
             </div>
 
-            <div
-                className={`grid transition-all duration-300 ease-in-out ${isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
-                    } overflow-hidden`}
-            >
+            <div className={`grid transition-all duration-300 ease-in-out ${isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'} overflow-hidden`}>
                 <div className="overflow-hidden">
-                    <ul className="text-gray-700 space-y-2 text-sm mb-4" style={{ fontFamily: 'Quicksand, sans-serif' }}>
+                    <ul className="text-gray-700 space-y-2 text-sm mb-4">
                         {features.map((item, idx) => (
                             <li key={idx}>• {item}</li>
                         ))}
                     </ul>
-                    <p className="text-sm font-semibold text-gray-800 pb-1" style={{ fontFamily: 'Quicksand, sans-serif' }}>
+                    <p className="text-sm font-semibold text-gray-800 pb-1">
                         <span className="text-black">Starting From </span>
                         <span className="text-teal-600">${price} USD</span>
                     </p>
@@ -230,7 +231,9 @@ function CollapsibleCard({ index, title, features = [], price, isOpen, toggle })
     );
 }
 
-function CheckIcon({ disabled = false }) {
+// -------------------- Check Icon --------------------
+
+function CheckIcon({ disabled = false }: CheckIconProps) {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
