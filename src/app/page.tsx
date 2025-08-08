@@ -1,34 +1,15 @@
-
-
-import { useState } from "react";
+import React from 'react'
 import { Loader } from '../components/common/Loader'
 import FluidCursor from '../components/FluidCursor'
 import { Hero } from '../components/Home/Hero'
-import React from 'react'
-import Faq from '@/components/Home/Faq'
-
-
-
-import {
-  Navbar,
-  NavBody,
-  NavbarLogo,
-  NavItems,
-  NavbarButton,
-  MobileNav,
-  MobileNavHeader,
-  MobileNavMenu,
-  MobileNavToggle,
-} from "@/components/ui/resizable-navbar";
-import Story from "@/components/Home/Story";
-import Testimonial from "@/components/Home/Testimonial";
-import MarqueeDemo from "@/components/Home/marquee-demo";
-import ParallaxHero from "@/components/Home/Parallax";
-import Brands from "@/components/Home/Brands";
-import ContactForm from "@/components/common/ContactForm";
-import Footer from "@/components/common/Footer";
-import ExpandableCardDemo from "@/components/expandable-card-demo-standard";
-import Pricing from "@/components/Home/Pricing";
+import Faq from '../components/Home/Faq'
+import Story from "../components/Home/Story";
+import Testimonial from "../components/Home/Testimonial";
+import MarqueeDemo from "../components/Home/marquee-demo";
+import ParallaxHero from "../components/Home/Parallax";
+import Brands from "../components/Home/Brands";
+import ContactForm from "../components/common/ContactForm";
+import Pricing from "../components/Home/Pricing";
 
 function Page() {
   return (
@@ -48,13 +29,12 @@ function Page() {
         <MarqueeDemo />
         <Faq />
         <Brands />
-                <section className="relative z-10 bg-[#1E1E1E]">
-<Pricing/>
+        <section className="relative z-10 bg-[#1E1E1E]">
+          <Pricing />
         </section>
         <section className="relative z-10 bg-[#f5f5f5]">
           <ContactForm />
         </section>
-        
       </Loader>
     </div>
   );
