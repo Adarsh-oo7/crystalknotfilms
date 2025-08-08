@@ -4,7 +4,7 @@ function Pricing() {
     return (
         <div className="bg-[#1E1E1E] py-20 text-white">
             {/* Top Heading */}
-            <h1 className="text-4xl font-bold text-center mb-12">PRICING</h1>
+            <h1 className="text-[26px] sm:text-[28px] md:text-[30px] lg:text-[34px] xl:text-[40px] font-bold text-center mb-12" style={{ fontFamily: 'Cinzel, sans-serif', letterSpacing: '0.1em', lineHeight: 1.4, }}>PRICING</h1>
 
             {/* Pricing Cards Container */}
             <div className="flex flex-wrap justify-center gap-6 px-4">
@@ -12,15 +12,15 @@ function Pricing() {
                 <div className="w-full sm:w-[90%] md:w-[45%] lg:w-[30%] bg-transparent border border-white rounded-xl shadow-sm p-6">
                     <div className="flex flex-col items-center">
                         <h2 className="text-center">
-                            <span className="bg-white text-black px-4 py-1 rounded text-xl font-semibold">HIGHLIGHTS</span>
+                            <span className="bg-[#D4AF37] text-white px-4 py-1 rounded text-xl font-semibold" style={{ fontFamily: 'Quicksand, sans-serif'}}>HIGHLIGHTS</span>
                         </h2>
-                        <p className="text-lg text-center mt-2 font-medium">
+                        <p className="text-lg text-center mt-2 font-medium"style={{ fontFamily: 'Montserrat, sans-serif'}}>
                             FROM
                         </p>
-                        <p className="text-4xl text-center mt-2 font-medium">
+                        <p className="text-4xl text-center mt-2 font-medium"style={{ fontFamily: 'Montserrat, sans-serif'}}>
                             $200
                         </p>
-                        <ul className="flex flex-col gap-3 text-sm mt-6 items-center text-center">
+                        <ul className="flex flex-col gap-3 text-sm mt-6 items-center text-center"style={{ fontFamily: 'Quicksand, sans-serif'}}>
                             <li><CheckIcon /><span>3 - 8 min long</span></li>
                             <li><CheckIcon /><span>1 - 3 cameras incl. drones</span></li>
                             <li><CheckIcon /><span>Upto 10hrs of raw footage</span></li>
@@ -29,6 +29,7 @@ function Pricing() {
                         <a
                             href="/Pricing"
                             className="mt-6 inline-block px-6 py-2 rounded-md border border-white text-white bg-white/20 backdrop-blur-md hover:bg-white hover:text-black transition"
+                            style={{ fontFamily: 'Quicksand, sans-serif'}}
                         >
                             View More
                         </a>
@@ -40,15 +41,15 @@ function Pricing() {
                 <div className="w-full sm:w-[90%] md:w-[45%] lg:w-[30%] bg-transparent border border-white rounded-xl shadow-sm p-6">
                     <div className="flex flex-col items-center">
                         <h2 className="text-center">
-                            <span className="bg-white text-black px-4 py-1 rounded text-xl font-semibold">HIGHLIGHTS</span>
+                            <span className="bg-[#D4AF37] text-white px-4 py-1 rounded text-xl font-semibold"style={{ fontFamily: 'Quicksand, sans-serif'}}>FEATURE</span>
                         </h2>
-                        <p className="text-lg text-center mt-2 font-medium">
+                        <p className="text-lg text-center mt-2 font-medium"style={{ fontFamily: 'Montserrat, sans-serif'}}>
                             FROM
                         </p>
-                        <p className="text-4xl text-center mt-2 font-medium">
+                        <p className="text-4xl text-center mt-2 font-medium"style={{ fontFamily: 'Montserrat, sans-serif'}}>
                             $300
                         </p>
-                        <ul className="flex flex-col gap-3 text-sm mt-6 items-center text-center">
+                        <ul className="flex flex-col gap-3 text-sm mt-6 items-center text-center"style={{ fontFamily: 'Quicksand, sans-serif'}}>
                             <li><CheckIcon /><span>10 - 15 min long</span></li>
                             <li><CheckIcon /><span>1 - 3 cameras incl. drones</span></li>
                             <li><CheckIcon /><span>Upto 10hrs of raw footage</span></li>
@@ -57,6 +58,7 @@ function Pricing() {
                         <a
                             href="/Pricing"
                             className="mt-6 inline-block px-6 py-2 rounded-md border border-white text-white bg-white/20 backdrop-blur-md hover:bg-white hover:text-black transition"
+                            style={{ fontFamily: 'Quicksand, sans-serif'}}
                         >
                             View More
                         </a>
@@ -68,15 +70,15 @@ function Pricing() {
                 <div className="w-full sm:w-[90%] md:w-[45%] lg:w-[30%] bg-transparent border border-white rounded-xl shadow-sm p-6">
                     <div className="flex flex-col items-center">
                         <h2 className="text-center">
-                            <span className="bg-white text-black px-4 py-1 rounded text-xl font-semibold">HIGHLIGHTS</span>
+                            <span className="bg-[#D4AF37] text-white px-4 py-1 rounded text-xl font-semibold"style={{ fontFamily: 'Quicksand, sans-serif'}}>FULL LENGTH</span>
                         </h2>
-                        <p className="text-lg text-center mt-2 font-medium">
+                        <p className="text-lg text-center mt-2 font-medium"style={{ fontFamily: 'Montserrat, sans-serif'}}>
                             FROM
                         </p>
-                        <p className="text-4xl text-center mt-2 font-medium">
+                        <p className="text-4xl text-center mt-2 font-medium"style={{ fontFamily: 'Montserrat, sans-serif'}}>
                             $325
                         </p>
-                        <ul className="flex flex-col gap-3 text-sm mt-6 items-center text-center">
+                        <ul className="flex flex-col gap-3 text-sm mt-6 items-center text-center"style={{ fontFamily: 'Quicksand, sans-serif'}}>
                             <li><CheckIcon /><span>30 - 60 min long</span></li>
                             <li><CheckIcon /><span>1 - 3 cameras incl. drones</span></li>
                             <li><CheckIcon /><span>Upto 12hrs of raw footage</span></li>
@@ -85,6 +87,7 @@ function Pricing() {
                         <a
                             href="/Pricing"
                             className="mt-6 inline-block px-6 py-2 rounded-md border border-white text-white bg-white/20 backdrop-blur-md hover:bg-white hover:text-black transition"
+                            style={{ fontFamily: 'Quicksand, sans-serif'}}
                         >
                             View More
                         </a>

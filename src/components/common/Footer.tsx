@@ -15,7 +15,7 @@ const navLeft = [
 
 const navRight = [
   { name: "PORTFOLIO", href: "/Portfolio" },
-  { name: "Contact", href: "/contact" },
+  { name: "CONTACT", href: "/contact" },
 ];
 
 export default function Footer() {
@@ -23,7 +23,7 @@ export default function Footer() {
     <footer className="bg-[#1e1e1e] text-white px-6 md:px-16 py-10">
       <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-10">
         {/* Left Nav */}
-        <div className="flex flex-col gap-2 text-sm text-left">
+        <div className="flex flex-col gap-2 text-sm text-left"style={{ fontFamily: 'Essential Sans, sans-serif'}}>
           {navLeft.map((item) => (
             <Link href={item.href} key={item.name} className="hover:underline">
               {item.name}
@@ -37,11 +37,11 @@ export default function Footer() {
             <Image src="./images/Ck logo.png" alt="Logo" width={100} height={100} />
           </Link>
 
-          <p className="text-3xl font-light tracking-wide">Crystal Knot Films</p>
+          <p className="text-2xl font-light "style={{ fontFamily: 'Ginger, sans-serif'}}>Crystal Knot <span style={{ fontFamily: 'Essential Sans, sans-serif'}}>Films</span></p>
         </div>
 
         {/* Right Nav */}
-        <div className="flex flex-col gap-2 text-sm text-right">
+        <div className="flex flex-col gap-2 text-sm text-right"style={{ fontFamily: 'Essential Sans, sans-serif'}}>
           {navRight.map((item) => (
             <Link href={item.href} key={item.name} className="hover:underline">
               {item.name}
@@ -51,7 +51,7 @@ export default function Footer() {
       </div>
 
       {/* Footer Bottom */}
-      <div className="mt-10 flex flex-col md:flex-row justify-between items-center text-xs text-gray-400 gap-4">
+      <div className="mt-10 flex flex-col md:flex-row justify-between items-center text-xs text-gray-400 gap-4"style={{ fontFamily: 'Quicksand, sans-serif'}}>
         <p className="text-left">COPYRIGHT 2025</p>
         <p className="text-center">DIGITAL PRODUCT SOLUTIONS</p>
         <div className="flex gap-4 text-white text-base">
