@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 
 interface VideoBannerProps {
   title?: string;
@@ -13,15 +13,29 @@ export default function VideoBanner({
   overlayOpacity = '0.4',
 }: VideoBannerProps) {
   const isProd = process.env.NODE_ENV === 'production';
+  const basePath = isProd ? '/crystalknotfilms' : '';
 
-  // Use a base path in production
-  const resolvedVideoSrc = videoSrc
-    ? isProd
-      ? `/crystalknotfilms${videoSrc}`
-      : videoSrc
-    : isProd
-    ? '/crystalknotfilms/videos/intro.mp4'
-    : '/videos/intro.mp4';
+  const [videoSources] = useState(() => {
+    const fallback = videoSrc || '/videos/intro.mp4';
+    const path = `${basePath}${fallback}`;
+
+    return [
+      // ✅ GitHub raw fallback (production only)
+      isProd
+        ? 'https://raw.githubusercontent.com/adarsh-oo7/crystalknotfilms/main/public/videos/intro.mp4'
+        : path,
+
+      // ✅ GitHub media fallback
+      isProd
+        ? 'https://media.githubusercontent.com/media/adarsh-oo7/crystalknotfilms/main/public/videos/intro.mp4'
+        : path,
+
+      // ✅ Local fallback
+      path,
+    ];
+  });
+
+  const poster = isProd ? `${basePath}/fallback.jpg` : '/fallback.jpg';
 
   return (
     <div className="relative w-full h-[60vh] md:h-[75vh] overflow-hidden">
@@ -31,20 +45,31 @@ export default function VideoBanner({
         muted
         loop
         playsInline
-        poster={isProd ? '/crystalknotfilms/fallback.jpg' : '/fallback.jpg'}
+        poster={poster}
       >
-        <source src={resolvedVideoSrc} type="video/mp4" />
+        {videoSources.map((src, idx) => (
+          <source key={idx} src={src} type="video/mp4" />
+        ))}
         Your browser does not support the video tag.
       </video>
+
+      {/* Overlay */}
       <div
         className="absolute inset-0 bg-black"
         style={{ opacity: overlayOpacity }}
-      ></div>
-      <div className="relative z-10 flex items-center justify-center h-full text-white text-center px-4">
-        <h1 className="text-3xl md:text-5xl font-bold" style={{ fontFamily: 'Montserrat, sans-serif' }}>
-          {title}
-        </h1>
-      </div>
+      />
+
+      {/* Title content */}
+      {title && (
+        <div className="relative z-10 flex items-center justify-center h-full text-white text-center px-4">
+          <h1
+            className="text-3xl md:text-5xl font-bold"
+            style={{ fontFamily: 'Montserrat, sans-serif' }}
+          >
+            {title}
+          </h1>
+        </div>
+      )}
     </div>
   );
 }
