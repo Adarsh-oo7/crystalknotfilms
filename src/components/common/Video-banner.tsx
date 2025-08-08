@@ -9,7 +9,7 @@ interface VideoBannerProps {
 }
 
 export default function VideoBanner({
-title = "The Clarity You Deserve",
+  title = "The Clarity You Deserve",
   overlayOpacity = "40",
   videoSrc,
 }: VideoBannerProps) {
@@ -20,9 +20,9 @@ title = "The Clarity You Deserve",
   const [videoError, setVideoError] = useState(false);
   const [videoRef, setVideoRef] = useState<HTMLVideoElement | null>(null);
 
-const videoSources = videoSrc
-  ? [videoSrc]
-  : [
+  const videoSources = videoSrc
+    ? [videoSrc]
+    : [
       isProd
         ? "https://github.com/adarsh-oo7/crystalknotfilms/raw/main/public/videos/intro.mp4"
         : "/videos/intro.mp4",

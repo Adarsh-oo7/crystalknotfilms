@@ -103,7 +103,7 @@ export default function Page() {
     },
   ];
 
-  
+
 
   return (
     <div>
@@ -170,7 +170,7 @@ export default function Page() {
           </div>
 
           <section className="max-w-2xl mx-auto px-4 py-12 mt-12">
-            <h2 className="text-2xl sm:text-3xl font-bold text-center text-black mb-8"style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.08em', lineHeight: 1.4, }}>
+            <h2 className="text-2xl sm:text-3xl font-bold text-center text-black mb-8" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.08em', lineHeight: 1.4, }}>
               Frequently Asked Questions
             </h2>
             <div className="space-y-4">
@@ -194,7 +194,7 @@ export default function Page() {
                   <div
                     className={`px-4 pb-4 text-sm text-gray-700 transition-all duration-300 ease-in-out ${openIndex === index ? "block" : "hidden"
                       }`}
-                      style={{ fontFamily: 'Quicksand, sans-serif' }}
+                    style={{ fontFamily: 'Quicksand, sans-serif' }}
                   >
                     {faq.answer || "Answer coming soon..."}
                   </div>
