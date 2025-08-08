@@ -39,6 +39,19 @@ export default function Brands() {
     return () => clearInterval(interval);
   }, []);
 
+  const isProd = process.env.NODE_ENV === 'production';
+  const basePath = isProd ? '/crystalknotfilms' : '';
+
+  const videoSources = [
+    isProd
+      ? 'https://raw.githubusercontent.com/adarsh-oo7/crystalknotfilms/main/public/videos/intro.mp4'
+      : `${basePath}/videos/intro.mp4`,
+    isProd
+      ? 'https://media.githubusercontent.com/media/adarsh-oo7/crystalknotfilms/main/public/videos/intro.mp4'
+      : `${basePath}/videos/intro.mp4`,
+    `${basePath}/videos/intro.mp4`,
+  ];
+
   return (
     <section className="relative w-full h-screen overflow-hidden">
       {/* Background Video */}
@@ -48,8 +61,11 @@ export default function Brands() {
         loop
         playsInline
         className="absolute inset-0 w-full h-full object-cover z-0"
+        poster={isProd ? `${basePath}/fallback.jpg` : '/fallback.jpg'}
       >
-        <source src="/videos/intro.mp4" type="video/mp4" />
+        {videoSources.map((src, index) => (
+          <source key={index} src={src} type="video/mp4" />
+        ))}
         Your browser does not support the video tag.
       </video>
 
@@ -59,16 +75,25 @@ export default function Brands() {
       {/* White Box Content */}
       <div className="relative z-20 flex items-center justify-center h-full px-4">
         <div className="bg-[#f5f5f5] p-10 md:p-16 rounded-lg shadow-lg max-w-5xl w-full text-center">
-          <h2 className="text-2xl md:text-3xl  font-normal mb-8 text-black" style={{ fontFamily: 'Montserrat, sans-serif', letterSpacing: '0.1em', lineHeight: 1.4, }}>
+          <h2
+            className="text-2xl md:text-3xl font-normal mb-8 text-black"
+            style={{
+              fontFamily: 'Montserrat, sans-serif',
+              letterSpacing: '0.1em',
+              lineHeight: 1.4,
+            }}
+          >
             AS SEEN ON:
           </h2>
 
           {/* Logos Grid */}
           <div className="grid grid-cols-6 gap-6 items-center justify-items-center">
-            {/* First row: 3 logos spanning 2 columns each */}
-            {/* First row: 3 logos spanning 2 columns each */}
+            {/* First row */}
             {[0, 1, 2].map((i) => (
-              <div key={i} className="col-span-2 relative w-24 h-12 sm:w-32 sm:h-16 md:w-40 md:h-20">
+              <div
+                key={i}
+                className="col-span-2 relative w-24 h-12 sm:w-32 sm:h-16 md:w-40 md:h-20"
+              >
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={logoPairs[i][activeIndex[i]]}
@@ -89,12 +114,13 @@ export default function Brands() {
               </div>
             ))}
 
-
-            {/* Second row: logos between the top ones */}
-            {/* Second row: logos between the top ones */}
+            {/* Second row */}
             <div className="col-span-1" />
             {[3, 4].map((i) => (
-              <div key={i} className="col-span-2 relative w-20 h-10 sm:w-28 sm:h-14 md:w-32 md:h-16">
+              <div
+                key={i}
+                className="col-span-2 relative w-20 h-10 sm:w-28 sm:h-14 md:w-32 md:h-16"
+              >
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={logoPairs[i][activeIndex[i]]}
@@ -115,7 +141,6 @@ export default function Brands() {
               </div>
             ))}
             <div className="col-span-1" />
-
           </div>
         </div>
       </div>
