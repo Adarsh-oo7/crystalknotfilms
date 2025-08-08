@@ -2,13 +2,17 @@
 
 import React, { useEffect, useState } from "react";
 
-export default function VideoBanner({
-  title = "The Clarity You Deserve",
-  overlayOpacity = "40",
-}: {
+interface VideoBannerProps {
   title?: string;
   overlayOpacity?: string;
-}) {
+  videoSrc?: string;
+}
+
+export default function VideoBanner({
+title = "The Clarity You Deserve",
+  overlayOpacity = "40",
+  videoSrc,
+}: VideoBannerProps) {
   const isProd = process.env.NODE_ENV === "production";
 
   const [currentVideoSource, setCurrentVideoSource] = useState(0);
@@ -16,15 +20,18 @@ export default function VideoBanner({
   const [videoError, setVideoError] = useState(false);
   const [videoRef, setVideoRef] = useState<HTMLVideoElement | null>(null);
 
-  const videoSources = [
-    isProd
-      ? "https://github.com/adarsh-oo7/crystalknotfilms/raw/main/public/videos/intro.mp4"
-      : "/videos/intro.mp4",
-    isProd
-      ? "https://media.githubusercontent.com/media/adarsh-oo7/crystalknotfilms/main/public/videos/intro.mp4"
-      : "/videos/intro.mp4",
-    "/videos/intro.mp4", // fallback
-  ];
+const videoSources = videoSrc
+  ? [videoSrc]
+  : [
+      isProd
+        ? "https://github.com/adarsh-oo7/crystalknotfilms/raw/main/public/videos/intro.mp4"
+        : "/videos/intro.mp4",
+      isProd
+        ? "https://media.githubusercontent.com/media/adarsh-oo7/crystalknotfilms/main/public/videos/intro.mp4"
+        : "/videos/intro.mp4",
+      "/videos/intro.mp4", // fallback
+    ];
+
 
   useEffect(() => {
     if (videoRef && videoLoaded) {
