@@ -97,7 +97,7 @@ export default function TestimonialSection() {
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 3000,
-        arrows: true,
+        arrows: false,
         pauseOnHover: false,
         responsive: [
             {
@@ -128,7 +128,7 @@ export default function TestimonialSection() {
                 <Slider {...settings}>
                     {testimonials.map((testimonial, index) => (
                         <div key={index} className="px-3 py-4 h-full">
-                            <div className="w-full max-w-[800px] mx-auto rounded-xl border border-white bg-[rgba(140,140,140,0.3)] p-6 text-white shadow-lg flex flex-col md:flex-row min-h-[350px] backdrop-blur-sm">
+                            <div className="w-full max-w-[800px] mx-auto rounded-xl border border-white  p-6 text-white shadow-lg flex flex-col md:flex-row min-h-[350px] backdrop-blur-sm">
                                 {/* Left Section */}
                                 <div className="flex-1 pr-0 md:pr-4 flex flex-col justify-between">
                                     <h3 className="text-[13px] sm:text-[14px] md:text-[16px] lg:text-[18px] xl:text-[20px] font-semibold text-white mb-1" style={{ fontFamily: 'Quicksand, sans-serif' }}>{testimonial.leftContent.heading}</h3>

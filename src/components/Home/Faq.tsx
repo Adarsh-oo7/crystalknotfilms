@@ -37,13 +37,13 @@ export default function Faq() {
             <Accordion type="single" collapsible className="w-full max-w-md">
               <AccordionItem value="item-1">
                 <AccordionTrigger
-                  className="text-sm sm:text-base md:text-lg font-bold text-gray-800 hover:no-underline"
+                  className="text-sm sm:text-base text-start md:text-lg font-bold text-gray-800 hover:no-underline"
                   style={{ fontFamily: "Quicksand, Regular" }}
                 >
                   Less Posey-shosey, and more Candid-Shandid.
                 </AccordionTrigger>
                 <AccordionContent
-                  className="text-sm sm:text-base text-gray-600"
+                  className="text-sm sm:text-base text-start text-gray-600"
                   style={{ fontFamily: "Quicksand, Regular" }}
                 >
                   Don’t get us wrong, all those Sabyasachi and GQ poses have their place and time. But there is nothing better than the natural versions of our couples. If I have to define our videography style, that would be a perfect mix of - &apos;Documentary &amp; Editorial.&apos;
@@ -52,7 +52,7 @@ export default function Faq() {
 
               <AccordionItem value="item-2">
                 <AccordionTrigger
-                  className="text-sm sm:text-base md:text-lg font-bold text-gray-800 hover:no-underline"
+                  className="text-sm sm:text-base text-start md:text-lg font-bold text-gray-800 hover:no-underline"
                   style={{ fontFamily: "Quicksand, Regular" }}
                 >
                   Family Matters.
@@ -67,7 +67,7 @@ export default function Faq() {
 
               <AccordionItem value="item-3">
                 <AccordionTrigger
-                  className="text-sm sm:text-base md:text-lg font-bold text-gray-800 hover:no-underline"
+                  className="text-sm sm:text-base text-start md:text-lg font-bold text-gray-800 hover:no-underline"
                   style={{ fontFamily: "Quicksand, Regular" }}
                 >
                   Our videos won&apos;t bore you to death!
@@ -85,7 +85,7 @@ export default function Faq() {
 
               <AccordionItem value="item-4">
                 <AccordionTrigger
-                  className="text-sm sm:text-base md:text-lg font-bold text-gray-800 hover:no-underline"
+                  className="text-sm sm:text-base text-start md:text-lg font-bold text-gray-800 hover:no-underline"
                   style={{ fontFamily: "Quicksand, Regular" }}
                 >
                   The more the merrier? - Boo!!

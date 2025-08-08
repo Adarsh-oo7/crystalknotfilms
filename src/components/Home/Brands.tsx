@@ -59,15 +59,16 @@ export default function Brands() {
       {/* White Box Content */}
       <div className="relative z-20 flex items-center justify-center h-full px-4">
         <div className="bg-[#f5f5f5] p-10 md:p-16 rounded-lg shadow-lg max-w-5xl w-full text-center">
-          <h2 className="text-2xl md:text-3xl  font-normal mb-8 text-black"style={{ fontFamily: 'Montserrat, sans-serif', letterSpacing: '0.1em', lineHeight: 1.4, }}>
+          <h2 className="text-2xl md:text-3xl  font-normal mb-8 text-black" style={{ fontFamily: 'Montserrat, sans-serif', letterSpacing: '0.1em', lineHeight: 1.4, }}>
             AS SEEN ON:
           </h2>
 
           {/* Logos Grid */}
           <div className="grid grid-cols-6 gap-6 items-center justify-items-center">
             {/* First row: 3 logos spanning 2 columns each */}
+            {/* First row: 3 logos spanning 2 columns each */}
             {[0, 1, 2].map((i) => (
-              <div key={i} className="col-span-2 relative w-[200px] h-[100px]">
+              <div key={i} className="col-span-2 relative w-24 h-12 sm:w-32 sm:h-16 md:w-40 md:h-20">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={logoPairs[i][activeIndex[i]]}
@@ -80,8 +81,7 @@ export default function Brands() {
                     <Image
                       src={logoPairs[i][activeIndex[i]]}
                       alt={`Logo ${i}`}
-                      width={150}
-                      height={50}
+                      fill
                       className="object-contain"
                     />
                   </motion.div>
@@ -89,10 +89,12 @@ export default function Brands() {
               </div>
             ))}
 
+
+            {/* Second row: logos between the top ones */}
             {/* Second row: logos between the top ones */}
             <div className="col-span-1" />
             {[3, 4].map((i) => (
-              <div key={i} className="col-span-2 relative w-[150px] h-[80px]">
+              <div key={i} className="col-span-2 relative w-20 h-10 sm:w-28 sm:h-14 md:w-32 md:h-16">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={logoPairs[i][activeIndex[i]]}
@@ -105,8 +107,7 @@ export default function Brands() {
                     <Image
                       src={logoPairs[i][activeIndex[i]]}
                       alt={`Logo ${i}`}
-                      width={150}
-                      height={50}
+                      fill
                       className="object-contain"
                     />
                   </motion.div>
@@ -114,6 +115,7 @@ export default function Brands() {
               </div>
             ))}
             <div className="col-span-1" />
+
           </div>
         </div>
       </div>

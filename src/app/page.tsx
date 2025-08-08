@@ -27,6 +27,8 @@ import ParallaxHero from "@/components/Home/Parallax";
 import Brands from "@/components/Home/Brands";
 import ContactForm from "@/components/common/ContactForm";
 import Footer from "@/components/common/Footer";
+import ExpandableCardDemo from "@/components/expandable-card-demo-standard";
+import Pricing from "@/components/Home/Pricing";
 
 function Page() {
   return (
@@ -46,6 +48,9 @@ function Page() {
         <MarqueeDemo />
         <Faq />
         <Brands />
+                <section className="relative z-10 bg-[#1E1E1E]">
+<Pricing/>
+        </section>
         <section className="relative z-10 bg-[#f5f5f5]">
           <ContactForm />
         </section>
