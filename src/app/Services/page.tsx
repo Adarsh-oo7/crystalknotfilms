@@ -3,7 +3,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
-import VideoBanner from "@/components/common/Video-banner";
 
 const services = [
   {

@@ -2,7 +2,6 @@
 import { useState } from "react";
 import { Pencil, Video, Download } from 'lucide-react';
 import { motion } from 'framer-motion';
-import VideoBanner from '@/components/common/Video-banner';
 import { ChevronDown, ChevronUp } from "lucide-react";
 
 

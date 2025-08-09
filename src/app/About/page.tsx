@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Image from "next/image";
 // import { motion } from "framer-motion";
-import VideoBanner from "@/components/common/Video-banner";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 import Link from "next/link";

@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState } from 'react';
-import VideoBanner from '@/components/common/Video-banner';
 import { Plus, Minus } from 'lucide-react';
 
 // -------------------- Component Types --------------------

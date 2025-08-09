@@ -1,4 +1,3 @@
-import VideoBanner from '@/components/common/Video-banner'
 import ClientVideoSection from '@/components/Home/ClientVideoSection'
 import React from 'react'
 
