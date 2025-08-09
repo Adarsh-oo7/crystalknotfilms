@@ -15,49 +15,47 @@ export default function ContactForm() {
 
   const [isSubmitting, setIsSubmitting] = useState(false)
 
-const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-  const { name, value } = e.target;
-  setFormData((prev) => ({ ...prev, [name]: value }));
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+  setIsSubmitting(true);
+
+  try {
+    // Use the deployment URL
+    const response = await fetch("https://script.google.com/macros/s/AKfycbwLJKaMBctvpf8Kz1g-oUx10WNO5GV7T9NLa6jEY08DBkpso9zXGgALIMWuvoDlgvY/exec", {
+      method: "POST",
+      // mode: 'no-cors',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: new URLSearchParams({
+        name: formData.name,
+        email: formData.email,
+        category: formData.category,
+        message: formData.message,
+        formGoogleSheetName: "CrystalKnotFilms",
+        formDataNameOrder: JSON.stringify(["name", "email", "category", "message"]),
+        formGoogleSendEmail: "crystalknotfilms@gmail.com",
+      }).toString(),
+    });
+
+    if (!response.ok) throw new Error("Form submission failed");
+
+    toast.success("Message Sent! We'll get back to you as soon as possible.");
+    setFormData({ name: "", email: "", category: "", message: "" });
+
+  } catch (error) {
+    toast.error("Something went wrong. Please try again later.");
+  } finally {
+    setIsSubmitting(false);
+  }
 };
 
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    const form = new FormData();
-    form.append("name", formData.name);
-    form.append("email", formData.email);
-    form.append("category", formData.category);
-    form.append("message", formData.message);
-    form.append("formGoogleSheetName", "CrystalKnotFilms");
-    form.append("formDataNameOrder", JSON.stringify(["name", "email", "category", "message"]));
-    form.append("formGoogleSendEmail", "crystalknotfilms@gmail.com");
-
-    try {
-      await fetch(
-        "https://script.google.com/macros/s/AKfycbxSkrQ037aGn4zYqB6dOkw4RCeMrWUiwBwMipbOimaWbve0JB4JwyayG_nDEAGvBLE/exec",
-        {
-          method: "POST",
-          mode: "no-cors",
-          body: form,
-        }
-      );
-
-      // even if the response can't be read, assume success
-      setFormData({
-        name: "",
-        email: "",
-        category: "",
-        message: "",
-      });
-      toast.success("Message sent successfully!");
-      setIsSubmitting(false);
-    } catch (error) {
-      toast.error("Network error. Please try again later.");
-      setIsSubmitting(false);
-    }
-  };
 
 
   return (
