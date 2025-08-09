@@ -1,9 +1,9 @@
 'use client';
 import Image from 'next/image';
-
+import Link from 'next/link';
 export default function Story() {
     return (
-        <main className="relative z-0 mt-[100vh] bg-[#f5f5f5]">
+        <main className="relative  mt-[100vh] bg-[#f5f5f5]">
 
             <main className="flex min-h-screen flex-col items-center justify-center bg-[#f5f5f5] py-12 px-4">
                 <div className="text-center max-w-4xl mx-auto">
@@ -69,13 +69,19 @@ export default function Story() {
                     </div>
 
 
-
-
-                    <div className="mt-12">
-                        <button className="bg-black text-white px-2 py-3 rounded-lg md:px-3 lg:px-7 lg:py-4 text-lg hover:bg-gray-800 transition-colors duration-200" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+<div className='relative z-10'>
+                    <div className="mt-12 ">
+                        <Link href={"/Portfolio"} >
+                        <button className=" bg-black text-white px-2 py-3 rounded-lg md:px-3 lg:px-7 lg:py-4 text-lg hover:bg-gray-800 transition-colors duration-200" style={{ fontFamily: 'Montserrat, sans-serif' }}>
                             Browse our Portfolio
                         </button>
+                        </Link>
+
                     </div>
+</div>
+
+
+
                 </div>
             </main>
         </main>

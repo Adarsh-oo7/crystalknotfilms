@@ -127,11 +127,11 @@ function Page() {
             </div>
 
             {/* Accordion Pricing Section */}
-            <section className="w-full px-4 py-16">
+            <section className="w-full px-4 py-16 relative z-10">
                 <h2 className="text-[26px] sm:text-[28px] md:text-[30px] lg:text-[34px] xl:text-[40px] font-bold text-center text-gray-900 mb-10" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.08em', lineHeight: 1.4 }}>
                     Wedding Video Editing Packages
                 </h2>
-                <div className="flex flex-wrap justify-center gap-6 items-start">
+                <div className="flex flex-wrap justify-center gap-6 items-start z-0"> 
                     <CollapsibleCard
                         index={0}
                         isOpen={activeIndex === 0}

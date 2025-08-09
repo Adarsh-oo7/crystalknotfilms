@@ -22,9 +22,9 @@ export default function Page() {
   });
 
   const stats = [
-    { value: 500, prefix: "+", label: "WEDDINGS EDITED" },
-    { value: 30, prefix: "+", label: "SATISFIED CLIENTS" },
-    { value: 6, prefix: "", label: "COUNTRIES" },
+    { value: 2500, prefix: "+", label: "WEDDINGS EDITED" },
+    { value: 500, prefix: "+", label: "SATISFIED CLIENTS" },
+    { value: 11, prefix: "", label: "COUNTRIES" },
   ];
 
   return (
@@ -158,26 +158,26 @@ export default function Page() {
       </section>
 
       {/* Client Logos */}
-      <section className="py-12">
+      {/* <section className="py-12">
         <div className="max-w-4xl mx-auto px-4 text-center bg-white rounded-lg shadow-md py-8">
           <h3
             className="text-xl md:text-2xl font-semibold mb-8"
             style={{ fontFamily: "Quicksand", letterSpacing: "0.1em", lineHeight: 1.4 }}
           >
             Our Clients
-          </h3>
+          </h3> */}
 
           {/* First row - 3 logos */}
-          <div className="flex justify-center gap-8 mb-8">
+          {/* <div className="flex justify-center gap-8 mb-8">
             {clientLogos.slice(0, 3).map((logo, idx) => (
               <div key={idx} className="relative w-28 h-14">
                 <Image src={logo} alt={`Client Logo ${idx}`} fill className="object-contain" />
               </div>
             ))}
-          </div>
+          </div> */}
 
           {/* Second row - 2 logos */}
-          <div className="flex justify-center gap-8">
+          {/* <div className="flex justify-center gap-8">
             {clientLogos.slice(3, 5).map((logo, idx) => (
               <div key={idx} className="relative w-28 h-14">
                 <Image src={logo} alt={`Client Logo ${idx + 3}`} fill className="object-contain" />
@@ -185,7 +185,7 @@ export default function Page() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="py-16" ref={ref}>
         <div className="max-w-5xl mx-auto px-6">
@@ -234,8 +234,8 @@ export default function Page() {
           Ready to bring your story <br /> to life with us?
         </h2>
         <Link
-          href="/contact"
-          className="inline-block bg-gradient-to-r from-[#d4af37] to-[#b58e20] text-white px-6 py-2 rounded-full text-md font-medium hover:opacity-90 transition-opacity"
+          href="/Contact/"
+          className="inline-block bg-gradient-to-r from-[#d4af37] to-[#b58e20] text-white px-6 py-2 rounded-full text-md font-medium hover:opacity-90 transition-opacity relative z-10"
           style={{ fontFamily: "Quicksand, sans-serif" }}
         >
           If yes, let&apos;s talk →

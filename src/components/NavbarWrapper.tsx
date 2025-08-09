@@ -54,7 +54,7 @@ export default function NavbarWrapper() {
               {item.name}
             </a>
           ))}
-          <NavbarButton href="/Contact">Get in Touch</NavbarButton>
+          <NavbarButton href="/Contact/">Get in Touch</NavbarButton>
         </MobileNavMenu>
       </MobileNav>
     </Navbar>

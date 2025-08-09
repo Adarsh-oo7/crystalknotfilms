@@ -15,7 +15,6 @@ function Page() {
   return (
     <div>
       <Loader loadingTime={3000}>
-        <FluidCursor />
         <div className="relative">
           <Hero />
           <Story />

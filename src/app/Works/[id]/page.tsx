@@ -26,9 +26,9 @@ export default async function VideoPage(props: {
   return (
     <div className="flex flex-col items-center justify-start min-h-screen bg-white text-white">
       <div className="w-full max-w-6xl px-4 pt-10 pb-6">
-        <div className="relative w-full pt-[56.25%] mb-6 rounded-lg overflow-hidden shadow-lg">
+        <div className="relative w-full pt-[56.25%] mb-6 rounded-lg overflow-hidden shadow-lg  relative z-10">
           <iframe
-            className="absolute inset-0 w-full h-full rounded-lg"
+            className="absolute inset-0 w-full h-full rounded-lg "
             src={youtubeEmbedUrl}
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

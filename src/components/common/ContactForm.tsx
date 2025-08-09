@@ -79,7 +79,7 @@ export default function ContactForm() {
         <form
           id="submit-form"
           onSubmit={handleSubmit}
-          className="p-8   "
+          className="p-8   relative z-10"
         >
           {/* <h2
             className="text-2xl font-normal mb-6 text-black"

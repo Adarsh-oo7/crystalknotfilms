@@ -5,12 +5,12 @@ import React from 'react'
 function page() {
   return (
     <div>
-        <VideoBanner
+        {/* <VideoBanner
 title={
     <>
       Let’s Create Something <br /> Unforgettable Together
     </>
-  }        videoSrc='/videos/intro.mp4'/>
+  }        videoSrc='/videos/intro.mp4'/> */}
         <ContactForm/>
     </div>
   )

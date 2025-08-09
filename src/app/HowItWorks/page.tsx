@@ -201,43 +201,7 @@ export default function Page() {
           </section>
 
           {/* Section: Why Choose Us */}
-          <section className="mt-24 text-center px-4">
-            <h3
-              className="text-2xl font-bold text-black mb-6"
-              style={{ fontFamily: '"Quicksand", sans-serif' }}
-            >
-              Why Choose Crystal Knot Films?
-            </h3>
-            <p
-              className="text-gray-700 max-w-3xl mx-auto text-base"
-              style={{ fontFamily: '"Quicksand", sans-serif' }}
-            >
-              We are passionate about storytelling. With years of experience and a creative team of editors and designers,
-              we deliver not just videos, but cinematic experiences. Fast turnaround, customized packages, and client-focused service set us apart.
-            </p>
-
-            <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="p-6 bg-gray-100 rounded-lg shadow-md">
-                <h4 className="font-semibold text-lg mb-2" style={{ fontFamily: '"Quicksand", sans-serif' }}>Fast Delivery</h4>
-                <p className="text-sm text-gray-600" style={{ fontFamily: '"Quicksand", sans-serif' }}>
-                  We value your time. Expect your first cut within 7–30 days.
-                </p>
-              </div>
-              <div className="p-6 bg-gray-100 rounded-lg shadow-md">
-                <h4 className="font-semibold text-lg mb-2" style={{ fontFamily: '"Quicksand", sans-serif' }}>Professional Team</h4>
-                <p className="text-sm text-gray-600" style={{ fontFamily: '"Quicksand", sans-serif' }}>
-                  Our expert editors bring your vision to life with precision and care.
-                </p>
-              </div>
-              <div className="p-6 bg-gray-100 rounded-lg shadow-md">
-                <h4 className="font-semibold text-lg mb-2" style={{ fontFamily: '"Quicksand", sans-serif' }}>Client-Centric</h4>
-                <p className="text-sm text-gray-600" style={{ fontFamily: '"Quicksand", sans-serif' }}>
-                  We work closely with you at every step to ensure you’re thrilled with the final product.
-                </p>
-              </div>
-            </div>
-          </section>
-
+    
           {/* Section: Call to Action */}
           <section className="mt-24 text-center">
             <h3
