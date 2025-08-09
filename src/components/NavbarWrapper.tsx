@@ -31,7 +31,7 @@ export default function NavbarWrapper() {
       <NavBody>
         <NavbarLogo />
         <NavItems items={navItems} />
-        <NavbarButton href="/contact">Get in Touch</NavbarButton>
+        <NavbarButton href="/Contact">Get in Touch</NavbarButton>
       </NavBody>
 
       <MobileNav>
@@ -54,7 +54,7 @@ export default function NavbarWrapper() {
               {item.name}
             </a>
           ))}
-          <NavbarButton href="/contact">Get in Touch</NavbarButton>
+          <NavbarButton href="/Contact">Get in Touch</NavbarButton>
         </MobileNavMenu>
       </MobileNav>
     </Navbar>

@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 
 interface VideoBannerProps {
-  title?: string;
+  title?: string | React.ReactNode;  
   videoSrc?: string;
   overlayOpacity?: string;
 }
@@ -63,7 +63,7 @@ export default function VideoBanner({
       {title && (
         <div className="relative z-10 flex items-center justify-center h-full text-white text-center px-4">
           <h1
-            className="text-3xl md:text-5xl font-normal"
+            className="text-[20px] sm:text-[25px] md:text-[30px] lg:text-[34px] xl:text-[40px] font-normal"
             style={{ fontFamily: 'Cinzel, sans-serif' }}
           >
             {title}

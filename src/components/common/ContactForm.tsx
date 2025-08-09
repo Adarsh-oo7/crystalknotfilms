@@ -1,6 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import { Send, Loader2 } from "lucide-react"
+import { toast } from 'sonner'
+
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -10,23 +13,51 @@ export default function ContactForm() {
     message: "",
   });
 
-  const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target
+    setFormData((prev) => ({ ...prev, [name]: value }))
+  }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form Submitted:", formData);
-    setSubmitted(true);
+    setIsSubmitting(true);
+
+    const form = new FormData();
+    form.append("name", formData.name);
+    form.append("email", formData.email);
+    form.append("category", formData.category);
+    form.append("message", formData.message);
+    form.append("formGoogleSheetName", "CrystalKnotFilms");
+    form.append("formDataNameOrder", JSON.stringify(["name", "email", "category", "message"]));
+    form.append("formGoogleSendEmail", "crystalknotfilms@gmail.com");
+
+    try {
+      await fetch(
+        "https://script.google.com/macros/s/AKfycbxSkrQ037aGn4zYqB6dOkw4RCeMrWUiwBwMipbOimaWbve0JB4JwyayG_nDEAGvBLE/exec",
+        {
+          method: "POST",
+          mode: "no-cors",
+          body: form,
+        }
+      );
+
+      // even if the response can't be read, assume success
+      setFormData({
+        name: "",
+        email: "",
+        category: "",
+        message: "",
+      });
+      toast.success("Message sent successfully!");
+      setIsSubmitting(false);
+    } catch (error) {
+      toast.error("Network error. Please try again later.");
+      setIsSubmitting(false);
+    }
   };
+
 
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center px-4">
@@ -47,6 +78,7 @@ export default function ContactForm() {
 
         {/* Form */}
         <form
+          id="submit-form"
           onSubmit={handleSubmit}
           className="p-8   "
         >
@@ -114,7 +146,7 @@ export default function ContactForm() {
                 lineHeight: 1.4,
               }}
             >
-              
+
               <option value="Private Client / Studio">Private Client / Studio</option>
               <option value="Private Client">Private Client</option>
               <option value="Studio / Videographer">Studio / Videographer</option>
@@ -143,31 +175,32 @@ export default function ContactForm() {
           {/* Submit */}
           <button
             type="submit"
-            className="w-full bg-transparent text-black border border-black py-2 rounded-md font-normal hover:bg-white hover:text-black transition"
+            className="w-full flex items-center justify-center gap-2 border border-black py-2 rounded-md font-normal transition
+             bg-transparent text-black hover:bg-white hover:text-black disabled:opacity-50 disabled:cursor-not-allowed"
             style={{
               fontFamily: "Quicksand, sans-serif",
               letterSpacing: "0.1em",
               lineHeight: 1.4,
             }}
           >
-            Send
+            {isSubmitting ? (
+              <>
+                <Loader2 className="h-4 w-4 animate-spin" />
+                <span>Sending...</span>
+              </>
+            ) : (
+              <>
+                <Send className="h-4 w-4" />
+                <span>Send Message</span>
+              </>
+            )}
           </button>
 
-          {/* Confirmation */}
-          {submitted && (
-            <p
-              className="mt-4 text-green-500 text-sm"
-              style={{
-                fontFamily: "Quicksand, sans-serif",
-                letterSpacing: "0.1em",
-                lineHeight: 1.4,
-              }}
-            >
-              Thank you! Your response has been recorded.
-            </p>
-          )}
         </form>
       </div>
     </div>
   );
 }
+
+
+

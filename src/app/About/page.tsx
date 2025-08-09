@@ -50,7 +50,11 @@ export default function Page() {
         <main className="flex flex-col bg-[#f5f5f5]">
             {/* Hero Section with Video */}
             <VideoBanner
-                title="Where Your Vision Meets Our Artistry"
+                title={
+                    <>
+                        Where Your Vision Meets  <br /> Our Artistry
+                    </>
+                }
                 videoSrc="/videos/intro.mp4" />
 
             {/* Team Story */}
@@ -60,25 +64,25 @@ export default function Page() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
                 > */}
-                    <h2
-                        className="text-[26px] sm:text-[28px] md:text-[30px] lg:text-[34px] xl:text-[40px] font-bold text-center mb-6"
-                        style={{ fontFamily: 'Quicksand', letterSpacing: '0.1em', lineHeight: 1.4 }}
-                    >
-                        Team Story
-                    </h2>
-                    <p className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] xl:text-[16px] leading-relaxed mb-4" style={{ fontFamily: 'Quicksand' }}
-                    >
-                        With years of experience and expertise across multiple formats, we
-                        bring your vision to life with precision and creativity. Our work
-                        spans weddings, corporate events, music videos, and branded content
-                        — always tailored to tell a compelling story.
-                    </p>
-                    <p className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] xl:text-[16px] leading-relaxed" style={{ fontFamily: 'Quicksand' }}>
-                        We believe in a collaborative model, supporting our clients from
-                        concept to delivery. Our global reach allows us to bring diverse
-                        perspectives to every project, ensuring that no two stories are ever
-                        the same.
-                    </p>
+                <h2
+                    className="text-[26px] sm:text-[28px] md:text-[30px] lg:text-[34px] xl:text-[40px] font-bold text-center mb-6"
+                    style={{ fontFamily: 'Quicksand', letterSpacing: '0.1em', lineHeight: 1.4 }}
+                >
+                    Team Story
+                </h2>
+                <p className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] xl:text-[16px] leading-relaxed mb-4" style={{ fontFamily: 'Quicksand' }}
+                >
+                    With years of experience and expertise across multiple formats, we
+                    bring your vision to life with precision and creativity. Our work
+                    spans weddings, corporate events, music videos, and branded content
+                    — always tailored to tell a compelling story.
+                </p>
+                <p className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] xl:text-[16px] leading-relaxed" style={{ fontFamily: 'Quicksand' }}>
+                    We believe in a collaborative model, supporting our clients from
+                    concept to delivery. Our global reach allows us to bring diverse
+                    perspectives to every project, ensuring that no two stories are ever
+                    the same.
+                </p>
                 {/* </motion.div> */}
             </section>
 
@@ -213,7 +217,7 @@ export default function Page() {
                     className="text-2xl md:text-3xl font-semibold mb-6"
                     style={{ fontFamily: 'Essential sans, sans-serif', letterSpacing: '0.1em', lineHeight: 1.4, }}
                 >
-                    Ready to bring your story <br/> to life with us?
+                    Ready to bring your story <br /> to life with us?
                 </h2>
                 <Link
                     href="/contact"
