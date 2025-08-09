@@ -1,5 +1,5 @@
 'use client';
-
+import Link from "next/link";
 import { useState } from "react";
 import {
   Navbar,
@@ -45,14 +45,14 @@ export default function NavbarWrapper() {
 
         <MobileNavMenu isOpen={isMobileOpen} onClose={() => setIsMobileOpen(false)}>
           {navItems.map((item) => (
-            <a
+            <Link
               key={item.name}
               href={item.link}
               className="text-black dark:text-white"
               onClick={() => setIsMobileOpen(false)}
             >
               {item.name}
-            </a>
+            </Link>
           ))}
           <NavbarButton href="/contact/">Get in Touch</NavbarButton>
         </MobileNavMenu>

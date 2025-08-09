@@ -227,42 +227,35 @@ export const NavbarLogo = () => {
 };
 
 export const NavbarButton = ({
-  href,
-  as: Tag = "a",
+  href = "/",
   children,
   className,
   variant = "primary",
   ...props
 }: {
-  href?: string;
-  as?: React.ElementType;
+  href: string;
   children: React.ReactNode;
   className?: string;
   variant?: "primary" | "secondary" | "dark" | "gradient";
-} & (
-  | React.ComponentPropsWithoutRef<"a">
-  | React.ComponentPropsWithoutRef<"button">
-)) => {
+}) => {
   const baseStyles =
     "px-4 py-2 rounded-md bg-white button text-black text-sm font-bold relative cursor-pointer hover:-translate-y-0.5 transition duration-200 inline-block text-center";
 
   const variantStyles = {
-    primary:
-      "shadow-[...]",
+    primary: "shadow-[...]",
     secondary: "bg-transparent shadow-none dark:text-white",
     dark: "bg-black text-white shadow-[...]",
-    gradient:
-      "bg-gradient-to-b from-blue-500 to-blue-700 text-white shadow-[...]",
+    gradient: "bg-gradient-to-b from-blue-500 to-blue-700 text-white shadow-[...]",
   };
 
   return (
-    <Tag
-      href={href || undefined}
+    <Link
+      href={href}
       className={cn(baseStyles, variantStyles[variant], className)}
-      {...props}
       style={{ fontFamily: "Essential Sans, sans-serif" }}
+      {...props}
     >
       {children}
-    </Tag>
+    </Link>
   );
 };
