@@ -10,12 +10,13 @@ export default function Story() {
                     <h1
                         className="text-[26px] sm:text-[28px] md:text-[30px] lg:text-[34px] xl:text-[36px] font-normal mb-4 text-gray-800"
                         style={{ fontFamily: 'Montserrat, sans-serif', letterSpacing: '0.1em', lineHeight: 1.4, }}>
-                        WEDDING VIDEOGRAPHY & CINEMATOGRAPHY
+                        WEDDING VIDEO EDITING SERVICES
+
                     </h1>
 
 
                     <p className="text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[18px] font-normal mb-12 text-gray-700" style={{ fontFamily: 'Montserrat, sans-serif', letterSpacing: '0.1em', lineHeight: 1.4, }}>
-                        &quot;NEW AGE LOVE STORIES FOR THE MODERN COUPLE.&quot;
+                        &quot;For videographers, photographers, and couples who want their footage transformed into timeless, cinematic films.&quot;
                     </p>
 
                     {/* New container for Foundering Story and Image */}

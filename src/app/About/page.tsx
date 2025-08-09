@@ -48,10 +48,10 @@ export default function Page() {
 
     return (
         <main className="flex flex-col bg-[#f5f5f5]">
-           
+
 
             {/* Team Story */}
-            <section className="max-w-6xl mx-auto pt-40 pb-20 px-4">
+            <section className="max-w-6xl mx-auto pt-40 pb-15 px-4">
                 {/* <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -63,65 +63,101 @@ export default function Page() {
                 >
                     Team Story
                 </h2>
-                <p className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] xl:text-[16px] leading-relaxed mb-4" style={{ fontFamily: 'Quicksand' }}
+                <p className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] xl:text-[16px] leading-relaxed mb-4 text-center" style={{ fontFamily: 'Quicksand' }}
                 >
-                    With years of experience and expertise across multiple formats, we
-                    bring your vision to life with precision and creativity. Our work
-                    spans weddings, corporate events, music videos, and branded content
-                    — always tailored to tell a compelling story.
+                    Our story didn’t start with Macbooks and mouse clicks. It started in a tiny darkroom over 60 years ago — no AC, no presets, just pure passion and photo chemicals.
+                    My grandfather was the OG memory-maker. Film rolls, hand-developed photos, and hours of patience — that’s how weddings were crafted back then. When my father stepped in at 20, he carried that legacy forward, editing and capturing love stories for four decades.
+
                 </p>
-                <p className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] xl:text-[16px] leading-relaxed" style={{ fontFamily: 'Quicksand' }}>
-                    We believe in a collaborative model, supporting our clients from
-                    concept to delivery. Our global reach allows us to bring diverse
-                    perspectives to every project, ensuring that no two stories are ever
-                    the same.
+                <p className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] xl:text-[16px] leading-relaxed text-center" style={{ fontFamily: 'Quicksand' }}>
+                    Now it's my turn — same blood, same love for storytelling… just with a faster render time
                 </p>
+                <p className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] xl:text-[16px] leading-relaxed text-center" style={{ fontFamily: 'Quicksand' }}>
+                    Welcome to Crystal Knot Films, where we don’t carry cameras — we carry emotions into the edit timeline.
+
+                </p>
+                <p className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] xl:text-[16px] leading-relaxed text-center" style={{ fontFamily: 'Quicksand' }}>
+                    <br />
+                    Over the years, we’ve worked behind the scenes on:
+                </p>
+                <p className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] xl:text-[16px] font-semibold leading-relaxed text-center" style={{ fontFamily: 'Quicksand' }}>
+                    <br />
+                    100+ celebrity edits (yup, the kind that make you say “who edited this??)
+                    <br />
+                    1000+ events with Flashbrush Productions
+                    <br />
+
+                    500+ wedding films with Aesthete Films
+                    <br />
+
+                    500+ photo edits with Palm Tree Content
+                </p>
+
                 {/* </motion.div> */}
             </section>
 
 
 
-            <section className=" py-16">
-                <div className="max-w-5xl mx-auto px-6">
-                    <h2
-                        className="text-[26px] sm:text-[28px] md:text-[30px] lg:text-[34px] xl:text-[40px] font-bold text-center mb-6"
-                        style={{ fontFamily: 'Quicksand', letterSpacing: '0.1em', lineHeight: 1.4 }}
-                    >
-                        Why Choose Us
-                    </h2>
-                    <p className="text-center text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] xl:text-[16px] text-gray-600 max-w-3xl mx-auto mb-12" style={{ fontFamily: 'Quicksand' }}>
-                        Several features set us apart from what the competition has to offer.
-                        Here’s why you should consider partnering up with us.
-                    </p>
+            <section className="max-w-6xl mx-auto px-4">
+                {/* <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                > */}
+                <h2
+                    className="text-[26px] sm:text-[28px] md:text-[30px] lg:text-[34px] xl:text-[40px] font-bold text-center mb-6"
+                    style={{ fontFamily: 'Quicksand', letterSpacing: '0.1em', lineHeight: 1.4 }}
+                >
+                    Why Crystal Knot?
+                </h2>
+                <p className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] xl:text-[16px] leading-relaxed mb-4 text-center " style={{ fontFamily: 'Quicksand' }}
+                >
+                    We’ve literally spent more time on Premiere timelines than on family vacations (true story).
+                </p>
+                <p className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] xl:text-[16px] leading-relaxed text-justify" style={{ fontFamily: 'Quicksand' }}>
+                    Let’s be real — there are a thousand editors out there who can drag, drop, and export. But that’s not editing. That’s just Ctrl+C, Ctrl+V with background music.
+                    At Crystal Knot Films, editing is storytelling. It’s feeling the mood of the moment, syncing every breath with the music, and knowing when to pause and when to punch.
+                    Whether it’s fixing the color on a cloudy beach wedding or syncing that perfect vow moment to the right piano chord — we live for the details that most people miss.
+                </p>
 
-                    <div className="grid md:grid-cols-2 gap-8 " style={{ fontFamily: 'Quicksand' }}>
-                        {[
-                            "Every video editor on the team has at least five years of experience editing or shooting wedding videos.",
-                            "7 - 30 days turnaround per project.",
-                            "Our team of 15 wedding video editors and three managers is based in London and Berlin.",
-                            "Over the course of the studio’s existence, we’ve edited over 500 wedding videos.",
-                            "Fast customer service and daily communication – a team member is available to address your inquiries 5 days a week over mail and phone.",
-                            "We use professional video editing and post-production software to ensure a stellar outcome every single time.",
-                            "We have developed well-established relationships with dozens of satisfied customers in the US, UK, Canada and Australia.",
-                            "We provide tailor-made editing styles to match each couple’s unique vision and story."
-                        ].map((point, idx) => (
-                            <div key={idx} className="flex items-start gap-3">
-                                {/* Luxury Diamond Icon */}
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    className="w-6 h-6 text-cyan-600 flex-shrink-0 mt-1"
-                                    viewBox="0 0 24 24"
-                                    fill="currentColor"
-                                >
-                                    <path d="M12 2L2 9l10 13 10-13-10-7zm0 3.3l6.16 4.31-6.16 8.02-6.16-8.02L12 5.3z" />
-                                </svg>
-                                <p className="text-gray-700 text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] xl:text-[16px]">{point}</p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
+                {/* </motion.div> */}
             </section>
 
+            <section className="max-w-6xl mx-auto mt-15 px-4">
+                {/* <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                > */}
+                <h2
+                    className="text-[26px] sm:text-[28px] md:text-[30px] lg:text-[34px] xl:text-[40px] font-bold text-center mb-6"
+                    style={{ fontFamily: 'Quicksand', letterSpacing: '0.1em', lineHeight: 1.4 }}
+                >
+                    Our vibe?
+
+                </h2>
+                <p className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] xl:text-[16px] leading-relaxed mb-4 text-center" style={{ fontFamily: 'Quicksand' }}
+                >
+                    A little filmy, a little funny, and 100% emotion-first.
+                    Think: “Candid-shandid, with color grading that slaps.”
+                    Less posey-shosey, More story.
+
+                </p>
+                <p className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] xl:text-[16px] leading-relaxed text-center" style={{ fontFamily: 'Quicksand' }}>
+                    We work with creators, planners, and couples across the world who care about quality — not just quantity. So whether it’s a luxury vineyard wedding in California, a cozy countryside ceremony in Italy, or a city elopement in New York — we treat every project like it’s a feature film.
+                </p>
+                <p className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] xl:text-[16px] leading-relaxed text-justify" style={{ fontFamily: 'Quicksand' }}>
+                    Because your memories deserve more than filters and flashy effects.
+                    They deserve heart, rhythm, and a story that actually feels like you.
+                    So if you’re looking for an editor who gets the vibe, nails the tone, and makes your footage feel like magic —
+                    you’ve found your team.
+                </p>
+                <p className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] xl:text-[16px] leading-relaxed text-center" style={{ fontFamily: 'Quicksand' }}>
+                    Let’s make something beautiful — frame by frame.
+                </p>
+
+                {/* </motion.div> */}
+            </section>
 
             {/* Client Logos */}
             <section className=" py-12">
