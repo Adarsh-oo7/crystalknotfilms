@@ -1,0 +1,105 @@
+"use client";
+
+import React from "react";
+import { motion } from "framer-motion";
+import { CheckCircle2 } from "lucide-react";
+import VideoBanner from "@/components/common/Video-banner";
+
+const services = [
+  {
+    title: "Wedding Editing",
+    description: [
+      "Highlight, Feature, Full Length edits",
+      "Tailored storytelling with cinematic feel",
+      "Multiple style options – romantic, modern, classic",
+      "Delivered in 4K with color grading",
+      "Turnaround: 2–4 weeks, 2 revision rounds"
+    ],
+  },
+  {
+    title: "Concert / Event Recaps",
+    description: [
+      "Energetic highlight reels to capture the vibe",
+      "Social-media optimized formats",
+      "Quick turnaround for timely sharing",
+      "Multi-camera & crowd coverage",
+    ],
+  },
+  {
+    title: "Podcast-to-Video",
+    description: [
+      "Full episode edit with branding",
+      "Clipped highlights for social media",
+      "Clean audio sync & noise removal",
+    ],
+  },
+  {
+    title: "Reels / Short Form",
+    description: [
+      "Trending transitions & effects",
+      "Optimized for Instagram & TikTok",
+      "Fast delivery for content batches",
+    ],
+  },
+  {
+    title: "Corporate Promos / Testimonials / Product Edits",
+    description: [
+      "Professional storytelling to boost brand image",
+      "Testimonial videos to build trust",
+      "Cinematic product showcases",
+    ],
+  },
+];
+
+export default function ServicePage() {
+  return (
+
+    <div>
+      <VideoBanner
+      title="Your Story, Perfectly Edited"
+      videoSrc="/videos/intro.mp4"/>
+    <section className="bg-[#111] text-white py-20 px-6">
+      <div className="max-w-6xl mx-auto text-center mb-14">
+        <motion.h2
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-4xl md:text-5xl font-bold tracking-wide"
+          style={{ fontFamily: "Montserrat, sans-serif" }}
+        >
+          Our Premium Editing Services
+        </motion.h2>
+        <p className="mt-4 text-gray-400 max-w-3xl mx-auto">
+          Every frame we touch is crafted with precision, passion, and the intent
+          to create timeless memories or impactful visuals for your audience.
+        </p>
+      </div>
+
+      <div className="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+        {services.map((service, idx) => (
+          <motion.div
+            key={idx}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: idx * 0.1 }}
+            viewport={{ once: true }}
+            className="bg-[#1E1E1E] rounded-2xl p-8 border border-gray-800 hover:border-yellow-500 transition-colors"
+          >
+            <h3 className="text-2xl font-semibold text-yellow-500 mb-4" style={{ fontFamily: "Montserrat, sans-serif" }}>
+              {service.title}
+            </h3>
+            <ul className="space-y-3 text-gray-300">
+              {service.description.map((point, i) => (
+                <li key={i} className="flex items-start">
+                  <CheckCircle2 className="w-5 h-5 text-yellow-500 flex-shrink-0 mt-1" />
+                  <span className="ml-3">{point}</span>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+        ))}
+      </div>
+    </section>
+    </div>
+  );
+}

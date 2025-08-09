@@ -35,7 +35,7 @@ const VideoCard = ({
 
         {/* Always-visible play button */}
         <Link
-          href={`/${id}`}
+          href={`/Works/${id}`}
           className="absolute inset-0 z-[60] flex items-center justify-center"
         >
           <div className="bg-black/60 hover:bg-black/70 text-white rounded-full p-4 transition">
