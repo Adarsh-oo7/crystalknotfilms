@@ -130,7 +130,7 @@ body {
 
 @font-face {
   font-family: 'Ginger';
-  src: url('/crystalknotfilms/fonts/GingerBread.woff') format('woff');  
+  src: url('/fonts/GingerBread.woff') format('woff');  
   font-weight: normal;
   font-style: normal;
   font-display: swap;

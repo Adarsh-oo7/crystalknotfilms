@@ -63,8 +63,8 @@ export default function VideoBanner({
       {title && (
         <div className="relative z-10 flex items-center justify-center h-full text-white text-center px-4">
           <h1
-            className="text-3xl md:text-5xl font-bold"
-            style={{ fontFamily: 'Montserrat, sans-serif' }}
+            className="text-3xl md:text-5xl font-normal"
+            style={{ fontFamily: 'Cinzel, sans-serif' }}
           >
             {title}
           </h1>
