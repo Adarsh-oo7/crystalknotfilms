@@ -56,35 +56,30 @@ export default function ClientVideoSection() {
     "Corporate Events": [
       {
         id: "video4",
-        src: "https://www.youtube.com/embed/LXb3EKWsInQ",
+        src: "https://player.vimeo.com/video/1108518205?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
         title: "Corporate Event Showcase 1",
-        thumbnail: "./images/A7405701.jpg",
+        thumbnail: "./images/portfolio/c1.png",
       },
-      {
-        id: "video5",
-        src: "https://www.youtube.com/embed/y6Sxv-sUYtM",
-        title: "Corporate Event Showcase 2",
-        thumbnail: "./images/Abbey&Andy_Previews (21 of 37).jpg",
-      },
+     
     ],
     Reels: [
       {
         id: "video6",
-        src: "https://www.youtube.com/embed/M7lc1UVf-VE",
+        src: "https://player.vimeo.com/video/1108519615?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
         title: "Creative Reel 1",
-        thumbnail: "./images/Chelsea&Liam (11 of 24).jpg",
+        thumbnail: "./images/portfolio/r1.png",
       },
       {
         id: "video7",
-        src: "https://www.youtube.com/embed/k_9g_2_2_2g",
+        src: "https://player.vimeo.com/video/1108519680?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
         title: "Creative Reel 2",
-        thumbnail: "./images/Jaymi-lee & Michael Previews (1 of 26).jpg",
+        thumbnail: "./images/portfolio/r2.png",
       },
       {
         id: "video8",
-        src: "https://www.youtube.com/embed/o_a_a_a_a_a",
+        src: "https://player.vimeo.com/video/1108519737?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
         title: "Creative Reel 3",
-        thumbnail: "./images/SONY (1272).jpg",
+        thumbnail: "./images/portfolio/r3.png",
       },
     ],
   };
