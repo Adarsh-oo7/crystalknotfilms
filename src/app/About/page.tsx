@@ -48,17 +48,10 @@ export default function Page() {
 
     return (
         <main className="flex flex-col bg-[#f5f5f5]">
-            {/* Hero Section with Video */}
-            <VideoBanner
-                title={
-                    <>
-                        Where Your Vision Meets  <br /> Our Artistry
-                    </>
-                }
-                videoSrc="/videos/intro.mp4" />
+           
 
             {/* Team Story */}
-            <section className="max-w-6xl mx-auto py-16 px-4">
+            <section className="max-w-6xl mx-auto pt-40 pb-20 px-4">
                 {/* <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
