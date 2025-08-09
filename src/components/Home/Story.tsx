@@ -53,18 +53,16 @@ export default function Story() {
                         </div>
 
                         {/* IMAGE */}
-                        <div className="w-full md:w-[70%] mt-0 sm:mb-10 sm:mt-0 md:mt-35 lg:mt-30 pl-2 md:pl-10 flex justify-end">
+                        <div className="w-full md:w-[70%] lg:w-[80%] xl:w-[95%] mt-0 sm:mb-10 sm:mt-0 md:mt-35 lg:mt-30 pl-2 md:pl-10 flex justify-end">
+  <Image
+    src="./images/Without background.png"
+    alt="Wedding Videography Equipment"
+    width={1000}
+    height={800}
+    className="w-[50%] md:w-[80%] lg:w-[120%] xl:w-[150%] mx-auto h-auto object-contain rounded-lg"
+  />
+</div>
 
-
-                            <Image
-                                src="./images/Without background.png"
-                                alt="Wedding Videography Equipment"
-                                width={800}
-                                height={600}
-                                className="w-[50%] lg:w-[100%] md:w-[100%] sm:w-[50%] mx-auto sm:mx-auto md:mx-auto h-auto object-cover rounded-lg"
-                            />
-
-                        </div>
 
                     </div>
 
