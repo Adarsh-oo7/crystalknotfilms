@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
 // import { motion } from "framer-motion";
 import CountUp from "react-countup";
@@ -32,18 +31,7 @@ export default function Page() {
         { value: 6, prefix: "", label: "COUNTRIES" },
     ];
 
-    const isProd = process.env.NODE_ENV === "production";
-    const basePath = isProd ? "/crystalknotfilms" : "";
 
-    const [videoSources] = useState(() => [
-        isProd
-            ? "https://github.com/adarsh-oo7/crystalknotfilms/raw/main/public/videos/intro.mp4"
-            : `${basePath}/videos/intro.mp4`,
-        `${basePath}/videos/intro.mp4`,
-        isProd
-            ? "https://media.githubusercontent.com/media/adarsh-oo7/crystalknotfilms/main/public/videos/intro.mp4"
-            : `${basePath}/videos/intro.mp4`,
-    ]);
 
     return (
         <main className="flex flex-col bg-[#f5f5f5]">
