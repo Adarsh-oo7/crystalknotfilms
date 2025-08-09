@@ -2,7 +2,6 @@
 import { useState } from "react";
 import { Pencil, Video, Download } from 'lucide-react';
 import { motion } from 'framer-motion';
-import VideoBanner from '@/components/common/Video-banner';
 import { ChevronDown, ChevronUp } from "lucide-react";
 
 
@@ -107,10 +106,8 @@ export default function Page() {
 
   return (
     <div>
-      <VideoBanner
-        title='Your Vision, Our Craft'
-        videoSrc='/videos/intro.mp4' />
-      <div id="HowItWorks" className="w-full bg-white py-24 px-4">
+      
+      <div id="HowItWorks" className="w-full bg-white pt-40 pb-20 px-4">
         <div className="w-full max-w-6xl mx-auto">
           {/* Section: How it works */}
           <h2

@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState } from 'react';
-import VideoBanner from '@/components/common/Video-banner';
 import { Plus, Minus } from 'lucide-react';
 
 // -------------------- Component Types --------------------
@@ -37,13 +36,10 @@ function Page() {
 
     return (
         <div className="bg-[#f5f5f5]">
-            <VideoBanner
-                title="The Clarity You Deserve"
-                videoSrc="/videos/intro.mp4"
-            />
+            
 
             {/* Section: Intro + List */}
-            <section className="py-20 px-6 md:px-16">
+            <section className="pt-40 pb-20 px-6 md:px-16">
                 <div className="max-w-6xl mx-auto">
                     <h3 className="text-[26px] sm:text-[28px] md:text-[30px] lg:text-[34px] xl:text-[40px]  text-center text-gray-900 mb-6" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.08em', lineHeight: 1.4 }}>
                         Wedding Video Editing Price

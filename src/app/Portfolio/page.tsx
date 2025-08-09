@@ -1,15 +1,11 @@
-import VideoBanner from '@/components/common/Video-banner'
 import ClientVideoSection from '@/components/Home/ClientVideoSection'
 import React from 'react'
 
 function page() {
     return (
         <div>
-            <VideoBanner
-                title="The Clarity You Deserve"
-                videoSrc="/videos/intro.mp4"
-            />
-            <section className="bg-[#1E1E1E] py-20 px-6 text-center">
+           
+            <section className="bg-[#1E1E1E] pt-20 pb-20 px-6 text-center">
                 <div className="max-w-3xl mx-auto">
                     <h2 className="text-[26px] sm:text-[28px] md:text-[30px] lg:text-[34px] xl:text-[40px] mt-15 text-white mb-8"style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.08em', lineHeight: 1.4, }}>OUR WORKS</h2>
                     <p className="text-white  mb-6 text-[13px] sm:text-[14px] md:text-[16px] lg:text-[18px] xl:text-[18px]" style={{ fontFamily: 'Quicksand, sans-serif' }}>

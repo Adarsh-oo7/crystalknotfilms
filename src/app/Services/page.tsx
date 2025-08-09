@@ -3,7 +3,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
-import VideoBanner from "@/components/common/Video-banner";
 
 const services = [
   {
@@ -55,10 +54,8 @@ export default function ServicePage() {
   return (
 
     <div>
-      <VideoBanner
-      title="Your Story, Perfectly Edited"
-      videoSrc="/videos/intro.mp4"/>
-    <section className="bg-[#111] text-white py-20 px-6">
+
+    <section className="bg-[#111] text-white pt-40 pb-20 px-6">
       <div className="max-w-6xl mx-auto text-center mb-14">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
