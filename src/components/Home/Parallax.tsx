@@ -9,15 +9,10 @@ const ParallaxHero = () => {
     const basePath = isProd ? '/crystalknotfilms' : '';
 
     return [
-      // Primary: GitHub raw file (works well in production)
       isProd
         ? 'https://github.com/adarsh-oo7/crystalknotfilms/raw/main/public/videos/intro.mp4'
         : `${basePath}/videos/intro.mp4`,
-
-      // Fallback: standard hosted file
       `${basePath}/videos/intro.mp4`,
-
-      // Fallback: media.githubusercontent.com (for Git LFS/media files)
       isProd
         ? 'https://media.githubusercontent.com/media/adarsh-oo7/crystalknotfilms/main/public/videos/intro.mp4'
         : `${basePath}/videos/intro.mp4`
@@ -27,7 +22,19 @@ const ParallaxHero = () => {
   return (
     <>
       <section className="relative min-h-[70vh] flex items-center justify-center text-white overflow-hidden">
-        {/* Video Background */}
+        
+        {/* Image Fallback Layer */}
+        <div className="absolute top-0 left-0 w-full h-full -z-20">
+          <Image
+            src="./images/A7405701.jpg"
+            alt="Video fallback"
+            fill
+            priority
+            className="object-cover"
+          />
+        </div>
+
+        {/* Video Layer */}
         <div className="absolute top-0 left-0 w-full h-full -z-10">
           <video
             className="w-full h-full object-cover"
@@ -35,6 +42,7 @@ const ParallaxHero = () => {
             muted
             loop
             playsInline
+            poster="./images/A7405701.jpg" // browser poster fallback
           >
             {videoSources.map((src, i) => (
               <source key={i} src={src} type="video/mp4" />
@@ -58,8 +66,14 @@ const ParallaxHero = () => {
               priority
             />
           </div>
-
-          <h1 className="text-3xl md:text-5xl font-medium leading-tight"style={{ fontFamily: 'Cinzel, sans-serif', letterSpacing: '0.09em', lineHeight: 1.4, }}>
+          <h1
+            className="text-[26px] sm:text-[28px] md:text-[30px] lg:text-[34px] xl:text-[40px] font-medium leading-tight"
+            style={{
+              fontFamily: 'Cinzel, sans-serif',
+              letterSpacing: '0.09em',
+              lineHeight: 1.4,
+            }}
+          >
             INTENTIONALLY CRAFTED <br />
             <span className="block mt-2">LOVE STORIES.</span>
           </h1>
