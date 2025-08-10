@@ -39,48 +39,35 @@ export default function Brands() {
     return () => clearInterval(interval);
   }, []);
 
-  const isProd = process.env.NODE_ENV === "production";
-  const basePath = isProd ? "/crystalknotfilms" : "";
+  const isProd = process.env.NODE_ENV === 'production';
+  const basePath = isProd ? '/crystalknotfilms' : '';
 
   const videoSources = [
     isProd
-      ? "https://raw.githubusercontent.com/adarsh-oo7/crystalknotfilms/main/public/videos/intro.mp4"
+      ? 'https://raw.githubusercontent.com/adarsh-oo7/crystalknotfilms/main/public/videos/intro.mp4'
       : `${basePath}/videos/intro.mp4`,
     isProd
-      ? "https://media.githubusercontent.com/media/adarsh-oo7/crystalknotfilms/main/public/videos/intro.mp4"
+      ? 'https://media.githubusercontent.com/media/adarsh-oo7/crystalknotfilms/main/public/videos/intro.mp4'
       : `${basePath}/videos/intro.mp4`,
     `${basePath}/videos/intro.mp4`,
   ];
 
   return (
     <section className="relative w-full h-screen overflow-hidden">
-      {/* Image Fallback Layer */}
-      <div className="absolute top-0 left-0 w-full h-full -z-20">
-        <Image
-          src="./images/fallback.webp"
-          alt="Video fallback"
-          fill
-          priority
-          className="object-cover"
-        />
-      </div>
-
-      {/* Video Layer */}
-      <div className="absolute top-0 left-0 w-full h-full -z-10">
-        <video
-          className="w-full h-full object-cover"
-          autoPlay
-          muted
-          loop
-          playsInline
-          poster="./images/fallback.webp" // browser poster fallback
-        >
-          {videoSources.map((src, i) => (
-            <source key={i} src={src} type="video/mp4" />
-          ))}
-          Your browser does not support the video tag.
-        </video>
-      </div>
+      {/* Background Video */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover z-0"
+        poster={isProd ? `${basePath}./images/fallback.webp` : './images/fallback.webp'}
+      >
+        {videoSources.map((src, index) => (
+          <source key={index} src={src} type="video/mp4" />
+        ))}
+        Your browser does not support the video tag.
+      </video>
 
       {/* Optional dark overlay */}
       <div className="absolute inset-0 bg-black/30 z-10" />
@@ -91,8 +78,8 @@ export default function Brands() {
           <h2
             className="text-2xl md:text-3xl font-normal mb-8 text-black"
             style={{
-              fontFamily: "Montserrat, sans-serif",
-              letterSpacing: "0.1em",
+              fontFamily: 'Montserrat, sans-serif',
+              letterSpacing: '0.1em',
               lineHeight: 1.4,
             }}
           >
