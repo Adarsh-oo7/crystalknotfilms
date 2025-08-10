@@ -63,7 +63,7 @@ export default function ContactForm() {
       <div className="w-full max-w-lg text-center">
         {/* Heading */}
         <h1
-          className="text-3xl font-semibold text-black mb-6"
+          className="text-[24px] sm:text-[28px] md:text-[30px] lg:text-[34px] xl:text-[40px] font-normal text-black mb-6"
           style={{
             fontFamily: "Quicksand, sans-serif",
             letterSpacing: "0.05em",
