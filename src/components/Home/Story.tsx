@@ -38,7 +38,7 @@ export default function Story() {
                                 style={{ fontFamily: 'Quicksand, sans-serif' }}
                             >
                                 &quot;Working with other big brands in the Video editing industry for almost 8 years, I realized that Almost editors was after one thing - to cover as many weddings and make as much money as possible.
-                                There was no character in the wedding Films, Have you observed that most of the wedding videos you see are just plain slow-motion walking clips of the couple? God, it's almost 2025! Your iPhones can do that!
+                                There was no character in the wedding Films, Have you observed that most of the wedding videos you see are just plain slow-motion walking clips of the couple? God, it&apos;s almost 2025! Your iPhones can do that!
                                 And no one even tried to change that. That killed me as an artist. In 2020,
 
                             </p>
@@ -46,8 +46,8 @@ export default function Story() {
                                 className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] xl:text-[16px] leading-relaxed text-gray-700"
                                 style={{ fontFamily: 'Quicksand, sans-serif' }}
                             >
-                                I decided to start Crystal Knot Films — a place where edits aren't rushed, stories aren't recycled, and every timeline is built with care, coffee, and just the right amount of drama.
-                                Today, we create wedding films that don't just look good — they feel right.
+                                I decided to start Crystal Knot Films — a place where edits aren&apos;t rushed, stories aren&apos;t recycled, and every timeline is built with care, coffee, and just the right amount of drama.
+                                Today, we create wedding films that don&apos;t just look good — they feel right.
                                 Real stories. Real emotion. Zero copy-paste vibes.
                             </p>
                         </div>
