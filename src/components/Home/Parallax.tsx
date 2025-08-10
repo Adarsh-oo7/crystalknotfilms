@@ -26,7 +26,7 @@ const ParallaxHero = () => {
         {/* Image Fallback Layer */}
         <div className="absolute top-0 left-0 w-full h-full -z-20">
           <Image
-            src="./images/A7405701.jpg"
+            src="./images/fallback.webp"
             alt="Video fallback"
             fill
             priority
@@ -42,7 +42,7 @@ const ParallaxHero = () => {
             muted
             loop
             playsInline
-            poster="./images/A7405701.jpg" // browser poster fallback
+            poster="./images/fallback.webp" // browser poster fallback
           >
             {videoSources.map((src, i) => (
               <source key={i} src={src} type="video/mp4" />

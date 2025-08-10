@@ -39,21 +39,36 @@ export default function Brands() {
     return () => clearInterval(interval);
   }, []);
 
-  const isProd = process.env.NODE_ENV === 'production';
-  const basePath = isProd ? '/crystalknotfilms' : '';
+  const isProd = process.env.NODE_ENV === "production";
+  const basePath = isProd ? "/crystalknotfilms" : "";
+
+  const fallbackImage = isProd
+    ? `${basePath}./images/fallback.webp`
+    : "./images/fallback.webp";
 
   const videoSources = [
     isProd
-      ? 'https://raw.githubusercontent.com/adarsh-oo7/crystalknotfilms/main/public/videos/intro.mp4'
+      ? "https://raw.githubusercontent.com/adarsh-oo7/crystalknotfilms/main/public/videos/intro.mp4"
       : `${basePath}/videos/intro.mp4`,
     isProd
-      ? 'https://media.githubusercontent.com/media/adarsh-oo7/crystalknotfilms/main/public/videos/intro.mp4'
+      ? "https://media.githubusercontent.com/media/adarsh-oo7/crystalknotfilms/main/public/videos/intro.mp4"
       : `${basePath}/videos/intro.mp4`,
     `${basePath}/videos/intro.mp4`,
   ];
 
   return (
     <section className="relative w-full h-screen overflow-hidden">
+      {/* Image Fallback Layer */}
+      <div className="absolute inset-0 -z-20">
+        <Image
+          src={fallbackImage}
+          alt="Video fallback"
+          fill
+          priority
+          className="object-cover"
+        />
+      </div>
+
       {/* Background Video */}
       <video
         autoPlay
@@ -61,7 +76,7 @@ export default function Brands() {
         loop
         playsInline
         className="absolute inset-0 w-full h-full object-cover z-0"
-        poster={isProd ? `${basePath}/fallback.jpg` : '/fallback.jpg'}
+        poster={fallbackImage} // browser fallback before first frame
       >
         {videoSources.map((src, index) => (
           <source key={index} src={src} type="video/mp4" />
@@ -78,8 +93,8 @@ export default function Brands() {
           <h2
             className="text-2xl md:text-3xl font-normal mb-8 text-black"
             style={{
-              fontFamily: 'Montserrat, sans-serif',
-              letterSpacing: '0.1em',
+              fontFamily: "Montserrat, sans-serif",
+              letterSpacing: "0.1em",
               lineHeight: 1.4,
             }}
           >
