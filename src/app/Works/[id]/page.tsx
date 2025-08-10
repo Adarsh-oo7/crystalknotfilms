@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { videos } from "@/lib/video-data";
-import ClientVideoSection from "@/components/Home/ClientVideoSection";
+import ClientVideoSections from "@/components/Home/ClientVideoSections";
 
 // ✅ Static params for static site generation
 export async function generateStaticParams() {
@@ -41,7 +41,7 @@ export default async function VideoPage(props: {
       </div>
 
       <div className="w-full">
-        <ClientVideoSection />
+        <ClientVideoSections />
       </div>
     </div>
   );
