@@ -14,19 +14,19 @@ export default function ClientVideoSections() {
         id: "video1",
         src: "https://www.youtube.com/embed/-mhTawVXNSk?si=Q8SEKEwfGtPs8r9W",
         title: "Wedding Highlight Reel 1",
-        thumbnail: "../../../images/video-data/v1.png",
+        thumbnail: "./images/video-data/v1.png",
       },
       {
         id: "video2",
         src: "https://www.youtube.com/embed/Nr1mu8u2FeU?si=qTO2jsnc-03I_k-5",
         title: "Wedding Highlight Reel 2",
-        thumbnail: "../../../images/video-data/v2.png",
+        thumbnail: "../images/video-data/v2.png",
       },
       {
         id: "video3",
         src: "https://www.youtube.com/embed/Uvq75p4yeq8?si=yegVq2hb_DVwjYkY",
         title: "Wedding Highlight Reel 3",
-        thumbnail: "../../../images/video-data/v3.png",
+        thumbnail: "./../images/video-data/v3.png",
       },
       {
         id: "video4",
