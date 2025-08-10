@@ -1,6 +1,4 @@
 import React from 'react'
-import { Loader } from '../components/common/Loader'
-import FluidCursor from '../components/FluidCursor'
 import { Hero } from '../components/Home/Hero'
 import Faq from '../components/Home/Faq'
 import Story from "../components/Home/Story";
@@ -14,7 +12,6 @@ import Pricing from "../components/Home/Pricing";
 function Page() {
   return (
     <div>
-      <Loader loadingTime={3000}>
         <div className="relative">
           <Hero />
           <Story />
@@ -34,7 +31,6 @@ function Page() {
         <section className="relative z-10 bg-[#f5f5f5]">
           <ContactForm />
         </section>
-      </Loader>
     </div>
   );
 }

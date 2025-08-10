@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import NavbarWrapper from "@/components/NavbarWrapper"; // client-side component
 import Footer from "@/components/common/Footer";
-// import { Toaster } from 'sonner'
+import { Loader } from '../components/common/Loader'
 import FluidCursor from "@/components/FluidCursor"; // client-side component
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,15 +28,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-                <FluidCursor />
+        <Loader loadingTime={3000}>
 
-        <NavbarWrapper /> {/* client-side navbar */}
+          <FluidCursor />
 
-        {children}
-        {/* <Toaster position="top-right" richColors /> */}
-        <section className="relative z-10 bg-[#f5f5f5]">
-          <Footer />
-        </section>
+          <NavbarWrapper />
+
+          {children}
+          <section className="relative z-10 bg-[#f5f5f5]">
+            <Footer />
+          </section>
+        </Loader>
+
       </body>
     </html>
   );
