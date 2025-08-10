@@ -85,12 +85,31 @@ export default function ClientVideoSection() {
   };
 
   const photoContent = [
-    { src: "../../images/A7401967.jpg", alt: "Wedding Photography" },
-    { src: "../../images/A7405701.jpg", alt: "Corporate Event Photography" },
-    { src: "../../images/A7405470.jpg", alt: "Portrait Photography" },
-    { src: "../../images/A7405566.jpg", alt: "Landscape Photography" },
-    { src: "../../images/SONY (1272).jpg", alt: "Event Photography" },
-    { src: "../../images/Jaymi-lee & Michael Previews (1 of 26).jpg", alt: "Product Photography" },
+    { src: "../../images/1.jpg", alt: "Wedding Photography" },
+    { src: "../../images/2.jpg", alt: "Corporate Event Photography" },
+    { src: "../../images/3.jpg", alt: "Portrait Photography" },
+    { src: "../../images/4.jpg", alt: "Landscape Photography" },
+    { src: "../../images/5.jpg", alt: "Event Photography" },
+    { src: "../../images/6.jpg", alt: "Product Photography" },
+    { src: "../../images/7.jpg", alt: "Fashion Photography" },
+    { src: "../../images/8.jpg", alt: "Street Photography" },
+    { src: "../../images/9.jpg", alt: "Architectural Photography" },
+    { src: "../../images/10.jpg", alt: "Nature Photography" },
+    { src: "../../images/11.jpg", alt: "Sports Photography" },
+    { src: "../../images/12.jpg", alt: "Event Photography" },     
+    { src: "../../images/13.jpg", alt: "Wedding Photography" },
+    { src: "../../images/14.jpg", alt: "Corporate Event Photography" },
+    { src: "../../images/15.jpg", alt: "Portrait Photography" },
+    { src: "../../images/16.jpg", alt: "Landscape Photography" },
+    { src: "../../images/17.jpg", alt: "Event Photography" },
+    { src: "../../images/18.jpg", alt: "Product Photography" },
+    { src: "../../images/19.jpg", alt: "Fashion Photography" },
+    { src: "../../images/20.jpg", alt: "Street Photography" },
+    { src: "../../images/21.jpg", alt: "Architectural Photography" },
+    { src: "../../images/22.jpg", alt: "Nature Photography" },
+    { src: "../../images/23.jpg", alt: "Sports Photography" },
+    { src: "../../images/24.jpg", alt: "Event Photography" },
+                
   ];
 
   return (

@@ -5,16 +5,16 @@ import Link from 'next/link';
 
 function Pricing() {
   return (
-    <div className="bg-[#1E1E1E] py-20 text-white">
+    <div className="bg-[#1E1E1E] py-20  text-white">
       {/* Top Heading */}
-      <h1
+      <h1 
+
         className="text-[26px] sm:text-[28px] md:text-[30px] lg:text-[34px] xl:text-[40px] font-bold text-center mb-12"
         style={{ fontFamily: 'Cinzel, sans-serif', letterSpacing: '0.1em', lineHeight: 1.4 }}
       >
         PRICING
       </h1>
 
-      {/* Pricing Cards */}
       <div className="flex flex-wrap justify-center gap-6 px-4">
 
         {[
