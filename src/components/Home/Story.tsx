@@ -54,31 +54,39 @@ export default function Story() {
 
                         {/* IMAGE - Made larger and moved more to the right */}
                         <div className="w-full md:w-[70%] lg:w-[80%] xl:w-[95%] mt-0 sm:mb-10 sm:mt-0 md:mt-35 lg:mt-30 pl-2 md:pl-10 flex justify-end overflow-visible">
-  <div className="relative sm:scale-110 md:scale-125 lg:scale-150 xl:scale-150 sm:translate-x-2 md:translate-x-4 lg:translate-x-8 xl:translate-x-12">
-    <Image
-      src="./images/Without background.png"
-      alt="Wedding Videography Equipment"
-      width={1000}
-      height={800}
-      className="w-[50%] md:w-[80%] lg:w-[120%] xl:w-[150%] mx-auto h-auto object-contain rounded-lg"
-    />
-  </div>
-</div>
+                            <div className="relative sm:scale-110 md:scale-125 lg:scale-150 xl:scale-150 sm:translate-x-2 md:translate-x-4 lg:translate-x-8 xl:translate-x-12">
+                                <Image
+                                    src="./images/Without background.png"
+                                    alt="Wedding Videography Equipment"
+                                    width={1000}
+                                    height={800}
+                                    className="w-[50%] md:w-[80%] lg:w-[120%] xl:w-[150%] mx-auto h-auto object-contain rounded-lg"
+                                />
+                            </div>
+                        </div>
 
 
                     </div>
 
 
-<div className='relative z-10'>
-                    <div className="mt-12 ">
-                        <Link href={"/Portfolio"} >
-                        <button className=" bg-black text-white px-2 py-3 rounded-lg md:px-3 lg:px-7 lg:py-4 text-lg hover:bg-gray-800 transition-colors duration-200" style={{ fontFamily: 'Montserrat, sans-serif' }}>
-                            Browse our Portfolio
-                        </button>
-                        </Link>
+                    <div className='relative z-10'
+                    >
+                        <div className="mt-12 ">
+                            <Link href={"/Portfolio"} >
+                                <button
+                                    className="relative z-50 bg-black text-white px-2 py-3 rounded-lg md:px-3 lg:px-7 lg:py-4 text-lg hover:bg-gray-800 transition-colors duration-200 cursor-pointer"
+                                    style={{
+                                        fontFamily: 'Montserrat, sans-serif',
+                                        pointerEvents: "auto"
+                                    }}
+                                >
+                                    Browse our Portfolio
+                                </button>
 
+                            </Link>
+
+                        </div>
                     </div>
-</div>
 
 
 

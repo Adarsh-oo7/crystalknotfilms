@@ -214,9 +214,9 @@ export default function Page() {
               Let’s bring your story to life. Contact us now and receive a personalized quote within 24 hours.
             </p>
             <a
-              href="#contact"
-              className="inline-block bg-black text-white px-8 py-3 rounded-md font-medium hover:bg-gray-800 transition"
-              style={{ fontFamily: '"Quicksand", sans-serif' }}
+              href="/Contact"
+              className="relative z-50 inline-block bg-black text-white px-8 py-3 rounded-md font-medium hover:bg-gray-800 transition"
+              style={{ fontFamily: '"Quicksand", sans-serif',pointerEvents: "auto" }}
             >
               Get in Touch
             </a>
