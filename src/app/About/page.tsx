@@ -1,19 +1,18 @@
 "use client";
 
-import Image from "next/image";
 // import { motion } from "framer-motion";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 import Link from "next/link";
 
 // Example client logos
-const clientLogos = [
-  "./images/brands/ninja-removebg-preview.png",
-  "./images/brands/gerdau-logo-removebg-preview.png",
-  "./images/brands/timeSquare-removebg-preview.png",
-  "./images/brands/TV9-removebg-preview.png",
-  "./images/brands/TEDx-Logo-500x281-removebg-preview.png",
-];
+// const clientLogos = [
+//   "./images/brands/ninja-removebg-preview.png",
+//   "./images/brands/gerdau-logo-removebg-preview.png",
+//   "./images/brands/timeSquare-removebg-preview.png",
+//   "./images/brands/TV9-removebg-preview.png",
+//   "./images/brands/TEDx-Logo-500x281-removebg-preview.png",
+// ];
 
 export default function Page() {
   const { ref, inView } = useInView({
