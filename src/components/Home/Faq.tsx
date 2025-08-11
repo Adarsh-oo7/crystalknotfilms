@@ -21,16 +21,42 @@ export default function Faq() {
                 WHY <br /> CRYSTAL KNOT FILMS?
               </h2>
               <p
-                className="text-base sm:text-lg text-gray-400 max-w-md"
+                className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] xl:text-[16px] text-gray-500 max-w-md"
                 style={{ fontFamily: "Quicksand, Regular" }}
               >
-                Aren&apos;t there like a thousand Wedding Videography companies out there? What makes Crystal Knot films different?
+                Aren&apos;t there Thousands of wedding video editors out there? What makes Crystal Knot Films apart?
+
               </p>
               <p
-                className="text-base sm:text-lg text-gray-700 max-w-md"
+                className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] xl:text-[16px] text-gray-800 max-w-md"
                 style={{ fontFamily: "Quicksand, Regular" }}
               >
                 (Hold my Chai!)
+              </p>
+              <p
+                className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] xl:text-[16px] text-gray-500 max-w-md"
+                style={{ fontFamily: "Quicksand, Regular" }}
+              >
+                Our videos wont bore you to death!<br />
+                Have you observed that most of the wedding videos you see are just plain slow-motion walking clips of the couple? God, it’s almost 2025! Your iPhones can do that!
+                Our wedding films bring in a perfect mixture of real-time emotions with those cinematic slow-motion sequences that will make your eyes sparkle with awe.
+                Each of our wedding Films is unique. Beautifully put together to reflect our couples, they journey and their love story.
+
+              </p>
+              <p
+                className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] xl:text-[16px] text-gray-500 max-w-md"
+                style={{ fontFamily: "Quicksand, Regular" }}
+              >
+                Quality over quantity, always.<br />
+                We only take on a limited number of weddings each year so we can obsess over every detail. You’re not “just another project” — you’re the project.
+              </p>
+              <p
+                className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] xl:text-[16px] text-gray-500 max-w-md"
+                style={{ fontFamily: "Quicksand, Regular" }}
+              >
+                We guide, you chill.<br/>
+                From the moment you hand over the footage to the final delivery, we keep the process simple and stress-free. You relax — we edit like our coffee depends on it. "
+
               </p>
             </div>
 

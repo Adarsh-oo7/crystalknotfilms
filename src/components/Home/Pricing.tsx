@@ -20,32 +20,32 @@ function Pricing() {
         {[
           {
             title: 'HIGHLIGHTS',
-            price: 200,
+            price: 150,
             features: [
               '3 - 8 min long',
               '1 - 3 cameras incl. drones',
               'Upto 10hrs of raw footage',
-              'Three Revisions + Premiere files'
+              'Unlimited Rivisions + Davinci Project File'
             ]
           },
           {
             title: 'FEATURE',
-            price: 300,
+            price: 250,
             features: [
               '10 - 15 min long',
               '1 - 3 cameras incl. drones',
               'Upto 10hrs of raw footage',
-              'Three Revisions + Premiere files'
+              'Unlimited Rivisions + Davinci Project File'
             ]
           },
           {
             title: 'FULL LENGTH',
-            price: 325,
+            price: 275,
             features: [
               '30 - 60 min long',
               '1 - 3 cameras incl. drones',
               'Upto 12hrs of raw footage',
-              'Three Revisions + Premiere files'
+              'Unlimited Rivisions + Davinci Project File'
             ]
           }
         ].map((plan, index) => (

@@ -167,8 +167,8 @@ export default function Page() {
             Our Clients
           </h3> */}
 
-          {/* First row - 3 logos */}
-          {/* <div className="flex justify-center gap-8 mb-8">
+      {/* First row - 3 logos */}
+      {/* <div className="flex justify-center gap-8 mb-8">
             {clientLogos.slice(0, 3).map((logo, idx) => (
               <div key={idx} className="relative w-28 h-14">
                 <Image src={logo} alt={`Client Logo ${idx}`} fill className="object-contain" />
@@ -176,8 +176,8 @@ export default function Page() {
             ))}
           </div> */}
 
-          {/* Second row - 2 logos */}
-          {/* <div className="flex justify-center gap-8">
+      {/* Second row - 2 logos */}
+      {/* <div className="flex justify-center gap-8">
             {clientLogos.slice(3, 5).map((logo, idx) => (
               <div key={idx} className="relative w-28 h-14">
                 <Image src={logo} alt={`Client Logo ${idx + 3}`} fill className="object-contain" />
@@ -222,23 +222,32 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="bg-[#f8f8f8] py-16 text-center">
+      <section className="bg-black py-16 text-center">
         <h2
-          className="text-2xl md:text-3xl font-semibold mb-6"
+          className="text-2xl md:text-3xl text-white font-semibold mb-6"
           style={{
             fontFamily: "Essential sans, sans-serif",
             letterSpacing: "0.1em",
-            lineHeight: 1.4,
           }}
         >
-          Ready to bring your story <br /> to life with us?
+          Looking for studio prices?
+          
         </h2>
+        <p
+          className="text-md md:text-lg text-white font-semibold mb-6"
+          style={{
+            fontFamily: "Essential sans, sans-serif",
+            letterSpacing: "0.1em",
+          }}
+        >
+         We offer discounts and fixed prices for small and big studios.
+        </p>
         <Link
           href="/Contact/"
           className="inline-block bg-gradient-to-r from-[#d4af37] to-[#b58e20] text-white px-6 py-2 rounded-full text-md font-medium hover:opacity-90 transition-opacity relative z-10"
           style={{ fontFamily: "Quicksand, sans-serif" }}
         >
-          If yes, let&apos;s talk →
+          Get a discount now →
         </Link>
       </section>
     </main>

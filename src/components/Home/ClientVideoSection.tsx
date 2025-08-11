@@ -12,9 +12,9 @@ export default function ClientVideoSection() {
     Wedding: [
       {
         id: "video1",
-        src: "https://www.youtube.com/embed/-mhTawVXNSk?si=Q8SEKEwfGtPs8r9W",
-        title: "Wedding Highlight Reel 1",
-        thumbnail: "./images/video-data/v1.png",
+        src: "https://www.youtube.com/embed/BQvWtk7BL_U?si=kLk2vsQKESv8fqXX",
+        title: "Wedding Highlight Reel 3",
+        thumbnail: "./images/video-data/v7.png",
       },
       {
         id: "video2",
@@ -48,9 +48,9 @@ export default function ClientVideoSection() {
       },
       {
         id: "video7",
-        src: "https://www.youtube.com/embed/BQvWtk7BL_U?si=kLk2vsQKESv8fqXX",
-        title: "Wedding Highlight Reel 3",
-        thumbnail: "./images/video-data/v7.png",
+        src: "https://www.youtube.com/embed/-mhTawVXNSk?si=Q8SEKEwfGtPs8r9W",
+        title: "Wedding Highlight Reel 1",
+        thumbnail: "./images/video-data/v1.png",
       },
     ],
     "Corporate Events": [
@@ -113,7 +113,7 @@ export default function ClientVideoSection() {
   ];
 
   return (
-    <section id="Portfolio" className="w-full py-20 bg-white">
+    <section id="Portfolio" className="w-full py-20 flex justify-center bg-white">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">

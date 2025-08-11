@@ -1,6 +1,6 @@
 'use client';
 import { useState } from "react";
-import { Pencil, Video, Download } from 'lucide-react';
+import { Edit, Film, CloudDownload  } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { ChevronDown, ChevronUp } from "lucide-react";
 import Link from "next/link";
@@ -87,19 +87,19 @@ export default function Page() {
       label: 'Tell Us',
       description:
         'Which package? What’s your deadline? Fill in the form and get a free quote within 24 hrs.',
-      icon: Pencil,
+      icon: Edit,
     },
     {
       label: 'We Work',
       description:
         'We’ll start working and editing your footage as soon as we’ve the files & notes.',
-      icon: Video,
+      icon: Film ,
     },
     {
       label: 'Download the Videos',
       description:
         'We’ll send the first video within 7 – 30 days and we offer three revisions.',
-      icon: Download,
+      icon: CloudDownload,
     },
   ];
 
@@ -135,8 +135,8 @@ export default function Page() {
                     transition={{ duration: 0.9, delay }}
                     className="flex flex-col items-center"
                   >
-                    <div className="w-20 h-20 flex items-center justify-center rounded-full border-2 border-black bg-white text-gray-800 shadow-lg ">
-                      <Icon className="w-8 h-8 text-[#000000]" />
+                    <div className="z-20   text-gray-800  ">
+                      <Icon className="w-15 h-15  bg-transparent" style={{ color: '#58c7c7',backgroundColor: 'transparent' }} />
                     </div>
 
                     <p
@@ -156,10 +156,10 @@ export default function Page() {
                   {index < steps.length - 1 && (
                     <motion.div
                       initial={{ scaleX: 0 }}
-                      whileInView={{ scaleX: 1 }}
+                      whileInView={{ scaleX: 0.8 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.5, delay: delay + 0.6 }}
-                      className="hidden md:block absolute top-10 right-[-50%] w-full h-0.5 bg-black origin-left z-0 pointer-events-none"
+                      className="hidden md:block absolute top-8 right-[-62%] w-full h-0.5 bg-black origin-left  z-10 pointer-events-none"
                     />
                   )}
                 </div>

@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { Plus, Minus } from 'lucide-react';
-
+import Link from "next/link";
 // -------------------- Component Types --------------------
 
 interface PricingCardProps {
@@ -19,6 +19,7 @@ interface CollapsibleCardProps {
     price: number;
     isOpen: boolean;
     toggle: (index: number) => void;
+    href: string;
 }
 
 interface CheckIconProps {
@@ -28,7 +29,7 @@ interface CheckIconProps {
 // -------------------- Main Page Component --------------------
 
 function Page() {
-    const [activeIndex, setActiveIndex] = useState<number | null>(null);
+    const [activeIndex, setActiveIndex] = useState<number | null>(0); // open first card by default
 
     const handleToggle = (index: number) => {
         setActiveIndex(activeIndex === index ? null : index);
@@ -36,7 +37,7 @@ function Page() {
 
     return (
         <div className="bg-[#f5f5f5]">
-            
+
 
             {/* Section: Intro + List */}
             <section className="pt-40 pb-20 px-6 md:px-16">
@@ -66,8 +67,8 @@ function Page() {
                             Elevate Your Business with Expert Editing
                         </h3>
                         <p className="text-center text-gray-800 text-[13px] sm:text-[14px] md:text-[16px] lg:text-[18px] xl:text-[18px] mb-6 max-w-3xl mx-auto" style={{ fontFamily: 'Quicksand, sans-serif' }}>
-                           Outsourcing wedding video editing saves you a lot of time – You can dedicate this newfound time to finding new clients, shooting videos and generating revenue for your business.
-                           Strategically speaking, a partnership with an experienced team like ours will enable you to optimise corporate processes, thus saving money and boosting your income.
+                            Outsourcing wedding video editing saves you a lot of time – You can dedicate this newfound time to finding new clients, shooting videos and generating revenue for your business.
+                            Strategically speaking, a partnership with an experienced team like ours will enable you to optimise corporate processes, thus saving money and boosting your income.
                         </p>
                         <p className="text-center text-gray-800 text-[13px] sm:text-[14px] md:text-[16px] lg:text-[18px] xl:text-[18px] max-w-3xl mx-auto" style={{ fontFamily: 'Quicksand, sans-serif' }}>
                             Looking for the biggest bargain in terms of wedding video editing isn’t always the best approach. There could be hidden fees and additional charges you weren’t made aware of in the beginning.<br />
@@ -131,7 +132,7 @@ function Page() {
                 <h2 className="text-[26px] sm:text-[28px] md:text-[30px] lg:text-[34px] xl:text-[40px] font-bold text-center text-gray-900 mb-10" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.08em', lineHeight: 1.4 }}>
                     Wedding Video Editing Packages
                 </h2>
-                <div className="flex flex-wrap justify-center gap-6 items-start z-0"> 
+                <div className="flex flex-wrap justify-center gap-6 items-start z-0">
                     <CollapsibleCard
                         index={0}
                         isOpen={activeIndex === 0}
@@ -139,6 +140,7 @@ function Page() {
                         title="Package (1)"
                         price={325}
                         features={['1 min trailer', '3 – 8 min highlight']}
+                        href="/Contact"
                     />
                     <CollapsibleCard
                         index={1}
@@ -147,6 +149,7 @@ function Page() {
                         title="Package (2)"
                         price={350}
                         features={['1 min trailer', '30 – 60 min full length']}
+                        href="/Contact"
                     />
                     <CollapsibleCard
                         index={2}
@@ -155,6 +158,7 @@ function Page() {
                         title="Package (3)"
                         price={350}
                         features={['1 min trailer', '3 – 8 min highlight', '30 – 60 min full length']}
+                        href="/Contact"
                     />
                 </div>
             </section>
@@ -200,29 +204,54 @@ function PricingCard({ title, price, features, addons = [] }: PricingCardProps) 
 
 // -------------------- Collapsible Card --------------------
 
-function CollapsibleCard({ index, title, features = [], price, isOpen, toggle }: CollapsibleCardProps) {
+function CollapsibleCard({ index, title, features = [], price, isOpen, toggle, href }: CollapsibleCardProps) {
     return (
-        <div className="border rounded-xl bg-[#e2e2e2df] p-6 shadow-md transition hover:shadow-lg w-full max-w-sm">
-            <div className="flex justify-between items-start mb-4">
-                <h3 className="font-bold text-lg" style={{ fontFamily: 'Quicksand, sans-serif' }}>{title}</h3>
-                <button onClick={() => toggle(index)} className="text-teal-500 hover:text-teal-700">
-                    {isOpen ? <Minus size={20} /> : <Plus size={20} />}
-                </button>
-            </div>
-
-            <div className={`grid transition-all duration-300 ease-in-out ${isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'} overflow-hidden`}>
-                <div className="overflow-hidden">
-                    <ul className="text-gray-700 space-y-2 text-sm mb-4">
-                        {features.map((item, idx) => (
-                            <li key={idx}>• {item}</li>
-                        ))}
-                    </ul>
-                    <p className="text-sm font-semibold text-gray-800 pb-1">
-                        <span className="text-black">Starting From </span>
-                        <span className="text-teal-600">${price} USD</span>
-                    </p>
+        <div className="border rounded-xl bg-[#e2e2e2df] p-6 shadow-md transition hover:shadow-lg w-full max-w-sm relative cursor-pointer">
+            <Link href={href} className="block">
+                <div>
+                    <div className="flex justify-between items-start mb-4">
+                        <h3 className="font-bold text-lg" style={{ fontFamily: 'Quicksand, sans-serif' }}>
+                            {title}
+                        </h3>
+                        {/* Empty space or icon here if you want, but no button inside link */}
+                    </div>
+                    <div
+                        className={`grid transition-all duration-300 ease-in-out ${isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
+                            } overflow-hidden`}
+                    >
+                        <div className="overflow-hidden">
+                            <ul
+                                className="text-gray-700 space-y-2 text-sm mb-4"
+                                style={{ fontFamily: 'Quicksand, sans-serif' }}
+                            >
+                                {features.map((item, idx) => (
+                                    <li key={idx}>• {item}</li>
+                                ))}
+                            </ul>
+                            <p
+                                className="text-sm font-semibold text-gray-800 pb-1"
+                                style={{ fontFamily: 'Quicksand, sans-serif' }}
+                            >
+                                <span className="text-black">Starting From </span>
+                                <span className="text-teal-600">${price} USD</span>
+                            </p>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </Link>
+
+            {/* Toggle button outside Link */}
+            <button
+                onClick={(e) => {
+                    e.stopPropagation(); // Prevent Link navigation on toggle click
+                    toggle(index);
+                }}
+                className="absolute top-4 right-4 text-teal-500 hover:text-teal-700"
+                aria-label={isOpen ? 'Collapse' : 'Expand'}
+                type="button"
+            >
+                {isOpen ? <Minus size={20} /> : <Plus size={20} />}
+            </button>
         </div>
     );
 }

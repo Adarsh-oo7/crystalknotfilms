@@ -40,9 +40,12 @@ export default async function VideoPage(props: {
         <h3 className="text-2xl font-semibold mb-4">More from Weddings</h3>
       </div>
 
-      <div className="w-full">
+      <div className="w-full flex justify-center items-center min-h-screen">
         <ClientVideoSections />
       </div>
+
+
+
     </div>
   );
 }

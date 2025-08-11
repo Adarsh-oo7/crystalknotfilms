@@ -145,7 +145,6 @@ export default function ContactForm() {
                 lineHeight: 1.4,
               }}
             >
-              <option value="Private Client / Studio">Who are you ?</option>
               <option value="Private Client / Studio">Private Client / Studio</option>
               <option value="Private Client">Private Client</option>
               <option value="Studio / Videographer">Studio / Videographer</option>

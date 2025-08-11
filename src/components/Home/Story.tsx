@@ -60,7 +60,7 @@ export default function Story() {
                                     alt="Wedding Videography Equipment"
                                     width={1000}
                                     height={800}
-                                    className="w-[50%] md:w-[80%] lg:w-[120%] xl:w-[150%] mx-auto h-auto object-contain rounded-lg"
+                                    className="w-[80%] md:w-[80%] lg:w-[120%] xl:w-[150%] mx-auto h-auto object-contain rounded-lg"
                                 />
                             </div>
                         </div>
