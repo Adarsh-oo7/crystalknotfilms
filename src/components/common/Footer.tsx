@@ -9,13 +9,13 @@ import {
 } from "react-icons/fa";
 
 const navLeft = [
-  { name: "ABOUT", href: "/about" },
-  { name: "SERVICE", href: "/Service" },
+  { name: "ABOUT", href: "/About" },
+  { name: "SERVICE", href: "/Services" },
 ];
 
 const navRight = [
   { name: "PORTFOLIO", href: "/Portfolio" },
-  { name: "CONTACT", href: "/contact" },
+  { name: "CONTACT", href: "/Contact" },
 ];
 
 export default function Footer() {

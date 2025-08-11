@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Pencil, Video, Download } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { ChevronDown, ChevronUp } from "lucide-react";
+import Link from "next/link";
 
 
 const faqs = [
@@ -106,7 +107,7 @@ export default function Page() {
 
   return (
     <div>
-      
+
       <div id="HowItWorks" className="w-full bg-white pt-40 pb-20 px-4">
         <div className="w-full max-w-6xl mx-auto">
           {/* Section: How it works */}
@@ -125,7 +126,7 @@ export default function Page() {
               return (
                 <div
                   key={index}
-                  className="relative w-full md:flex-1 flex flex-col items-center text-center"
+                  className="relative z-10 w-full md:flex-1 flex flex-col items-center text-center "
                 >
                   <motion.div
                     initial={{ opacity: 0, y: 50 }}
@@ -134,7 +135,7 @@ export default function Page() {
                     transition={{ duration: 0.9, delay }}
                     className="flex flex-col items-center"
                   >
-                    <div className="w-20 h-20 flex items-center justify-center rounded-full border-2 border-black bg-white text-gray-800 shadow-lg z-10">
+                    <div className="w-20 h-20 flex items-center justify-center rounded-full border-2 border-black bg-white text-gray-800 shadow-lg ">
                       <Icon className="w-8 h-8 text-[#000000]" />
                     </div>
 
@@ -158,7 +159,7 @@ export default function Page() {
                       whileInView={{ scaleX: 1 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.5, delay: delay + 0.6 }}
-                      className="hidden md:block absolute top-10 right-[-50%] w-full h-0.5 bg-black origin-left z-0"
+                      className="hidden md:block absolute top-10 right-[-50%] w-full h-0.5 bg-black origin-left z-0 pointer-events-none"
                     />
                   )}
                 </div>
@@ -178,7 +179,7 @@ export default function Page() {
                 >
                   <button
                     onClick={() => toggle(index)}
-                    className="w-full flex justify-between items-center px-4 py-3 text-left text-black font-semibold focus:outline-none"
+                    className="relative w-full flex justify-between items-center px-4 py-3 text-left text-black font-semibold focus:outline-none z-50"
                     style={{ fontFamily: 'Quicksand, sans-serif' }}
                   >
                     {faq.question}
@@ -201,7 +202,7 @@ export default function Page() {
           </section>
 
           {/* Section: Why Choose Us */}
-    
+
           {/* Section: Call to Action */}
           <section className="mt-24 text-center">
             <h3
@@ -213,13 +214,13 @@ export default function Page() {
             <p className="text-gray-700 mb-8" style={{ fontFamily: '"Quicksand", sans-serif' }}>
               Let’s bring your story to life. Contact us now and receive a personalized quote within 24 hours.
             </p>
-            <a
+            <Link
               href="/Contact"
               className="relative z-50 inline-block bg-black text-white px-8 py-3 rounded-md font-medium hover:bg-gray-800 transition"
-              style={{ fontFamily: '"Quicksand", sans-serif',pointerEvents: "auto" }}
+              style={{ fontFamily: '"Quicksand", sans-serif', pointerEvents: "auto" }}
             >
               Get in Touch
-            </a>
+            </Link>
           </section>
         </div>
       </div>
