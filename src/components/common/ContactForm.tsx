@@ -9,7 +9,7 @@ export default function ContactForm() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    category: "",
+    category: "Private Client / Studio",
     message: "",
   });
 
