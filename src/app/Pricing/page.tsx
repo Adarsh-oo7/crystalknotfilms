@@ -36,20 +36,20 @@ function Page() {
     };
 
     return (
-        <div className="bg-[#f5f5f5]">
+        <div className="bg-black">
 
 
             {/* Section: Intro + List */}
             <section className="pt-40 pb-20 px-6 md:px-16">
                 <div className="max-w-6xl mx-auto">
-                    <h3 className="text-[26px] sm:text-[28px] md:text-[30px] lg:text-[34px] xl:text-[40px]  text-center text-gray-900 mb-6" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.08em', lineHeight: 1.4 }}>
+                    <h3 className="text-[26px] sm:text-[28px] md:text-[30px] lg:text-[34px] xl:text-[40px]  text-center text-white mb-6" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.08em', lineHeight: 1.4 }}>
                         Wedding Video Editing Price
                     </h3>
-                    <p className="text-start text-gray-700 text-[13px] sm:text-[14px] md:text-[16px] lg:text-[18px] xl:text-[18px] mb-8 max-w-3xl mx-auto" style={{ fontFamily: 'Quicksand, sans-serif' }}>
+                    <p className="text-start text-white text-[13px] sm:text-[14px] md:text-[16px] lg:text-[18px] xl:text-[18px] mb-8 max-w-3xl mx-auto" style={{ fontFamily: 'Quicksand, sans-serif' }}>
                         We are fully committed to giving our clients cost-efficient wedding video editing services. We’re always striving to provide the best price – 2 – quality ratio so you’ll get the outcome you’re looking for at a reasonable price. Our professional wedding video editing price structure is based on several factors. To determine how much our service is going to cost, you’ll have to take the following in consideration:
                     </p>
 
-                    <ul className="text-gray-700 text-[13px] sm:text-[14px] md:text-[16px] lg:text-[18px] xl:text-[18px] space-y-2 max-w-2xl mx-auto text-start" style={{ fontFamily: 'Quicksand, sans-serif' }}>
+                    <ul className="text-white text-[13px] sm:text-[14px] md:text-[16px] lg:text-[18px] xl:text-[18px] space-y-2 max-w-2xl mx-auto text-start" style={{ fontFamily: 'Quicksand, sans-serif' }}>
                         <li>1. The hours of raw footage</li>
                         <li>2. The quality of the footage</li>
                         <li>3. The number of cameras used</li>
@@ -58,19 +58,19 @@ function Page() {
                         <li>6. The volume of work</li>
                     </ul>
 
-                    <p className="text-start text-gray-700 text-[13px] sm:text-[14px] md:text-[16px] lg:text-[18px] xl:text-[18px] mt-8 mb-8 max-w-3xl mx-auto" style={{ fontFamily: 'Quicksand, sans-serif' }}>
+                    <p className="text-start text-white text-[13px] sm:text-[14px] md:text-[16px] lg:text-[18px] xl:text-[18px] mt-8 mb-8 max-w-3xl mx-auto" style={{ fontFamily: 'Quicksand, sans-serif' }}>
                         There isn’t a one-size-fits-all solution in terms of wedding video editing and post-production. We will create a tailored offer for you that will be based on those factors.
                     </p>
 
-                    <div className="border border-pink-100 shadow-lg rounded-2xl p-10 md:p-14 bg-[#e2e2e2df]">
-                        <h3 className="text-[20px] sm:text-[20px] md:text-[25px] lg:text-[30px] xl:text-[35px] font-bold text-center text-gray-900 mb-6" style={{ fontFamily: 'Quicksand, sans-serif' }}>
+                    <div className="border border-white shadow-lg rounded-2xl p-10 md:p-14 bg-black">
+                        <h3 className="text-[20px] sm:text-[20px] md:text-[25px] lg:text-[30px] xl:text-[35px] font-bold text-center text-white mb-6" style={{ fontFamily: 'Quicksand, sans-serif' }}>
                             Elevate Your Business with Expert Editing
                         </h3>
-                        <p className="text-center text-gray-800 text-[13px] sm:text-[14px] md:text-[16px] lg:text-[18px] xl:text-[18px] mb-6 max-w-3xl mx-auto" style={{ fontFamily: 'Quicksand, sans-serif' }}>
+                        <p className="text-center text-white text-[13px] sm:text-[14px] md:text-[16px] lg:text-[18px] xl:text-[18px] mb-6 max-w-3xl mx-auto" style={{ fontFamily: 'Quicksand, sans-serif' }}>
                             Outsourcing wedding video editing saves you a lot of time – You can dedicate this newfound time to finding new clients, shooting videos and generating revenue for your business.
                             Strategically speaking, a partnership with an experienced team like ours will enable you to optimise corporate processes, thus saving money and boosting your income.
                         </p>
-                        <p className="text-center text-gray-800 text-[13px] sm:text-[14px] md:text-[16px] lg:text-[18px] xl:text-[18px] max-w-3xl mx-auto" style={{ fontFamily: 'Quicksand, sans-serif' }}>
+                        <p className="text-center text-white text-[13px] sm:text-[14px] md:text-[16px] lg:text-[18px] xl:text-[18px] max-w-3xl mx-auto" style={{ fontFamily: 'Quicksand, sans-serif' }}>
                             Looking for the biggest bargain in terms of wedding video editing isn’t always the best approach. There could be hidden fees and additional charges you weren’t made aware of in the beginning.<br />
                             <span className="block mt-4 font-medium">
                                 At <span className="text-[#D4AF37] font-semibold" style={{ fontFamily: 'Ginger, sans-serif' }}>Crystal Knot Films</span>, we believe in complete transparency and we offer competitive wedding video editing services that are reasonably priced even for the one-man team.
@@ -129,7 +129,7 @@ function Page() {
 
             {/* Accordion Pricing Section */}
             <section className="w-full px-4 py-16 relative z-10">
-                <h2 className="text-[26px] sm:text-[28px] md:text-[30px] lg:text-[34px] xl:text-[40px] font-bold text-center text-gray-900 mb-10" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.08em', lineHeight: 1.4 }}>
+                <h2 className="text-[26px] sm:text-[28px] md:text-[30px] lg:text-[34px] xl:text-[40px] font-bold text-center text-white mb-10" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.08em', lineHeight: 1.4 }}>
                     Wedding Video Editing Packages
                 </h2>
                 <div className="flex flex-wrap justify-center gap-6 items-start z-0">
@@ -170,16 +170,16 @@ function Page() {
 
 function PricingCard({ title, price, features, addons = [] }: PricingCardProps) {
     return (
-        <div className="w-full sm:w-[90%] md:w-[45%] lg:w-[30%] bg-[#e2e2e2df] border border-gray-300 rounded-xl shadow-sm p-6">
+        <div className="w-full sm:w-[90%] md:w-[45%] lg:w-[30%] bg-black border border-white rounded-xl shadow-sm p-6">
             <div className="flex flex-col items-center">
                 <h2 className="text-center">
                     <span className="bg-[#D4AF37] w-full text-white px-4 py-1 rounded text-xl" style={{ fontFamily: 'Quicksand, sans-serif' }}>{title}</span>
                 </h2>
 
-                <p className="text-lg text-center mt-2 font-medium" style={{ fontFamily: 'Montserrat, sans-serif' }}>FROM</p>
-                <p className="text-4xl text-center mt-2 font-medium" style={{ fontFamily: 'Montserrat, sans-serif' }}>${price}</p>
+                <p className="text-lg text-center mt-2 font-medium text-white" style={{ fontFamily: 'Montserrat, sans-serif' }}>FROM</p>
+                <p className="text-4xl text-center mt-2 font-medium text-white" style={{ fontFamily: 'Montserrat, sans-serif' }}>${price}</p>
 
-                <ul className="flex flex-col gap-3 text-sm mt-6 items-center text-center" style={{ fontFamily: 'Quicksand, sans-serif' }}>
+                <ul className="flex flex-col gap-3 text-sm mt-6 items-center text-center text-white" style={{ fontFamily: 'Quicksand, sans-serif' }}>
                     {features.map((item, idx) => (
                         <li key={idx}>
                             <CheckIcon /> <span>{item}</span>
@@ -189,8 +189,8 @@ function PricingCard({ title, price, features, addons = [] }: PricingCardProps) 
 
                 {addons.length > 0 && (
                     <div className="mt-6 w-full text-center">
-                        <h4 className="text-sm font-bold mb-2 text-gray-800">Add-ons</h4>
-                        <ul className="text-sm text-gray-600 space-y-1">
+                        <h4 className="text-sm font-bold mb-2 text-white">Add-ons</h4>
+                        <ul className="text-sm text-white space-y-1">
                             {addons.map((addon, idx) => (
                                 <li key={idx}>• {addon}</li>
                             ))}

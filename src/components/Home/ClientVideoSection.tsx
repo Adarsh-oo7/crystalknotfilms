@@ -113,11 +113,11 @@ export default function ClientVideoSection() {
   ];
 
   return (
-    <section id="Portfolio" className="w-full py-20 flex justify-center bg-white">
+    <section id="Portfolio" className="w-full py-20 flex justify-center bg-black">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
-            <h2 className="text-3xl font-medium tracking-tighter sm:text-5xl text-black pb-10" style={{ fontFamily: "Cinzel" }}>
+            <h2 className="text-3xl font-medium tracking-tighter sm:text-5xl text-white pb-10" style={{ fontFamily: "Cinzel" }}>
               PORTFOLIO
             </h2>
             <p
@@ -140,8 +140,8 @@ export default function ClientVideoSection() {
                 style={{ fontFamily: 'Quicksand, sans-serif' }}
                 className={`px-6 py-2 rounded-full transition-colors duration-300 backdrop-blur-md border ${
                   activeCategory === category
-                    ? "bg-black/60 text-white border-white/10 shadow-lg"
-                    : "bg-black/30 text-white border-white/10 hover:bg-black/50 hover:text-white shadow-sm"
+                    ? "bg-black/60 text-white border-yellow-500 shadow-lg"
+                    : "bg-black/30 text-white border-yellow-500 hover:bg-black/50 hover:text-white shadow-sm"
                 }`}
               >
                 {category}
@@ -151,10 +151,10 @@ export default function ClientVideoSection() {
         </div>
 
         {/* Media Grid */}
-        <div className="mt-8 grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
+        <div className="mt-8  grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
           {activeCategory !== "Photos"
             ? videoContent[activeCategory as keyof typeof videoContent].map((video) => (
-                <div key={video.id} className="relative w-full aspect-video rounded-lg overflow-hidden shadow-lg z-10">
+                <div key={video.id} className="relative w-full aspect-video rounded-lg border-1 border-white overflow-hidden shadow-lg z-10">
                   {playingVideoId === video.id ? (
                     <iframe
                       src={`${video.src}?rel=0&modestbranding=1&showinfo=0&controls=1&autoplay=1`}

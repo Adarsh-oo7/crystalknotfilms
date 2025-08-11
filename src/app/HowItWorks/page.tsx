@@ -1,6 +1,6 @@
 'use client';
 import { useState } from "react";
-import { Edit, Film, CloudDownload  } from 'lucide-react';
+import { Edit, Film, CloudDownload } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { ChevronDown, ChevronUp } from "lucide-react";
 import Link from "next/link";
@@ -93,7 +93,7 @@ export default function Page() {
       label: 'We Work',
       description:
         'We’ll start working and editing your footage as soon as we’ve the files & notes.',
-      icon: Film ,
+      icon: Film,
     },
     {
       label: 'Download the Videos',
@@ -108,11 +108,11 @@ export default function Page() {
   return (
     <div>
 
-      <div id="HowItWorks" className="w-full bg-white pt-40 pb-20 px-4">
+      <div id="HowItWorks" className="w-full bg-black pt-40 pb-20 px-4">
         <div className="w-full max-w-6xl mx-auto">
           {/* Section: How it works */}
           <h2
-            className="text-[26px] sm:text-[28px] md:text-[30px] lg:text-[34px] xl:text-[40px] font-bold text-center text-black mb-16"
+            className="text-[26px] sm:text-[28px] md:text-[30px] lg:text-[34px] xl:text-[40px] font-bold text-center text-white mb-16"
             style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.08em', lineHeight: 1.4, }}
           >
             HOW IT WORKS
@@ -136,17 +136,17 @@ export default function Page() {
                     className="flex flex-col items-center"
                   >
                     <div className="z-20   text-gray-800  ">
-                      <Icon className="w-15 h-15  bg-transparent" style={{ color: '#58c7c7',backgroundColor: 'transparent' }} />
+                      <Icon className="w-15 h-15  bg-transparent text-yellow-500" style={{ backgroundColor: 'transparent' }} />
                     </div>
 
                     <p
-                      className="text-base font-semibold mt-4 text-black"
+                      className="text-base font-semibold mt-4 text-white"
                       style={{ fontFamily: '"Quicksand", sans-serif' }}
                     >
                       {step.label}
                     </p>
                     <p
-                      className="text-sm text-gray-800 mt-4 max-w-sm"
+                      className="text-sm text-white mt-4 max-w-sm"
                       style={{ fontFamily: '"Quicksand", sans-serif' }}
                     >
                       {step.description}
@@ -159,7 +159,7 @@ export default function Page() {
                       whileInView={{ scaleX: 0.8 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.5, delay: delay + 0.6 }}
-                      className="hidden md:block absolute top-8 right-[-62%] w-full h-0.5 bg-black origin-left  z-10 pointer-events-none"
+                      className="hidden md:block absolute top-8 right-[-62%] w-full h-0.5 bg-white origin-left  z-10 pointer-events-none"
                     />
                   )}
                 </div>
@@ -168,29 +168,29 @@ export default function Page() {
           </div>
 
           <section className="max-w-2xl mx-auto px-4 py-12 mt-12">
-            <h2 className="text-2xl sm:text-3xl font-bold text-center text-black mb-8" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.08em', lineHeight: 1.4, }}>
+            <h2 className="text-2xl sm:text-3xl font-bold text-center text-white mb-8" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.08em', lineHeight: 1.4, }}>
               Frequently Asked Questions
             </h2>
             <div className="space-y-4">
               {faqs.map((faq, index) => (
                 <div
                   key={index}
-                  className="border rounded-lg bg-white shadow-sm overflow-hidden"
+                  className="border rounded-lg bg-black shadow-sm overflow-hidden"
                 >
                   <button
                     onClick={() => toggle(index)}
-                    className="relative w-full flex justify-between items-center px-4 py-3 text-left text-black font-semibold focus:outline-none z-50"
+                    className="relative w-full flex justify-between items-center px-4 py-3 text-left text-white font-semibold focus:outline-none z-50"
                     style={{ fontFamily: 'Quicksand, sans-serif' }}
                   >
                     {faq.question}
                     {openIndex === index ? (
-                      <ChevronUp size={20} className="text-teal-500" />
+                      <ChevronUp size={20} className="text-yellow-500" />
                     ) : (
-                      <ChevronDown size={20} className="text-teal-500" />
+                      <ChevronDown size={20} className="text-yellow-500" />
                     )}
                   </button>
                   <div
-                    className={`px-4 pb-4 text-sm text-gray-700 transition-all duration-300 ease-in-out ${openIndex === index ? "block" : "hidden"
+                    className={`px-4 pb-4 text-sm text-white transition-all duration-300 ease-in-out ${openIndex === index ? "block" : "hidden"
                       }`}
                     style={{ fontFamily: 'Quicksand, sans-serif' }}
                   >
@@ -206,17 +206,17 @@ export default function Page() {
           {/* Section: Call to Action */}
           <section className="mt-24 text-center">
             <h3
-              className="text-2xl font-bold text-black mb-6"
+              className="text-2xl font-bold text-white mb-6"
               style={{ fontFamily: '"Quicksand", sans-serif' }}
             >
               Ready to Get Started?
             </h3>
-            <p className="text-gray-700 mb-8" style={{ fontFamily: '"Quicksand", sans-serif' }}>
+            <p className="text-white mb-8" style={{ fontFamily: '"Quicksand", sans-serif' }}>
               Let’s bring your story to life. Contact us now and receive a personalized quote within 24 hours.
             </p>
             <Link
               href="/Contact"
-              className="relative z-50 inline-block bg-black text-white px-8 py-3 rounded-md font-medium hover:bg-gray-800 transition"
+              className="relative z-50 inline-block bg-[#1E1E1E] text-white px-8 py-3 rounded-md border-1 border-gray-800 hover:border-yellow-500 font-medium transition"
               style={{ fontFamily: '"Quicksand", sans-serif', pointerEvents: "auto" }}
             >
               Get in Touch
