@@ -22,7 +22,7 @@ function page() {
                     </p>
                 </div>
             </section>
-            <section className="flex bg-black items-center justify-center min-h-screen">
+            <section className="flex bg-[#111] items-center justify-center min-h-screen">
                 <ClientVideoSection />
             </section>
 

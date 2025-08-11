@@ -108,7 +108,7 @@ export default function Page() {
   return (
     <div>
 
-      <div id="HowItWorks" className="w-full bg-black pt-40 pb-20 px-4">
+      <div id="HowItWorks" className="w-full bg-[#111] pt-40 pb-20 px-4">
         <div className="w-full max-w-6xl mx-auto">
           {/* Section: How it works */}
           <h2
@@ -175,7 +175,7 @@ export default function Page() {
               {faqs.map((faq, index) => (
                 <div
                   key={index}
-                  className="border rounded-lg bg-black shadow-sm overflow-hidden"
+                  className="border rounded-lg bg-[#111] shadow-sm overflow-hidden"
                 >
                   <button
                     onClick={() => toggle(index)}

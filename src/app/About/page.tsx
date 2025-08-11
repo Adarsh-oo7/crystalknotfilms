@@ -27,7 +27,7 @@ export default function Page() {
   ];
 
   return (
-    <main className="flex flex-col bg-black">
+    <main className="flex flex-col bg-[#f5f5f5]">
       {/* Team Story */}
       <section className="max-w-6xl mx-auto pt-40 pb-15 px-4">
         {/* <motion.div
@@ -36,39 +36,39 @@ export default function Page() {
             transition={{ duration: 0.6 }}
           > */}
         <h2
-          className="text-[26px] sm:text-[28px] md:text-[30px] lg:text-[34px] xl:text-[40px] font-bold text-white text-center mb-6"
+          className="text-[26px] sm:text-[28px] md:text-[30px] lg:text-[34px] xl:text-[40px] font-bold text-center mb-6"
           style={{ fontFamily: "Quicksand", letterSpacing: "0.1em", lineHeight: 1.4 }}
         >
           Team Story
         </h2>
         <p
-          className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] xl:text-[16px] leading-relaxed mb-4 text-center text-white"
+          className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] xl:text-[16px] leading-relaxed mb-4 text-center"
           style={{ fontFamily: "Quicksand" }}
         >
           Our story didn&apos;t start with Macbooks and mouse clicks. It started in a tiny darkroom over 60 years ago — no AC, no presets, just pure passion and photo chemicals.
           My grandfather was the OG memory-maker. Film rolls, hand-developed photos, and hours of patience — that&apos;s how weddings were crafted back then. When my father stepped in at 20, he carried that legacy forward, editing and capturing love stories for four decades.
         </p>
         <p
-          className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] xl:text-[16px] leading-relaxed text-center text-white"
+          className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] xl:text-[16px] leading-relaxed text-center"
           style={{ fontFamily: "Quicksand" }}
         >
           Now it&apos;s my turn — same blood, same love for storytelling… just with a faster render time
         </p>
         <p
-          className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] xl:text-[16px] leading-relaxed text-center text-white"
+          className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] xl:text-[16px] leading-relaxed text-center"
           style={{ fontFamily: "Quicksand" }}
         >
           Welcome to Crystal Knot Films, where we don&apos;t carry cameras — we carry emotions into the edit timeline.
         </p>
         <p
-          className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] xl:text-[16px] leading-relaxed text-center text-white"
+          className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] xl:text-[16px] leading-relaxed text-center"
           style={{ fontFamily: "Quicksand" }}
         >
           <br />
           Over the years, we&apos;ve worked behind the scenes on:
         </p>
         <p
-          className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] xl:text-[16px] font-semibold leading-relaxed text-center text-white"
+          className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] xl:text-[16px] font-semibold leading-relaxed text-center"
           style={{ fontFamily: "Quicksand" }}
         >
           <br />
@@ -90,19 +90,19 @@ export default function Page() {
             transition={{ duration: 0.6 }}
           > */}
         <h2
-          className="text-[26px] sm:text-[28px] md:text-[30px] lg:text-[34px] xl:text-[40px] font-bold text-center mb-6 text-white"
+          className="text-[26px] sm:text-[28px] md:text-[30px] lg:text-[34px] xl:text-[40px] font-bold text-center mb-6"
           style={{ fontFamily: "Quicksand", letterSpacing: "0.1em", lineHeight: 1.4 }}
         >
           Why Crystal Knot?
         </h2>
         <p
-          className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] xl:text-[16px] leading-relaxed mb-4 text-center text-white"
+          className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] xl:text-[16px] leading-relaxed mb-4 text-center"
           style={{ fontFamily: "Quicksand" }}
         >
           We&apos;ve literally spent more time on Premiere timelines than on family vacations (true story).
         </p>
         <p
-          className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] xl:text-[16px] leading-relaxed text-center text-white"
+          className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] xl:text-[16px] leading-relaxed text-center"
           style={{ fontFamily: "Quicksand" }}
         >
           Let&apos;s be real — there are a thousand editors out there who can drag, drop, and export. But that&apos;s not editing. That&apos;s just Ctrl+C, Ctrl+V with background music.
@@ -119,13 +119,13 @@ export default function Page() {
             transition={{ duration: 0.6 }}
           > */}
         <h2
-          className="text-[26px] sm:text-[28px] md:text-[30px] lg:text-[34px] xl:text-[40px] font-bold text-center mb-6 text-white"
+          className="text-[26px] sm:text-[28px] md:text-[30px] lg:text-[34px] xl:text-[40px] font-bold text-center mb-6"
           style={{ fontFamily: "Quicksand", letterSpacing: "0.1em", lineHeight: 1.4 }}
         >
           Our vibe?
         </h2>
         <p
-          className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] xl:text-[16px] leading-relaxed mb-4 text-center text-white"
+          className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] xl:text-[16px] leading-relaxed mb-4 text-center"
           style={{ fontFamily: "Quicksand" }}
         >
           A little filmy, a little funny, and 100% emotion-first.
@@ -133,13 +133,13 @@ export default function Page() {
           Less posey-shosey, More story.
         </p>
         <p
-          className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] xl:text-[16px] leading-relaxed text-center text-white"
+          className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] xl:text-[16px] leading-relaxed text-center"
           style={{ fontFamily: "Quicksand" }}
         >
           We work with creators, planners, and couples across the world who care about quality — not just quantity. So whether it&apos;s a luxury vineyard wedding in California, a cozy countryside ceremony in Italy, or a city elopement in New York — we treat every project like it&apos;s a feature film.
         </p>
         <p
-          className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] xl:text-[16px] leading-relaxed text-justify text-white"
+          className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] xl:text-[16px] leading-relaxed text-justify"
           style={{ fontFamily: "Quicksand" }}
         >
           Because your memories deserve more than filters and flashy effects.
@@ -148,7 +148,7 @@ export default function Page() {
           you&apos;ve found your team.
         </p>
         <p
-          className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] xl:text-[16px] leading-relaxed text-center text-white"
+          className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] xl:text-[16px] leading-relaxed text-center"
           style={{ fontFamily: "Quicksand" }}
         >
           Let&apos;s make something beautiful —&nbsp;frame&nbsp;by&nbsp;frame.
@@ -192,16 +192,16 @@ export default function Page() {
             {stats.map((stat, idx) => (
               <div
                 key={idx}
-                className="flex flex-col items-center justify-center p-6 rounded-lg shadow-lg bg-black border border-gray-100"
+                className="flex flex-col items-center justify-center p-6 rounded-lg shadow-lg bg-white border border-gray-200"
                 style={{
-                  background: "black",
+                  background: "linear-gradient(145deg, #ffffff, #f8f8f8)",
                   boxShadow: "0 4px 20px rgba(0, 0, 0, 0.05)",
                 }}
               >
                 <span
                   className="text-4xl md:text-5xl font-bold"
                   style={{
-                    color: "white",
+                    color: "#1E1E1E",
                     fontFamily: "Montserrat, sans-serif",
                   }}
                 >
@@ -210,7 +210,7 @@ export default function Page() {
                   )}
                 </span>
                 <span
-                  className="mt-2 text-sm md:text-base tracking-wider text-gray-100"
+                  className="mt-2 text-sm md:text-base tracking-wider text-gray-700"
                   style={{ fontFamily: "Montserrat, sans-serif" }}
                 >
                   {stat.label}
@@ -221,7 +221,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="bg-black py-16 text-center">
+      <section className="bg-[#111] py-16 text-center">
         <h2
           className="text-2xl md:text-3xl text-white font-semibold mb-5"
           style={{
