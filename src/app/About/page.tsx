@@ -103,7 +103,7 @@ export default function Page() {
           We&apos;ve literally spent more time on Premiere timelines than on family vacations (true story).
         </p>
         <p
-          className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] xl:text-[16px] leading-relaxed text-justify"
+          className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] xl:text-[16px] leading-relaxed text-center"
           style={{ fontFamily: "Quicksand" }}
         >
           Let&apos;s be real — there are a thousand editors out there who can drag, drop, and export. But that&apos;s not editing. That&apos;s just Ctrl+C, Ctrl+V with background music.
