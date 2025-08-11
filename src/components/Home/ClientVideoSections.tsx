@@ -12,9 +12,9 @@ export default function ClientVideoSections() {
     Wedding: [
       {
         id: "video1",
-        src: "https://www.youtube.com/embed/-mhTawVXNSk?si=Q8SEKEwfGtPs8r9W",
-        title: "Wedding Highlight Reel 1",
-        thumbnail: "../images/video-data/v1.png",
+        src: "https://www.youtube.com/embed/BQvWtk7BL_U?si=kLk2vsQKESv8fqXX",
+        title: "Wedding Highlight Reel 3",
+        thumbnail: "../images/video-data/v7.png",
       },
       {
         id: "video2",
@@ -48,9 +48,9 @@ export default function ClientVideoSections() {
       },
       {
         id: "video7",
-        src: "https://www.youtube.com/embed/BQvWtk7BL_U?si=kLk2vsQKESv8fqXX",
-        title: "Wedding Highlight Reel 3",
-        thumbnail: "../images/video-data/v7.png",
+        src: "https://www.youtube.com/embed/-mhTawVXNSk?si=Q8SEKEwfGtPs8r9W",
+        title: "Wedding Highlight Reel 1",
+        thumbnail: "../images/video-data/v1.png",
       },
     ],
     "Corporate Events": [
@@ -60,7 +60,7 @@ export default function ClientVideoSections() {
         title: "Corporate Event Showcase 1",
         thumbnail: "../images/portfolio/c1.png",
       },
-     
+
     ],
     Reels: [
       {
@@ -96,7 +96,7 @@ export default function ClientVideoSections() {
     { src: "../images/9.jpg", alt: "Architectural Photography" },
     { src: "../images/10.jpg", alt: "Nature Photography" },
     { src: "../images/11.jpg", alt: "Sports Photography" },
-    { src: "../images/12.jpg", alt: "Event Photography" },     
+    { src: "../images/12.jpg", alt: "Event Photography" },
     { src: "../images/13.jpg", alt: "Wedding Photography" },
     { src: "../images/14.jpg", alt: "Corporate Event Photography" },
     { src: "../images/15.jpg", alt: "Portrait Photography" },
@@ -109,7 +109,7 @@ export default function ClientVideoSections() {
     { src: "../images/22.jpg", alt: "Nature Photography" },
     { src: "../images/23.jpg", alt: "Sports Photography" },
     { src: "../images/24.jpg", alt: "Event Photography" },
-                
+
   ];
 
   return (
@@ -138,11 +138,10 @@ export default function ClientVideoSections() {
                   setPlayingVideoId(null);
                 }}
                 style={{ fontFamily: 'Quicksand, sans-serif' }}
-                className={`px-6 py-2 rounded-full transition-colors duration-300 backdrop-blur-md border ${
-                  activeCategory === category
+                className={`px-6 py-2 rounded-full transition-colors duration-300 backdrop-blur-md border ${activeCategory === category
                     ? "bg-black/60 text-white border-white/10 shadow-lg"
                     : "bg-black/30 text-white border-white/10 hover:bg-black/50 hover:text-white shadow-sm"
-                }`}
+                  }`}
               >
                 {category}
               </button>
@@ -154,41 +153,41 @@ export default function ClientVideoSections() {
         <div className="mt-8 grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
           {activeCategory !== "Photos"
             ? videoContent[activeCategory as keyof typeof videoContent].map((video) => (
-                <div key={video.id} className="relative w-full aspect-video rounded-lg overflow-hidden shadow-lg z-10">
-                  {playingVideoId === video.id ? (
-                    <iframe
-                      src={`${video.src}?rel=0&modestbranding=1&showinfo=0&controls=1&autoplay=1`}
-                      title={video.title}
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                      className="absolute top-0 left-0 w-full h-full border-0"
-                    />
-                  ) : (
-                    <button onClick={() => setPlayingVideoId(video.id)} className="group relative w-full h-full">
-
-                      <Image
-                        src={video.thumbnail}
-                        alt={video.title}
-                        fill
-                        className="object-cover transition-transform duration-300 group-hover:scale-100"
-                      />
-                      <div className="absolute inset-0 flex items-center justify-center bg-black/50">
-                        <FaPlay className="text-white text-4xl opacity-90 hover:scale-110 transition-transform" />
-                      </div>
-                    </button>
-                  )}
-                </div>
-              ))
-            : photoContent.map((photo, index) => (
-                <div key={index} className="relative w-full aspect-[3/2] rounded-lg overflow-hidden shadow-lg">
-                  <Image
-                    src={photo.src || "./placeholder.svg"}
-                    alt={photo.alt}
-                    fill
-                    className="object-cover transition-transform duration-300 hover:scale-105"
+              <div key={video.id} className="relative w-full aspect-video rounded-lg overflow-hidden shadow-lg z-10">
+                {playingVideoId === video.id ? (
+                  <iframe
+                    src={`${video.src}?rel=0&modestbranding=1&showinfo=0&controls=1&autoplay=1`}
+                    title={video.title}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="absolute top-0 left-0 w-full h-full border-0"
                   />
-                </div>
-              ))}
+                ) : (
+                  <button onClick={() => setPlayingVideoId(video.id)} className="group relative w-full h-full">
+
+                    <Image
+                      src={video.thumbnail}
+                      alt={video.title}
+                      fill
+                      className="object-cover transition-transform duration-300 group-hover:scale-100"
+                    />
+                    <div className="absolute inset-0 flex items-center justify-center bg-black/50">
+                      <FaPlay className="text-white text-4xl opacity-90 hover:scale-110 transition-transform" />
+                    </div>
+                  </button>
+                )}
+              </div>
+            ))
+            : photoContent.map((photo, index) => (
+              <div key={index} className="relative w-full aspect-[3/2] rounded-lg overflow-hidden shadow-lg">
+                <Image
+                  src={photo.src || "./placeholder.svg"}
+                  alt={photo.alt}
+                  fill
+                  className="object-cover transition-transform duration-300 hover:scale-105"
+                />
+              </div>
+            ))}
         </div>
       </div>
     </section>
