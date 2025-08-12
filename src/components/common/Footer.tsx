@@ -41,7 +41,7 @@ export default function Footer() {
             <FaInstagram />
           </Link>
           <Link
-            href="https://www.facebook.com/yourpage"
+            href="https://www.facebook.com/profile.php?id=61575820371345"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-gray-300 transition-colors"
@@ -49,7 +49,7 @@ export default function Footer() {
             <FaFacebookF />
           </Link>
           <Link
-            href="https://www.youtube.com/@yourchannel"
+            href="https://www.youtube.com/@CrystalKnotFilms"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-gray-300 transition-colors"
