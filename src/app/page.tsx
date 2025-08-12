@@ -8,12 +8,13 @@ import ParallaxHero from "../components/Home/Parallax";
 import Brands from "../components/Home/Brands";
 import ContactForm from "../components/common/ContactForm";
 import Pricing from "../components/Home/Pricing";
-import ContactLinks from "../components/ContactLinks";
+import FollowUs from '@/components/FollowUs';
+
 function Page() {
   return (
     <div>
-      <ContactLinks />
         <div className="relative">
+          <FollowUs />
           <Hero />
           <Story />
         </div>
