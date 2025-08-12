@@ -3,7 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
-
+import Link from "next/link";
 const services = [
   {
     title: "Wedding Editing",
@@ -32,14 +32,71 @@ const services = [
       "Delivered in 4K with color grading",
       "Turnaround: 1-2 weeks, Unlimited revision rounds"
     ],
+  },
+    {
+    title: "Weddings / Events Photo Edits",
+    description: [
+      "Lightroom Culling, retouching, and color correction",
+      " AI-powered Photoshop editing to remove distractions and enhance details",
+      "Tailored editing style — romantic, modern, classic",
+      "Skin tone perfection and background enhancement",
+      "Delivered in high-resolution, print-ready format",
+      "Turnaround: 1 week, Unlimited revision rounds"
+
+    ],
   }
 ];
 
 
 export default function ServicePage() {
   return (
-
     <div>
+
+    <div className="hidden lg:flex bg-white h-5 items-center justify-around px-4">
+      {/* Gmail */}
+      <Link
+        href="mailto:yourmail@gmail.com"
+        target="_blank"
+        className="flex items-center space-x-1 hover:underline"
+      >
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png"
+          alt="Gmail"
+          className="w-4 h-4"
+        />
+        <span className="text-black text-sm">Gmail</span>
+      </Link>
+
+      {/* WhatsApp with Number */}
+      <Link
+        href="https://wa.me/919876543210"
+        target="_blank"
+        className="flex items-center space-x-1 hover:underline"
+      >
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+          alt="WhatsApp"
+          className="w-4 h-4"
+        />
+        <span className="text-black text-sm">+91 98765 43210</span>
+      </Link>
+
+      {/* Instagram */}
+      <Link
+        href="https://instagram.com/yourusername"
+        target="_blank"
+        className="flex items-center space-x-1 hover:underline"
+      >
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+          alt="Instagram"
+          className="w-4 h-4"
+        />
+        <span className="text-black text-sm">Instagram</span>
+      </Link>
+
+
+    </div>
 
     <section className="bg-[#111] text-white pt-40 pb-20 px-6">
       <div className="max-w-6xl mx-auto text-center mb-14">

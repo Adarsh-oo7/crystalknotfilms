@@ -37,7 +37,51 @@ function Page() {
 
     return (
         <div className="bg-[#f5f5f5]">
+    <div className="hidden lg:flex bg-white h-5 items-center justify-around px-4">
+      {/* Gmail */}
+      <Link
+        href="mailto:yourmail@gmail.com"
+        target="_blank"
+        className="flex items-center space-x-1 hover:underline"
+      >
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png"
+          alt="Gmail"
+          className="w-4 h-4"
+        />
+        <span className="text-black text-sm">Gmail</span>
+      </Link>
 
+      {/* WhatsApp with Number */}
+      <Link
+        href="https://wa.me/919876543210"
+        target="_blank"
+        className="flex items-center space-x-1 hover:underline"
+      >
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+          alt="WhatsApp"
+          className="w-4 h-4"
+        />
+        <span className="text-black text-sm">+91 98765 43210</span>
+      </Link>
+
+      {/* Instagram */}
+      <Link
+        href="https://instagram.com/yourusername"
+        target="_blank"
+        className="flex items-center space-x-1 hover:underline"
+      >
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+          alt="Instagram"
+          className="w-4 h-4"
+        />
+        <span className="text-black text-sm">Instagram</span>
+      </Link>
+
+
+    </div>
 
             {/* Section: Intro + List */}
             <section className="pt-40 pb-20 px-6 md:px-16">
@@ -84,7 +128,7 @@ function Page() {
             <div className="flex flex-wrap justify-center gap-6 px-4">
                 <PricingCard
                     title="HIGHLIGHT"
-                    price={200}
+                    price={150}
                     features={[
                         '3 - 8 min long',
                         '1 - 3 cameras incl. drones',
@@ -97,7 +141,7 @@ function Page() {
                 />
                 <PricingCard
                     title="FEATURE"
-                    price={300}
+                    price={250}
                     features={[
                         '10 - 15 min long',
                         '1 - 3 cameras incl. drones',
@@ -110,7 +154,7 @@ function Page() {
                 />
                 <PricingCard
                     title="FULL LENGTH"
-                    price={325}
+                    price={275}
                     features={[
                         '30 - 60 min long',
                         '1 - 3 cameras incl. drones',
@@ -135,7 +179,7 @@ function Page() {
                 <div className="flex flex-wrap justify-center gap-6 items-start z-0">
                     <CollapsibleCard
                         index={0}
-                        isOpen={activeIndex === 0}
+                        isOpen={activeIndex === 1}
                         toggle={handleToggle}
                         title="Package (1)"
                         price={325}
