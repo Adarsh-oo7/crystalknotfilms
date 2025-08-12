@@ -72,7 +72,7 @@ export default function ContactForm() {
         >
           Customized Wedding Video Editing
           <br />
-          <span className="text-lg font-normal">Starting From $250</span>
+          <span className="text-lg font-normal">Starting From $150</span>
         </h1>
 
         {/* Form */}
