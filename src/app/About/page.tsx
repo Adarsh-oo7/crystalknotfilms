@@ -4,7 +4,6 @@
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 import Link from "next/link";
-import ContactLinks from "@/components/ContactLinks";
 // Example client logos
 // const clientLogos = [
 //   "./images/brands/ninja-removebg-preview.png",
@@ -28,7 +27,6 @@ export default function Page() {
 
   return (
     <main className="flex flex-col bg-[#f5f5f5]">
-<ContactLinks />
       <section className="max-w-6xl mx-auto pt-40 pb-15 px-4">
         {/* <motion.div
             initial={{ opacity: 0, y: 30 }}

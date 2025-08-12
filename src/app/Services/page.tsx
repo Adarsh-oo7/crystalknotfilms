@@ -3,7 +3,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
-import ContactLinks from "@/components/ContactLinks";
 const services = [
   {
     title: "Wedding Editing",
@@ -52,7 +51,6 @@ export default function ServicePage() {
   return (
     <div>
 
-<ContactLinks/>
 
     <section className="bg-[#111] text-white pt-40 pb-20 px-6">
       <div className="max-w-6xl mx-auto text-center mb-14">

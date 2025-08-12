@@ -6,7 +6,6 @@ import { Edit, Film, CloudDownload } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { ChevronDown, ChevronUp } from "lucide-react";
 import Link from "next/link";
-import ContactLinks from "@/components/ContactLinks";
 
 const faqs = [
   {
@@ -102,7 +101,6 @@ export default function Page() {
 
   return (
     <div>
-     <ContactLinks/>
 
 
       <div id="HowItWorks" className="w-full bg-[#111] pt-40 pb-20 px-4">

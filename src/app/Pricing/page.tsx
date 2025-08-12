@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import { Plus, Minus } from 'lucide-react';
 import Link from "next/link";
-import ContactLinks from "@/components/ContactLinks";
 // -------------------- Component Types --------------------
 
 interface PricingCardProps {
@@ -46,7 +45,6 @@ function Page() {
 
     return (
         <div className="bg-[#f5f5f5]">
-<ContactLinks/>
 
 
             {/* Section: Intro + List */}

@@ -1,10 +1,8 @@
 import ClientVideoSection from '@/components/Home/ClientVideoSection'
 import React from 'react'
-import ContactLinks from "@/components/ContactLinks";
 function page() {
     return (
         <div>
-  <ContactLinks/>
 
             <section className="bg-[#1E1E1E] pt-20 pb-20 px-6 text-center">
                 <div className="max-w-3xl mx-auto">

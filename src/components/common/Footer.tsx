@@ -25,7 +25,7 @@ export default function Footer() {
         {/* Social Media Icons */}
         <div className="flex gap-4 text-white text-xl">
           <Link
-            href="https://wa.me/your-number"
+            href="https://wa.me/918310881045"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-gray-300 transition-colors"
