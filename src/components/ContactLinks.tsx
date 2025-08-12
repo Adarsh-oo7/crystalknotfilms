@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function ContactLinks() {
   return (
-    <div className="hidden lg:flex bg-white h-5 items-center justify-around px-4">
+    <div className="hidden lg:flex bg-white h-5 items-center justify-around px-4 fixed top-0 left-4 right-4 z-50 rounded-b-lg shadow-lg border-b border-l border-r border-gray-200">
       {/* Gmail */}
       <Link
         href="mailto:yourmail@gmail.com"
@@ -13,8 +13,8 @@ export default function ContactLinks() {
         <Image
           src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png"
           alt="Gmail"
-          width={16} // 1rem
-          height={16} // 1rem
+          width={16}
+          height={16}
         />
         <span className="text-black text-sm">Gmail</span>
       </Link>

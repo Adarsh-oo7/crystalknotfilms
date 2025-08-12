@@ -53,14 +53,14 @@ export default function Story() {
                         </div>
 
                         {/* IMAGE - Made larger and moved more to the right */}
-                        <div className="w-full md:w-[70%] lg:w-[80%] xl:w-[95%] mt-0 sm:mb-10 sm:mt-0 md:mt-35 lg:mt-30 pl-2 md:pl-10 flex justify-end overflow-visible">
+                        <div className="w-full md:w-[80%] lg:w-980%] xl:w-[95%] mt-0 sm:mb-10 sm:mt-0 md:mt-35 lg:mt-30 pl-2 md:pl-10 flex justify-end overflow-visible">
                             <div className="relative sm:scale-110 md:scale-125 lg:scale-150 xl:scale-150 sm:translate-x-2 md:translate-x-4 lg:translate-x-8 xl:translate-x-12">
                                 <Image
                                     src="./images/Without background.png"
                                     alt="Wedding Videography Equipment"
                                     width={1000}
                                     height={800}
-                                    className="w-[80%] md:w-[80%] lg:w-[120%] xl:w-[150%] mx-auto h-auto object-contain rounded-lg"
+                                    className="w-[100%] md:w-[100%] lg:w-[120%] xl:w-[150%] mx-auto h-auto object-contain rounded-lg"
                                 />
                             </div>
                         </div>
