@@ -5,74 +5,69 @@ import { motion } from 'framer-motion';
 import { ChevronDown, ChevronUp } from "lucide-react";
 import Link from "next/link";
 
-
 const faqs = [
   {
-    question: "Who are you?",
+    question: "Who are we?",
     answer:
-      "Our team consists of 15 editors and three managers based in London and Berlin. Each of the team members has at least five years of experience in outsourcing wedding video editing, post-production or shooting. Since the inception of the studio, we’ve edited more than 800 weddings – a noteworthy accomplishment that has resulted in many happy clients.",
+      "We’re a passionate team of 10 skilled editors, led by our founder and manager, working right here in India. With years of experience in wedding video editing and post-production, we’ve successfully completed over 3,000 projects — turning raw footage into unforgettable stories that couples and creators treasure for a lifetime.",
   },
   {
-    question: "How much does your service cost?",
-    answer: "Our wedding video editing prices are dependent on several factors. These include hours raw footage, quality, number of cameras used, your deadline and the specifics of the editing work. If you’re looking for same day wedding video editing, you’ll have to be contact us atleast two – four days before the event",
+    question: "How much does same day edit service cost?",
+    answer:
+      "Our wedding video editing rates depend on a few key factors — the total hours of raw footage, video quality, number of camera angles, turnaround time, and the specific editing style you need. For urgent projects like same-day wedding edits, we request you contact us at least 2–4 days before the event so we can plan and deliver the best results.",
   },
   {
-    question: "How do I start?",
-    answer: "Outsourcing wedding video editing is a fairly simple process. Contact us today via that form and send your project details. We will get back to you to discuss the specifics and provide you with a personalised, free of charge quote. If you’re happy with the offer, we can move onto our portal and take it from there.",
+    question: "Our Motto?",
+    answer:
+      "We focus on helping wedding videographers and photographers who are busy capturing unforgettable moments but don’t have the time or the right team to handle post-production. Our goal is to be the trusted editing partner they can rely on — delivering polished, cinematic films while they stay focused on what they do best: shooting the perfect moments.",
   },
   {
-    question: "Which countries do you serve?",
-    answer: "We have worked with clients from the US, UK, Canada, France, Australia etc… Our knowledge, experience and understanding of local audiences enable us to provide quality solutions, regardless of the customer’s background",
-  },
-  {
-    question: "What software do you use?",
-    answer: "We use Premiere Pro,  Final Cut Pro, After Effects, Audio Audition and Photoshop.",
+    question: "What software do we use?",
+    answer:
+      "For video editing, we work with industry-leading tools like DaVinci Resolve, Adobe Premiere Pro, Final Cut Pro, After Effects, and Adobe Audition.\n\nFor photo editing, we use Adobe Lightroom and Photoshop.",
   },
   {
     question: "How do I pay?",
-    answer: "We use Paypal and we charge upfront. However, if you use other payment services let us know and we’ll see what we can do.",
+    answer:
+      "We accept payments through Remitly and PayPal. If you prefer another payment method, let us know — we’ll do our best to accommodate it.",
   },
   {
-    question: "How much time would it take you to edit my footage?",
-    answer: "Before getting started with your project, we’d like to discuss the scope of the wedding video editing you need. Based on this information, we will calculate the price and determine the timeframe for delivery. We will do our best to meet your deadline and we do offer same day wedding video editing services (Max. 4 projects per month).",
+    question: "What’s our editing process like?",
+    answer:
+      "Our editing process is fully tailored to your style, requirements, and vision. We consider factors like raw footage length, quality, number of camera angles, and your deadline. Once we start, we’ll deliver the final edit within the agreed timeframe. As part of our policy, every project includes unlimited revisions plus the complete project files (Premiere, DaVinci, or Final Cut) so you have everything you need.",
   },
   {
-    question: "Why should I outsource the wedding video editing process?",
-    answer: "Wedding video editing can be very time-consuming and cumbersome. If you’re working with multiple clients, you’ll find it even more difficult to focus on the task at hand and produce a high quality outcome every single time with fast turnarounds.Outsourced wedding video editing services give you quality within a short period of time. While we’re working on putting the final video together, you’ll be free to nurture relationships with clients and grow your business",
-  },
-  {
-    question: "What does your service entail?",
-    answer: "We offer wedding video editing and post-production services that are tailored to your specific needs. You’ll simply have to let us know what you’re looking for and we’ll do our best to accommodate for your preferences.",
-  },
-  {
-    question: "What’s your editing process like?",
-    answer: "Our editing process is entirely based on your specifications and requirements. It depends on the hours raw footage, quality, number of cameras used and your deadline. We will work on editing and sending you the final outcome within the specified deadline. As per our work policy, clients are entitled to three rounds of revisions + the complete premiere files",
-  },
-  {
-    question: "Will my data be saved and will you return my original footage?",
-    answer: "It depends on the specific agreement between you and the client. We usually keep the original footage until the final video(s) are approved and we typically keep the files up to 6 weeks after delivery. If you need us to keep the files for a longer period of time, please let us know in advance. ",
-  },
-  {
-    question: "Can you improve the quality of my wedding video?",
-    answer: "Depends on your footage quality and age – We have extensive experience in wedding video editing and post-production, but keep in mind, however, that the quality of the footage will be determining for the final outcome. Our editors always do their best to optimise the quality but we’ll let you know before we start.",
-  },
-  {
-    question: "Do you offer free revisions?",
-    answer: "We offer three rounds of revisions + the complete premiere files. We charge a small fee for anything beyond that depending on scope.",
-  },
-  {
-    question: "How will I get my finished product?",
-    answer: "We’ll send the files for client approval via Dropbox or Frame.io to ensure fast, safe and reliable transfers of information.",
+    question: "How long will it take to edit my footage?",
+    answer:
+      "Before we begin, we’ll discuss the details of your wedding video — including the style, length, and complexity of the edit. Based on this, we’ll give you both a quote and a delivery timeline. We always aim to meet your deadline, and for urgent needs, we offer same-day wedding video editing (limited to a maximum of 6–8 projects per month).",
   },
   {
     question: "Is there anything you don’t do in terms of post-production?",
-    answer: "Get in touch with us and let the team know exactly what you’re looking for. We have years of experience in video editing and post-production. We can handle most types of projects, including specialised wedding video production (Feature, cinematographic, documentary, storytelling, etc..)",
+    answer:
+      "Get in touch with us and let the team know exactly what you’re looking for. We have years of experience in video editing and post-production. We can handle most types of projects, including specialised concert editing, podcasts (Feature, cinematographic, documentary, storytelling, etc..)",
   },
   {
-    question: "Can I tweak or customize my package?",
-    answer: "Yes, we believe that personalised solutions are the only way to go. This is why our team members will carry out an initial consultation with you. Once we understand your goal and specifications, we will do our best to offer a personalised, 100% tailored wedding video editing package.",
+    question: "Why should I outsource wedding video editing?",
+    answer:
+      "Editing a wedding film takes time — a lot of it. If you’re juggling multiple clients and shoots, it can be challenging to deliver top-quality videos quickly, every single time. By outsourcing your wedding video edits to us, you get professional, high-quality results with fast turnarounds, while freeing up your schedule to focus on what truly matters — capturing more moments, building stronger client relationships, and growing your business.",
+  },
+  {
+    question: "Will my data be saved, and will I get my original footage back?",
+    answer:
+      "By default, we keep your original footage until the final video is approved. After delivery, we typically store all files for up to 6 weeks. If you’d like us to keep them longer, just let us know in advance, and we’ll arrange it as part of our agreement.",
+  },
+  {
+    question: "Can you improve the quality of my wedding video?",
+    answer:
+      "Yes — depending on the quality and age of your footage. Our team has extensive experience in wedding video editing and post-production, and we’ll always do our best to enhance and optimise your video. That said, the final result will largely depend on the original footage. Before we start, we’ll review your files and let you know exactly what improvements are possible.",
+  },
+  {
+    question: "How will I receive my finished product?",
+    answer:
+      "We deliver your final videos through Google Drive or Frame.io, ensuring fast, secure, and reliable file transfers. This also makes it easy for you to preview, download, and share your edits hassle-free.",
   },
 ];
+
 
 export default function Page() {
 

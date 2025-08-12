@@ -8,11 +8,11 @@ const services = [
   {
     title: "Wedding Editing",
     description: [
-      "Highlight, Feature, Full Length edits",
+      "Teaser, Highlight, Feature, Full Length edits",
       "Tailored storytelling with cinematic feel",
       "Multiple style options – romantic, modern, classic",
       "Delivered in 4K with color grading",
-      "Turnaround: 2–4 weeks, 2 revision rounds"
+      "Turnaround: 1-2 weeks, Unlimited revision rounds"
     ],
   },
   {
@@ -21,34 +21,20 @@ const services = [
       "Energetic highlight reels to capture the vibe",
       "Social-media optimized formats",
       "Quick turnaround for timely sharing",
-      "Multi-camera & crowd coverage",
+      "Multi-camera & crowd coverage"
     ],
   },
   {
-    title: "Podcast-to-Video",
+    title: "Corporate Promos / Birthdays / Product Edits",
     description: [
-      "Full episode edit with branding",
-      "Clipped highlights for social media",
-      "Clean audio sync & noise removal",
+      "Teaser, Highlight, Feature, Full Length edits",
+      "Tailored storytelling",
+      "Delivered in 4K with color grading",
+      "Turnaround: 1-2 weeks, Unlimited revision rounds"
     ],
-  },
-  {
-    title: "Reels / Short Form",
-    description: [
-      "Trending transitions & effects",
-      "Optimized for Instagram & TikTok",
-      "Fast delivery for content batches",
-    ],
-  },
-  {
-    title: "Corporate Promos / Testimonials / Product Edits",
-    description: [
-      "Professional storytelling to boost brand image",
-      "Testimonial videos to build trust",
-      "Cinematic product showcases",
-    ],
-  },
+  }
 ];
+
 
 export default function ServicePage() {
   return (
