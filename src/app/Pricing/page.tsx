@@ -56,7 +56,7 @@ function Page() {
                         Wedding Video Editing Price
                     </h3>
                     <p className="text-start text-gray-700 text-[13px] sm:text-[14px] md:text-[16px] lg:text-[18px] xl:text-[18px] mb-8 max-w-3xl mx-auto" style={{ fontFamily: 'Quicksand, sans-serif' }}>
-                        We are fully committed to giving our clients cost-efficient wedding video editing services. We're always striving to provide the best price – 2 – quality ratio so you'll get the outcome you're looking for at a reasonable price. Our professional wedding video editing price structure is based on several factors. To determine how much our service is going to cost, you'll have to take the following in consideration:
+                        We are fully committed to giving our clients cost-efficient wedding video editing services. We&apos;re always striving to provide the best price – 2 – quality ratio so you&apos;ll get the outcome you&apos;re looking for at a reasonable price. Our professional wedding video editing price structure is based on several factors. To determine how much our service is going to cost, you&apos;ll have to take the following in consideration:
                     </p>
 
                     <ul className="text-gray-700 text-[13px] sm:text-[14px] md:text-[16px] lg:text-[18px] xl:text-[18px] space-y-2 max-w-2xl mx-auto text-start" style={{ fontFamily: 'Quicksand, sans-serif' }}>
@@ -69,7 +69,7 @@ function Page() {
                     </ul>
 
                     <p className="text-start text-gray-700 text-[13px] sm:text-[14px] md:text-[16px] lg:text-[18px] xl:text-[18px] mt-8 mb-8 max-w-3xl mx-auto" style={{ fontFamily: 'Quicksand, sans-serif' }}>
-                        There isn't a one-size-fits-all solution in terms of wedding video editing and post-production. We will create a tailored offer for you that will be based on those factors.
+                        There isn&apos;t a one-size-fits-all solution in terms of wedding video editing and post-production. We will create a tailored offer for you that will be based on those factors.
                     </p>
 
                     <div className="border border-pink-100 shadow-lg rounded-2xl p-10 md:p-14 bg-[#e2e2e2df]">
@@ -81,7 +81,7 @@ function Page() {
                             Strategically speaking, a partnership with an experienced team like ours will enable you to optimise corporate processes, thus saving money and boosting your income.
                         </p>
                         <p className="text-center text-gray-800 text-[13px] sm:text-[14px] md:text-[16px] lg:text-[18px] xl:text-[18px] max-w-3xl mx-auto" style={{ fontFamily: 'Quicksand, sans-serif' }}>
-                            Looking for the biggest bargain in terms of wedding video editing isn't always the best approach. There could be hidden fees and additional charges you weren't made aware of in the beginning.<br />
+                            Looking for the biggest bargain in terms of wedding video editing isn&apos;t always the best approach. There could be hidden fees and additional charges you weren&apos;t made aware of in the beginning.<br />
                             <span className="block mt-4 font-medium">
                                 At <span className="text-[#D4AF37] font-semibold" style={{ fontFamily: 'Ginger, sans-serif' }}>Crystal Knot Films</span>, we believe in complete transparency and we offer competitive wedding video editing services that are reasonably priced even for the one-man team.
                             </span>
