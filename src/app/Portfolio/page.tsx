@@ -35,7 +35,7 @@ function page() {
 
       {/* Instagram */}
       <Link
-        href="https://instagram.com/yourusername"
+        href="https://www.instagram.com/crystalknotfilms/"
         target="_blank"
         className="flex items-center space-x-1 hover:underline"
       >

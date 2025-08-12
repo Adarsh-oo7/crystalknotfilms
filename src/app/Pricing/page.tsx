@@ -54,7 +54,7 @@ function Page() {
 
       {/* WhatsApp with Number */}
       <Link
-        href="https://wa.me/919876543210"
+        href="https://wa.me/918310881045"
         target="_blank"
         className="flex items-center space-x-1 hover:underline"
       >
@@ -68,7 +68,7 @@ function Page() {
 
       {/* Instagram */}
       <Link
-        href="https://instagram.com/yourusername"
+        href="https://www.instagram.com/crystalknotfilms/"
         target="_blank"
         className="flex items-center space-x-1 hover:underline"
       >

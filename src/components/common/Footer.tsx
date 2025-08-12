@@ -81,7 +81,7 @@ export default function Footer() {
             <FaTiktok />
           </Link>
           <Link
-            href="https://www.instagram.com/yourprofile"
+            href="https://www.instagram.com/crystalknotfilms/"
             target="_blank"
             rel="noopener noreferrer"
           >
