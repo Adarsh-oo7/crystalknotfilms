@@ -7,6 +7,7 @@ import { motion } from 'framer-motion';
 import { ChevronDown, ChevronUp } from "lucide-react";
 import Link from "next/link";
 import ContactLinks from "@/components/ContactLinks";
+
 const faqs = [
   {
     question: "Who are we?",
@@ -82,19 +83,19 @@ export default function Page() {
     {
       label: 'Tell Us',
       description:
-        "Which package? What's your deadline? Fill in the form and get a free quote within 24 hrs.",
+        "Which package? What&apos;s your deadline? Fill in the form and get a free quote within 24 hrs.",
       icon: Edit,
     },
     {
       label: 'We Work',
       description:
-        "We'll start working and editing your footage as soon as we've the files & notes.",
+        "We&apos;ll start working and editing your footage as soon as we&apos;ve the files & notes.",
       icon: Film,
     },
     {
       label: 'Download the Videos',
       description:
-        "We'll send the first video within 7 – 30 days and we offer three revisions.",
+        "We&apos;ll send the first video within 7 – 30 days and we offer three revisions.",
       icon: CloudDownload,
     },
   ];
@@ -272,7 +273,7 @@ export default function Page() {
               Ready to Get Started?
             </h3>
             <p className="text-white mb-8" style={{ fontFamily: '"Quicksand", sans-serif' }}>
-              Let's bring your story to life. Contact us now and receive a personalized quote within 24 hours.
+              Let&apos;s bring your story to life. Contact us now and receive a personalized quote within 24 hours.
             </p>
             <Link
               href="/Contact"
