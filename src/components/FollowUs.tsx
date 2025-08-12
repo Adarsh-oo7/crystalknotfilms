@@ -6,6 +6,7 @@ import {
   FaWhatsapp,
   FaInstagram,
   FaFacebookF,
+  FaYoutube,
   FaShare,
   FaTimes,
 } from "react-icons/fa";
@@ -48,7 +49,7 @@ function FollowUs(): React.JSX.Element {
   };
 
   return (
-    <div className={`fixed top-22 right-8 z-50 transition-all duration-500 ${
+    <div className={`fixed top-24 right-8 z-50 transition-all duration-500 ${
       isVisible ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'
     }`}>
       {/* Main Floating Button */}
@@ -73,7 +74,7 @@ function FollowUs(): React.JSX.Element {
             isOpen ? 'translate-x-0 opacity-100' : 'translate-x-8 opacity-0'
           }`} style={{ transitionDelay: isOpen ? '100ms' : '0ms' }}>
             <Link
-              href="mailto:info@crystalknotfilms.com"
+              href="mailto:Crystal@knotfilms.com"
               className="bg-red-500 hover:bg-red-600 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-125 hover:rotate-12 ml-auto animate-bounce"
               title="Email Us"
               onClick={() => setIsOpen(false)}
@@ -87,7 +88,7 @@ function FollowUs(): React.JSX.Element {
             isOpen ? 'translate-x-0 opacity-100' : 'translate-x-8 opacity-0'
           }`} style={{ transitionDelay: isOpen ? '200ms' : '0ms' }}>
             <Link
-              href="https://wa.me/your-number"
+              href="https://wa.me/918310881045"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-green-500 hover:bg-green-600 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-125 hover:rotate-12 ml-auto animate-bounce"
@@ -116,12 +117,29 @@ function FollowUs(): React.JSX.Element {
             </Link>
           </div>
           
+          {/* YouTube */}
+          <div className={`mb-3 transition-all duration-300 ${
+            isOpen ? 'translate-x-0 opacity-100' : 'translate-x-8 opacity-0'
+          }`} style={{ transitionDelay: isOpen ? '500ms' : '0ms' }}>
+            <Link
+              href="https://www.youtube.com/@CrystalKnotFilms"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-red-600 hover:bg-red-700 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-125 hover:rotate-12 ml-auto animate-bounce"
+              title="YouTube"
+              onClick={() => setIsOpen(false)}
+              style={{ animationDelay: '0.4s' }}
+            >
+              <FaYoutube className="text-lg" />
+            </Link>
+          </div>
+          
           {/* Facebook */}
           <div className={`mb-3 transition-all duration-300 ${
             isOpen ? 'translate-x-0 opacity-100' : 'translate-x-8 opacity-0'
           }`} style={{ transitionDelay: isOpen ? '400ms' : '0ms' }}>
             <Link
-              href="https://www.facebook.com/yourpage"
+              href="https://www.facebook.com/profile.php?id=61575820371345"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-blue-500 hover:bg-blue-600 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-125 hover:rotate-12 ml-auto animate-bounce"

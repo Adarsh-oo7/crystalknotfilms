@@ -14,7 +14,7 @@ export default function Footer() {
         {/* Center Logo + Brand */}
         <div className="flex flex-col items-center gap-2 text-center">
           <Link href="/" className="invert">
-            <Image src="./images/Ck logo.png" alt="Logo" width={100} height={100} />
+            <Image src="./images/Ck logo.png" alt="Logo" width={120} height={120} />
           </Link>
           
           <p className="text-2xl font-light" style={{ fontFamily: 'Ginger, sans-serif' }}>
@@ -61,7 +61,7 @@ export default function Footer() {
         {/* Website URL */}
         <div className="text-center">
           <p className="text-sm text-gray-300" style={{ fontFamily: "Quicksand, sans-serif" }}>
-            crystalknotfilms.com
+            Crystal@knotfilms.com
           </p>
         </div>
 
