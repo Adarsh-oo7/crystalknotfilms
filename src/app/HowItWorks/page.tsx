@@ -1,5 +1,5 @@
 'use client';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { FaPlay } from "react-icons/fa";
 import { Edit, Film, CloudDownload } from 'lucide-react';
@@ -73,36 +73,78 @@ const faqs = [
 export default function Page() {
   const [playingVideo, setPlayingVideo] = useState(false);
   const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const [videoError, setVideoError] = useState(false);
+  const [videoLoaded, setVideoLoaded] = useState(false);
+  const [videoRef, setVideoRef] = useState<HTMLVideoElement | null>(null);
+  const [currentVideoSource, setCurrentVideoSource] = useState(0);
+
+  // Define video sources similar to Hero section
+  const [videoSources] = useState(() => {
+    const isProd = process.env.NODE_ENV === 'production'
+    const basePath = isProd ? '/crystalknotfilms' : ''
+
+    return [
+      // Try GitHub raw URL first since we know it works for download
+      isProd ? 'https://github.com/adarsh-oo7/crystalknotfilms/raw/main/public/videos/HIW.mp4' : `${basePath}/videos/HIW.mp4`,
+      // Standard GitHub Pages path
+      `${basePath}/videos/HIW.mp4`,
+      // Media URL for LFS files (fallback)
+      isProd ? 'https://media.githubusercontent.com/media/adarsh-oo7/crystalknotfilms/main/public/videos/HIW.mp4' : `${basePath}/videos/HIW.mp4`
+    ]
+  })
 
   const toggle = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
+  };
+
+  const handleVideoError = (e: React.SyntheticEvent<HTMLVideoElement, Event>) => {
+    console.error("Video failed to load:", e.currentTarget.error);
+
+    // Try next video source if available
+    if (currentVideoSource < videoSources.length - 1) {
+      console.log(`Trying next video source: ${videoSources[currentVideoSource + 1]}`);
+      setCurrentVideoSource(prev => prev + 1);
+      setVideoLoaded(false);
+    } else {
+      console.error("All video sources failed");
+      setVideoError(true);
+    }
+  };
+
+  const handleVideoLoad = () => {
+    console.log("Video loaded successfully");
+    setVideoLoaded(true);
+  };
+
+  const handleCanPlay = (e: React.SyntheticEvent<HTMLVideoElement, Event>) => {
+    const video = e.currentTarget;
+    setVideoRef(video);
+    console.log("Video can start playing");
   };
 
   const steps = [
     {
       label: 'Tell Us',
       description:
-        "Which package? What&apos;s your deadline? Fill in the form and get a free quote within 24 hrs.",
+        "Which package? What's your deadline? Fill in the form and get a free quote within 24 hrs.",
       icon: Edit,
     },
     {
       label: 'We Work',
       description:
-        "We&apos;ll start working and editing your footage as soon as we&apos;ve the files & notes.",
+        "We'll start working and editing your footage as soon as we've the files & notes.",
       icon: Film,
     },
     {
       label: 'Download the Videos',
       description:
-        "We&apos;ll send the first video within 7 – 30 days and we offer three revisions.",
+        "We'll send the first video within 7 – 30 days and we offer three revisions.",
       icon: CloudDownload,
     },
   ];
 
   return (
     <div>
-
-
       <div id="HowItWorks" className="w-full bg-[#111] pt-40 pb-20 px-4">
         <div className="w-full max-w-6xl mx-auto">
           {/* Section: How it works */}
@@ -162,21 +204,25 @@ export default function Page() {
             })}
           </div>
 
-          {/* Fixed Video Section */}
+          {/* Enhanced Video Section with fallback handling */}
           <div className="mt-16 max-w-4xl mx-auto">
             <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow-2xl border border-gray-700">
-              {playingVideo ? (
+              {playingVideo && !videoError ? (
                 <video
+                  key={currentVideoSource} // Force re-render when source changes
+                  ref={setVideoRef}
                   className="w-full h-full object-cover"
                   controls
                   autoPlay
-                  poster="./images/imgs.png"
-                  onError={() => {
-                    console.error("Video failed to load");
-                    setPlayingVideo(false);
-                  }}
+                  playsInline
+                  onError={handleVideoError}
+                  onLoadedData={handleVideoLoad}
+                  onCanPlay={handleCanPlay}
+                  preload="metadata"
+                  crossOrigin={currentVideoSource === 0 ? undefined : "anonymous"}
+                  style={{ backgroundColor: '#000' }}
                 >
-                  <source src="./../videos/HIW.mp4" type="video/mp4" />
+                  <source src={videoSources[currentVideoSource]} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               ) : (
@@ -224,7 +270,39 @@ export default function Page() {
                   </div>
                 </button>
               )}
+
+              {/* Error Fallback */}
+              {videoError && playingVideo && (
+                <div className="absolute inset-0 flex items-center justify-center bg-gray-900 text-white">
+                  <div className="text-center">
+                    <p className="text-lg mb-2">Video temporarily unavailable</p>
+                    <p className="text-sm text-gray-400">Please try again later</p>
+                    <button
+                      onClick={() => {
+                        setVideoError(false);
+                        setPlayingVideo(false);
+                        setCurrentVideoSource(0);
+                      }}
+                      className="mt-4 px-4 py-2 bg-yellow-500 text-black rounded-md hover:bg-yellow-600 transition-colors"
+                    >
+                      Try Again
+                    </button>
+                  </div>
+                </div>
+              )}
             </div>
+
+            {/* Debug info for development */}
+            {process.env.NODE_ENV === 'development' && (
+              <div className="mt-4 text-white text-xs bg-black/70 p-3 rounded max-w-sm">
+                <div>Current Video Source: {videoSources[currentVideoSource]}</div>
+                <div>Source Index: {currentVideoSource + 1}/{videoSources.length}</div>
+                <div>Video Error: {videoError ? 'Yes' : 'No'}</div>
+                <div>Video Loaded: {videoLoaded ? 'Yes' : 'No'}</div>
+                <div>Playing Video: {playingVideo ? 'Yes' : 'No'}</div>
+                <div>Environment: {process.env.NODE_ENV}</div>
+              </div>
+            )}
           </div>
 
           <section className="max-w-2xl mx-auto px-4 py-12 mt-12">
@@ -271,7 +349,7 @@ export default function Page() {
               Ready to Get Started?
             </h3>
             <p className="text-white mb-8" style={{ fontFamily: '"Quicksand", sans-serif' }}>
-              Let&apos;s bring your story to life. Contact us now and receive a personalized quote within 24 hours.
+              Let's bring your story to life. Contact us now and receive a personalized quote within 24 hours.
             </p>
             <Link
               href="/Contact"
