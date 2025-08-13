@@ -170,13 +170,13 @@ export default function Page() {
                   className="w-full h-full object-cover"
                   controls
                   autoPlay
-                  poster="/images/imgs.png"
+                  poster="./images/imgs.png"
                   onError={() => {
                     console.error("Video failed to load");
                     setPlayingVideo(false);
                   }}
                 >
-                  <source src="/videos/HIW.mp4" type="video/mp4" />
+                  <source src="./videos/HIW.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               ) : (
@@ -187,7 +187,7 @@ export default function Page() {
                 >
                   {/* Thumbnail Image */}
                   <Image
-                    src="/images/imgs.png"
+                    src="./images/imgs.png"
                     alt="How It Works - Video Tutorial"
                     fill
                     className="object-cover transition-all duration-500 group-hover:scale-105 group-hover:brightness-75"
