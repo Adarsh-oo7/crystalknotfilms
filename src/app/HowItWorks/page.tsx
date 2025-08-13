@@ -176,7 +176,7 @@ export default function Page() {
                     setPlayingVideo(false);
                   }}
                 >
-                  <source src="./videos/HIW.mp4" type="video/mp4" />
+                  <source src="../videos/HIW.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               ) : (
