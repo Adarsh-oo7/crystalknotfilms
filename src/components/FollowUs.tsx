@@ -74,7 +74,7 @@ function FollowUs(): React.JSX.Element {
             isOpen ? 'translate-x-0 opacity-100' : 'translate-x-8 opacity-0'
           }`} style={{ transitionDelay: isOpen ? '100ms' : '0ms' }}>
             <Link
-              href="mailto:Crystal@knotfilms.com"
+              href="mailto:contact@crystalknotfilms.com"
               className="bg-red-500 hover:bg-red-600 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-125 hover:rotate-12 ml-auto animate-bounce"
               title="Email Us"
               onClick={() => setIsOpen(false)}

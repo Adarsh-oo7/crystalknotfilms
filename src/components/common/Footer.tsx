@@ -59,11 +59,12 @@ export default function Footer() {
         </div>
 
         {/* Website URL */}
-        <div className="text-center">
+           <Link
+              href="mailto:contact@crystalknotfilms.com" className="text-center">
           <p className="text-sm text-gray-300" style={{ fontFamily: "Quicksand, sans-serif" }}>
-            Crystal@knotfilms.com
+            contact@crystalknotfilms.com
           </p>
-        </div>
+        </Link>
 
         {/* Footer Bottom */}
         <div className="text-center">
