@@ -44,7 +44,7 @@ export default function Page() {
           style={{ fontFamily: "Quicksand" }}
         >
           Our story didn&apos;t start with Macbooks and mouse clicks. It started in a tiny darkroom over 60 years ago — no AC, no presets, just pure passion and photo chemicals.
-          My grandfather was the OG memory-maker. Film rolls, hand-developed photos, and hours of patience — that&apos;s how weddings were crafted back then. When my father stepped in at 20, he carried that legacy forward, editing and capturing love stories for four decades.
+          My grandfather was the OG memory-maker. Film rolls, hand-developed photos, and hours of patience — that&apos;s how weddings were crafted back then. When my father stepped in at 10, he carried that legacy forward, editing and capturing love stories for four decades.
         </p>
         <p
           className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] xl:text-[16px] leading-relaxed text-center"
