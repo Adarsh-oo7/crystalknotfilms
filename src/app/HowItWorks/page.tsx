@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import { FaPlay } from "react-icons/fa";
 import { Edit, Film, CloudDownload } from 'lucide-react';
@@ -75,7 +75,6 @@ export default function Page() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
   const [videoError, setVideoError] = useState(false);
   const [videoLoaded, setVideoLoaded] = useState(false);
-  const [videoRef, setVideoRef] = useState<HTMLVideoElement | null>(null);
   const [currentVideoSource, setCurrentVideoSource] = useState(0);
 
   // Define video sources similar to Hero section
@@ -117,8 +116,6 @@ export default function Page() {
   };
 
   const handleCanPlay = (e: React.SyntheticEvent<HTMLVideoElement, Event>) => {
-    const video = e.currentTarget;
-    setVideoRef(video);
     console.log("Video can start playing");
   };
 
@@ -210,7 +207,6 @@ export default function Page() {
               {playingVideo && !videoError ? (
                 <video
                   key={currentVideoSource} // Force re-render when source changes
-                  ref={setVideoRef}
                   className="w-full h-full object-cover"
                   controls
                   autoPlay
@@ -348,8 +344,8 @@ export default function Page() {
             >
               Ready to Get Started?
             </h3>
-            <p className="text-white mb-8" style={{ fontFamily: '"Quicksand", sans-serif' }}>
-              Let's bring your story to life. Contact us now and receive a personalized quote within 24 hours.
+            <p className="text-white mb-8" style={{ fontFamily: '&quot;Quicksand&quot;, sans-serif' }}>
+              Let&apos;s bring your story to life. Contact us now and receive a personalized quote within 24 hours.
             </p>
             <Link
               href="/Contact"
