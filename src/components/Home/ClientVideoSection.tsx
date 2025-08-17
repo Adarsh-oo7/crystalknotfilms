@@ -68,7 +68,7 @@ export default function ClientVideoSection() {
         id: "video10",
         src: "https://www.youtube.com/embed/jkcTBYxBelM?si=lpHh7opwr_ldjcpb",
         title: "Wedding Highlight Reel 1",
-        thumbnail: "./images/video-data/v8.png",
+        thumbnail: "./images/video-data/v11.png",
       },
     ],
     "Corporate Events": [
