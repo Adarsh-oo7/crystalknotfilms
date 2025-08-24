@@ -4,7 +4,7 @@ const isProd = process.env.NODE_ENV === 'production';
 const isExport = process.env.NEXT_EXPORT === 'true';
 
 const nextConfig: NextConfig = {
-  // output: 'export',
+  output: 'export',
   basePath: isProd ? '/crystalknotfilms' : '',
   assetPrefix: isProd ? '/crystalknotfilms' : '',
   trailingSlash: true,

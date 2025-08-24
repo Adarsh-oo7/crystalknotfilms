@@ -28,16 +28,25 @@ export default function ContactForm() {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+      // ✅ Replace this with YOUR deployed Google Apps Script URL
+      const googleScriptUrl =
+        "https://script.google.com/macros/s/AKfycbwLJKaMBctvpf8Kz1g-oUx10WNO5GV7T9NLa6jEY08DBkpso9zXGgALIMWuvoDlgvY/exec";
+
+      const form = new FormData();
+      Object.entries(formData).forEach(([key, value]) => {
+        form.append(key, value);
       });
 
-      const result = await response.json();
+      const response = await fetch(googleScriptUrl, {
+        method: "POST",
+        body: form,
+      });
 
-      if (!response.ok || !result.success) {
-        throw new Error(result.error || "Form submission failed");
+      const text = await response.text();
+      console.log("📨 Google Script response:", text);
+
+      if (!response.ok) {
+        throw new Error(text || "Form submission failed");
       }
 
       toast.success("✅ Message Sent! We'll get back to you soon.");
@@ -48,6 +57,7 @@ export default function ContactForm() {
         message: "",
       });
     } catch (err) {
+      console.error("❌ Error submitting form:", err);
       toast.error("❌ Something went wrong. Please try again later.");
     } finally {
       setIsSubmitting(false);
