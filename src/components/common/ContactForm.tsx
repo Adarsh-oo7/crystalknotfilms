@@ -30,29 +30,25 @@ export default function ContactForm() {
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          category: formData.category,
-          message: formData.message,
-        }),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
       });
 
+      const result = await response.json();
 
-      if (!response.ok) throw new Error("Form submission failed");
+      if (!response.ok || !result.success) {
+        throw new Error(result.error || "Form submission failed");
+      }
 
-      toast.success("Message Sent! We'll get back to you as soon as possible.");
+      toast.success("✅ Message Sent! We'll get back to you soon.");
       setFormData({
         name: "",
         email: "",
         category: "Private Client / Studio",
         message: "",
       });
-    } catch (error) {
-      toast.error("Something went wrong. Please try again later.");
+    } catch (err) {
+      toast.error("❌ Something went wrong. Please try again later.");
     } finally {
       setIsSubmitting(false);
     }
@@ -76,27 +72,17 @@ export default function ContactForm() {
         </h1>
 
         {/* Form */}
-        <form
-          id="submit-form"
-          onSubmit={handleSubmit}
-          className="p-8 relative z-10"
-        >
+        <form onSubmit={handleSubmit} className="p-8 relative z-10">
           {/* Name */}
           <div className="mb-4">
             <input
               required
               type="text"
-              id="name"
               name="name"
               value={formData.name}
               onChange={handleChange}
-              className="w-full border border-gray-900 text-black rounded-md px-3 py-2 focus:outline-none focus:ring-1 focus:ring-yellow-900 bg-transparent"
               placeholder="Full Name"
-              style={{
-                fontFamily: "Quicksand, sans-serif",
-                letterSpacing: "0.1em",
-                lineHeight: 1.4,
-              }}
+              className="w-full border border-gray-900 text-black rounded-md px-3 py-2 focus:outline-none focus:ring-1 focus:ring-yellow-900 bg-transparent"
             />
           </div>
 
@@ -105,17 +91,11 @@ export default function ContactForm() {
             <input
               required
               type="email"
-              id="email"
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className="w-full border border-gray-900 rounded-md text-black px-3 py-2 focus:outline-none focus:ring-1 focus:ring-yellow-900 bg-transparent"
               placeholder="Email"
-              style={{
-                fontFamily: "Quicksand, sans-serif",
-                letterSpacing: "0.1em",
-                lineHeight: 1.4,
-              }}
+              className="w-full border border-gray-900 rounded-md text-black px-3 py-2 focus:outline-none focus:ring-1 focus:ring-yellow-900 bg-transparent"
             />
           </div>
 
@@ -123,16 +103,10 @@ export default function ContactForm() {
           <div className="mb-4">
             <select
               required
-              id="category"
               name="category"
               value={formData.category}
               onChange={handleChange}
               className="w-full border border-gray-900 rounded-md text-black px-3 py-2 focus:outline-none focus:ring-1 focus:ring-yellow-900 bg-transparent"
-              style={{
-                fontFamily: "Quicksand, sans-serif",
-                letterSpacing: "0.1em",
-                lineHeight: 1.4,
-              }}
             >
               <option value="Private Client / Studio">
                 Private Client / Studio
@@ -148,18 +122,12 @@ export default function ContactForm() {
           <div className="mb-6">
             <textarea
               required
-              id="message"
               name="message"
               rows={4}
               value={formData.message}
               onChange={handleChange}
-              className="w-full border border-gray-900 text-black rounded-md px-3 py-2 focus:outline-none focus:ring-1 focus:ring-yellow-900 bg-transparent"
               placeholder="Tell us more about your project..."
-              style={{
-                fontFamily: "Quicksand, sans-serif",
-                letterSpacing: "0.1em",
-                lineHeight: 1.4,
-              }}
+              className="w-full border border-gray-900 text-black rounded-md px-3 py-2 focus:outline-none focus:ring-1 focus:ring-yellow-900 bg-transparent"
             />
           </div>
 
@@ -167,13 +135,7 @@ export default function ContactForm() {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full flex items-center justify-center gap-2 border border-black py-2 rounded-md font-normal transition
-             bg-transparent text-black hover:bg-white hover:text-black disabled:opacity-50 disabled:cursor-not-allowed"
-            style={{
-              fontFamily: "Quicksand, sans-serif",
-              letterSpacing: "0.1em",
-              lineHeight: 1.4,
-            }}
+            className="w-full flex items-center justify-center gap-2 border border-black py-2 rounded-md font-normal transition bg-transparent text-black hover:bg-white disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {isSubmitting ? (
               <>
