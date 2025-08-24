@@ -2,15 +2,20 @@
 // The 'id' is the YouTube video ID, used for routing.
 // The 'baseEmbedUrl' is the full YouTube embed URL without autoplay.
 export const videos = [
+    {
+    id: "M7lc1UVf-VE",
+    thumbnail: "./images/video-data/v10.png",
+    baseEmbedUrl: "https://www.youtube.com/embed/1kEODHb5-TM?si=yyK4F1BdoVCdjAIt",
+  },
   {
     id: "dQw4w9WgXcQ",
-    thumbnail: "./images/video-data/v1.png",
-    baseEmbedUrl: "https://www.youtube.com/embed/-mhTawVXNSk?si=Q8SEKEwfGtPs8r9W",
+    thumbnail: "./images/video-data/v8.png",
+    baseEmbedUrl: "https://www.youtube.com/embed/jkcTBYxBelM?si=lpHh7opwr_ldjcpb",
   },
   {
     id: "LXb3EKWsInQ",
-    thumbnail: "./images/video-data/v2.png",
-    baseEmbedUrl: "https://www.youtube.com/embed/Nr1mu8u2FeU?si=qTO2jsnc-03I_k-5",
+    thumbnail: "./images/video-data/v9.png",
+    baseEmbedUrl: "https://player.vimeo.com/video/1109815007?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1",
   },
   {
     id: "k_okcNVz_FM",
@@ -22,11 +27,7 @@ export const videos = [
     thumbnail: "./images/video-data/v4.jpg",
     baseEmbedUrl: "https://www.youtube.com/embed/HdYf4KAzb3g?si=x0ROIvqYiBUDJn87",
   },
-  {
-    id: "M7lc1UVf-VE",
-    thumbnail: "./images/video-data/v5.png",
-    baseEmbedUrl: "https://www.youtube.com/embed/Ntfg592ufcs?si=sNu7wtPxq0oIMNiR",
-  },
+
   {
     id: "lTRiuFIWV54",
     thumbnail: "./images/video-data/v6.png",

@@ -1,9 +1,12 @@
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
+import MarqueeDemo from "./marquee-demo";
 export default function Story() {
     return (
         <main className="relative  mt-[100vh] bg-[#f5f5f5]">
+                    <MarqueeDemo />
+            
 
             <main className="flex min-h-screen flex-col items-center justify-center bg-[#f5f5f5] py-12 px-2 lg:px-6 xl:px-8">
                 <div className="text-center max-w-4xl mx-auto">

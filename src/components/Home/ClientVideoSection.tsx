@@ -52,6 +52,24 @@ export default function ClientVideoSection() {
         title: "Wedding Highlight Reel 1",
         thumbnail: "./images/video-data/v1.png",
       },
+      {
+        id: "video8",
+        src: "https://www.youtube.com/embed/1kEODHb5-TM?si=yyK4F1BdoVCdjAIt",
+        title: "Wedding Highlight Reel 3",
+        thumbnail: "./images/video-data/v10.png",
+      },
+      {
+        id: "video9",
+        src: "https://player.vimeo.com/video/1109815007?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1",
+        title: "Wedding Highlight Reel 3",
+        thumbnail: "./images/video-data/v9.png",
+      },
+      {
+        id: "video10",
+        src: "https://www.youtube.com/embed/jkcTBYxBelM?si=lpHh7opwr_ldjcpb",
+        title: "Wedding Highlight Reel 1",
+        thumbnail: "./images/video-data/v11.png",
+      },
     ],
     "Corporate Events": [
       {
